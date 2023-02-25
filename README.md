@@ -39,31 +39,30 @@ http://domainname.com/admin/index.php
 
 #### nginx配置
 
-`
+```zsh
 location / {
         if (!-e $request_filename){
                 rewrite ^/(.*) /index.php last;
         }
         index index.html index.php;
 }
-`
+```
 
-`
+```zsh
 location /admin {
         if (!-e $request_filename){
                 rewrite ^/(.*) /admin/index.php last;
         }
         index index.html index.php;
 }
-`
+```
 
-`
+```zsh
 location ~ \.php$ {
         include fastcgi.conf;
         fastcgi_pass 127.0.0.1:9000;
         try_files $uri = 404;
 }
-`
-    
+```
  
 
