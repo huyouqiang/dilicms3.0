@@ -33,9 +33,9 @@ mysql5.7
 
 单选/复选框（varchar）	字符串1=备注1|字符串2=备注2 例如：1=男|2=女
 
-#### 目录
+#### 示例url
 
-http://xxx.com/admin/index.php
+http://domainname.com/admin/index.php
 
 #### nginx配置
 
