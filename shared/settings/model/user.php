@@ -29,37 +29,13 @@ $setting['models']['user']=array (
       'order' => '1',
       'editable' => '1',
     ),
-    1007 => 
-    array (
-      'id' => '1007',
-      'name' => 'user_gender',
-      'description' => '性别',
-      'model' => '187',
-      'type' => 'radio',
-      'length' => '10',
-      'values' => 
-      array (
-        1 => '男',
-        2 => '女',
-      ),
-      'width' => '0',
-      'height' => '0',
-      'rules' => '',
-      'ruledescription' => '',
-      'searchable' => '1',
-      'listable' => '1',
-      'order' => '2',
-      'editable' => '1',
-    ),
   ),
   'listable' => 
   array (
     0 => '1006',
-    1 => '1007',
   ),
   'searchable' => 
   array (
     0 => '1006',
-    1 => '1007',
   ),
 );

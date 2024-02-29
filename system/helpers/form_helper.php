@@ -46,7 +46,7 @@ if ( ! function_exists('form_open'))
 
 		if ($attributes == '')
 		{
-			$attributes = 'method="post"';
+			$attributes = 'method="post" class="mt-sm-4"';
 		}
 
 		// If an action is not a full URL then turn it into one

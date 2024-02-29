@@ -1,45 +1,270 @@
 <?php if ( ! defined('IN_DILICMS')) exit('No direct script access allowed');?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html>
+<html>
 <head>
 <base href="<?php echo base_url().'templates/'.setting('backend_theme').'/'; ?>" />
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title><?php echo setting('backend_title');  ?></title>
 <link rel="stylesheet" href="images/admin.css"  type="text/css" />
-<link rel="stylesheet" href="images/font-ux/css.css" />
+<link rel="stylesheet" href="images/bootstrap-icons.css"  type="text/css" />
+<!-- =======================
+JS libraries, plugins and custom scripts -->
+<script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
+<!-- Bootstrap JS -->
+<script src="images/bootstrap.bundle.min.js"></script>
 </head>
 <body id="login">
 	<div class="container">
-		<div id="header">
-			<div class="logo">
-				<img src="<?php echo setting('backend_logo');  ?>" />
+		
+		<!-- =======================
+Header START -->
+		<header class="navbar-light fixed-top header-static bg-mode">
+
+		<!-- Logo Nav START -->
+		<nav class="navbar navbar-expand-lg">
+		<div class="container-fluid">
+			<!-- Logo START -->
+			<a class="navbar-brand" href="/admin/index.php/system/home">
+			
+			<!-- <img class="light-mode-item navbar-brand-item" src="/public/logo.svg" alt="logo">
+			<img class="dark-mode-item navbar-brand-item" src="/public/logo.svg" alt="logo"> -->
+
+			
+			<img src="<?php echo setting('backend_logo');  ?>" style="height: 40px;">
+			
+			</a>
+			<b><?php echo setting('backend_title');  ?></b>
+			<!-- Logo END -->
+
+			<!-- Responsive navbar toggler -->
+			<button class="navbar-toggler ms-auto icon-md btn btn-light p-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-animation">
+				<span></span>
+				<span></span>
+				<span></span>
+			</span>
+			</button>
+
+			<!-- Main navbar START -->
+			<div class="collapse navbar-collapse" id="navbarCollapse">
+
+			<!-- Nav Search START -->
+			<div class="nav mt-3 mt-lg-0 flex-nowrap align-items-center px-4 px-lg-0">
+				<div class="nav-item w-100">
+				<!-- <form class="rounded position-relative">
+					<input class="form-control ps-5 bg-light" type="search" name="headerSearch" placeholder="搜索..." aria-label="Search" value="">
+					<input class="form-control ps-5 bg-light" type="search" placeholder="搜索..." aria-label="Search" value="" style="display: none;">
+					<button class="btn bg-transparent px-2 py-0 position-absolute top-50 start-0 translate-middle-y" type="button"><i class="bi bi-search fs-5"> </i></button>
+				</form> -->
+				</div>
 			</div>
+			<!-- Nav Search END -->
+
+			<ul class="navbar-nav navbar-nav-scroll ms-auto">
+				<!-- <li class="nav-item">
+				<a class="nav-link" href="/fire" target="_blank">
+					<img src="/public/bianpao.gif" style="height:50px;" title="去放炮">
+				</a>
+				</li> -->
+				<!-- Nav item 4 Mega menu -->
+						<!-- <li class="nav-item">
+				<a class="nav-link " href="/?n=dev">开发</a>
+				</li>
+						<li class="nav-item">
+				<a class="nav-link " href="/?n=microchip">硬件</a>
+				</li>
+						<li class="nav-item">
+				<a class="nav-link " href="/?n=soft">软件</a>
+				</li>
+						<li class="nav-item">
+				<a class="nav-link " href="/?n=photo">摄影</a>
+				</li> -->
+				
+			</ul>
+			</div>
+			<!-- Main navbar END -->
+
+			<!-- Nav right START -->
+			<ul class="nav flex-nowrap align-items-center ms-sm-3 list-unstyled">
+			<li class="nav-item ms-2">
+				<a class="nav-link icon-md btn btn-light p-0" href="/admin/login">
+				<i class="bi bi-gear-fill fs-6"> </i>
+				</a>
+			</li>
+			<li class="nav-item ms-2">
+				<a class="nav-link icon-md btn btn-light p-0" href="/blog/feedback">
+				<i class="bi bi-chat-left-text-fill fs-6"> </i>
+				</a>
+			</li>
+			<li class="nav-item dropdown ms-2">
+				<a class="nav-link icon-md btn btn-light p-0" href="#" id="notifDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside">
+				<span class="badge-notif animation-blink"></span>
+				<i class="bi bi-bell-fill fs-6"> </i>
+				</a>
+				<div class="dropdown-menu dropdown-animation dropdown-menu-end dropdown-menu-size-md p-0 shadow-lg border-0" aria-labelledby="notifDropdown">
+				<div class="card">
+					<div class="card-header d-flex justify-content-between align-items-center">
+					<h6 class="m-0">消息 <span class="badge bg-danger bg-opacity-10 text-danger ms-1">0</span></h6>
+					</div>
+					<div class="card-body p-0">
+					<ul class="list-group list-group-flush list-unstyled p-2">
+															<li>
+						<a href="#" class="list-group-item list-group-item-action rounded d-flex border-0 p-3 mb-1">
+							<div class="avatar text-center d-none d-sm-inline-block">
+							<img class="avatar-img rounded-circle" src="<?php echo setting('backend_logo');  ?>" alt="">
+							</div>
+							<div class="ms-sm-3 d-flex">
+							<p class="small mb-2"><b>XIAOHU</b> 文章详情-添加相关文章推荐，pc/手机端均适配</p>
+							<p class="small ms-3 text-nowrap">01-29</p>
+							</div>
+						</a>
+						</li>
+																			<li>
+						<a href="#" class="list-group-item list-group-item-action rounded d-flex border-0 p-3 mb-1">
+							<div class="avatar text-center d-none d-sm-inline-block">
+							<img class="avatar-img rounded-circle" src="<?php echo setting('backend_logo');  ?>" alt="">
+							</div>
+							<div class="ms-sm-3 d-flex">
+							<p class="small mb-2"><b>XIAOHU</b> 上线2024龙年主题、canvas烟花动画，支持鼠标点击、跟随</p>
+							<p class="small ms-3 text-nowrap">01-16</p>
+							</div>
+						</a>
+						</li>
+																			<li>
+						<a href="#" class="list-group-item list-group-item-action rounded d-flex border-0 p-3 mb-1">
+							<div class="avatar text-center d-none d-sm-inline-block">
+							<img class="avatar-img rounded-circle" src="<?php echo setting('backend_logo');  ?>" alt="">
+							</div>
+							<div class="ms-sm-3 d-flex">
+							<p class="small mb-2"><b>XIAOHU</b> 所有域名xiaohu365.com都指向hutc.top，望各位周知</p>
+							<p class="small ms-3 text-nowrap">12-13</p>
+							</div>
+						</a>
+						</li>
+														</ul>
+					</div>
+					<!-- <div class="card-footer text-center">
+					<a href="#" class="btn btn-sm btn-primary-soft">所有消息</a>
+					</div> -->
+				</div>
+				</div>
+			</li>
+			<!-- Notification dropdown END -->
+
+			<li class="nav-item ms-2 dropdown">
+				<a class="nav-link btn icon-md p-0" href="#" id="profileDropdown" role="button" data-bs-auto-close="outside" data-bs-display="static" data-bs-toggle="dropdown" aria-expanded="false">
+				<img class="avatar-img rounded-2" src="<?php echo setting('backend_logo');  ?>" alt="">
+				</a>
+				<ul class="dropdown-menu dropdown-animation dropdown-menu-end pt-3 small me-md-n3" aria-labelledby="profileDropdown">
+				<!-- Profile info -->
+				<li class="px-3">
+					<div class="d-flex align-items-center position-relative">
+					<!-- Avatar -->
+					<div class="avatar me-3">
+						<img class="avatar-img rounded-circle" src="<?php echo setting('backend_logo');  ?>" alt="avatar">
+					</div>
+					<div>
+						<a class="h6 stretched-link" href="#">XIAOHU</a>
+						<p class="small m-0">PHP DEVELOPER</p>
+					</div>
+					</div>
+									<a class="dropdown-item btn btn-danger-soft btn-sm my-2 text-center" href="/admin/login">未登录</a>
+								</li>
+				<!-- Links -->
+				<li><a class="dropdown-item" href="https://github.com/huyouqiang" target="_blank"><i class="bi bi-github fa-fw me-2"></i>github.com/huyouqiang</a></li>
+				<li> 
+					<a class="dropdown-item" href="#">
+					<i class="fa-fw bi bi-chat-right-dots me-2"></i>1451984637@qq.com
+					</a> 
+				</li>
+				<li> 
+					<a class="dropdown-item" href="#">
+					<i class="fa-fw bi bi-tiktok me-2"></i>huyouqiang
+					</a> 
+				</li>
+				<li class="dropdown-divider"></li>
+							<li><a class="dropdown-item bg-danger-soft-hover" href="/admin/index.php/login"><i class="bi bi-power fa-fw me-2"></i>登录</a></li>
+							</ul>
+			</li>
+			<!-- Profile START -->
+			
+			</ul>
+			<!-- Nav right END -->
 		</div>
-		<div id="wrapper" class="clearfix">
-			<div class="login_box">
-				<div class="login_title">管理登录</div>
-				<div class="login_cont">
-					<b style="color:red"><?php echo $this->session->flashdata('error'); ?></b>
-                    <?php echo form_open('login/do'); ?>
-						<table class="form_table">
-							<col width="90px" />
-							<col />
-							<tr>
-								<th>用户名：</th><td><input autocomplete="off" class="normal" type="text" name="username" alt="请填写用户名" /></td>
-							</tr>
-							<tr>
-								<th>密码：</th><td><input class="normal" type="password" name="password" alt="请填写密码" /></td>
-							</tr>
-							<tr>
-								<th></th><td><input class="submit" type="submit" value="登录" /><input class="submit" type="reset" value="取消" /></td>
-							</tr>
-						</table>
-					<?php echo form_close(); ?>
+		</nav>
+		<!-- Logo Nav END -->
+		</header>
+		<!-- =======================
+		Header END -->
+
+		<div class="container">
+			<div class="row justify-content-center align-items-center py-5" style="height: calc(100vh - 0px);">
+				<div class="col-sm-10 col-md-8 col-lg-7 col-xl-6 col-xxl-5">
+
+					<div id="wrapper" class="card card-body text-center p-4 p-sm-5">
+						<div class="login_box">
+							<h2 class="mb-2">登 录</h2>
+							<div class="login_cont">
+								<b style="color:red"><?php echo $this->session->flashdata('error'); ?></b>
+								<?php echo form_open('login/do'); ?>
+								<div class="mb-3 input-group-lg">
+									<input autocomplete="off" class="form-control" type="text" name="username" placeholder="请填写账号" />
+								</div>
+								<div class="mb-3 position-relative">
+									<!-- Password -->
+									<div class="input-group input-group-lg">
+										<input class="form-control fakepassword" type="password" id="psw-input" placeholder="请填写密码" id="pwd" name="password">
+										<!-- <span class="input-group-text p-0">
+										<i class="fakepasswordicon fa-solid fa-eye-slash cursor-pointer p-2 w-40px"></i>
+										</span> -->
+									</div>
+								</div>
+								<!-- Button -->
+								<div class="d-grid"><input class="btn btn-lg btn-primary" type="submit" value="登录" /></div>
+									
+								<?php echo form_close(); ?>
+							</div>
+						</div>
+					</div>
+
 				</div>
 			</div>
 		</div>
-		<div id="footer"><i class="iconfont">㑥</i><i class="iconfont">㑤</i> with <i class="iconfont">󰀄</i> By <a href="http://www.dilicms.com/">DiliCMS</a> Copyright &copy; <?php echo date('Y'); ?>
-        </div>
+		
+		
 	</div>
+
+	<!-- footer -->
+	<!-- footer START -->
+	<footer class="bg-mode py-3">
+	<div class="container">
+		<div class="row">
+		<div class="col-md-6">
+			<!-- Footer nav START -->
+			<ul class="nav justify-content-center justify-content-md-start lh-1">
+			<li class="nav-item">
+				<a class="nav-link" href="#">关于</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="#">支持 </a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="#">文档 </a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="#">隐私 & 协议</a>
+			</li>
+			</ul>
+			<!-- Footer nav START -->
+		</div>
+		<div class="col-md-6">
+			<!-- Copyright START -->
+			<p class="text-center text-md-end mb-0">©2024 <a class="text-body" target="_blank" href="https://beian.miit.gov.cn/#/Integrated/index"> 皖ICP备XXXXXX号-X </a></p>
+			<!-- Copyright END -->
+		</div>
+		</div>
+	</div>
+	</footer>
+	<!-- footer END --> 
 </body>
 </html>

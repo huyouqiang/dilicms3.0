@@ -55,8 +55,8 @@ $active_record = TRUE;
 
 $db['default']['hostname'] = 'localhost';
 $db['default']['username'] = 'root';
-$db['default']['password'] = '12345678';
-$db['default']['database'] = 'dilicms3';
+$db['default']['password'] = '123456';
+$db['default']['database'] = 'dilicms3.0';
 $db['default']['dbdriver'] = 'mysqli';
 $db['default']['dbprefix'] = 'ge_';
 $db['default']['pconnect'] = FALSE;

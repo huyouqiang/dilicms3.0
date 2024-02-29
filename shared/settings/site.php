@@ -1,8 +1,8 @@
 <?php if ( ! defined('IN_DILICMS')) exit('No direct script access allowed');
 $setting=array (
-  'site_name' => 'dilicms3.0',
+  'site_name' => '通用数据库管理系统',
   'site_domain' => '',
-  'site_logo' => 'images/logo.gif',
+  'site_logo' => 'images/logo.jpeg',
   'site_icp' => '',
   'site_terms' => '',
   'site_stats' => '',
