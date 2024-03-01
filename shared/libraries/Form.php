@@ -349,8 +349,8 @@ class Form
 			$count = 1;
 			foreach ($field['values'] as $key => $v)
 			{
-				$return .= 	'<li><input id="chk_' . $field['name'] . '_' . $count . '" name="' . $field['name'] . '[]" type="checkbox" value="' . 
-				            $key . '" ' . (in_array($key, $default) ? 'checked="checked"' : '') . ' /><lable class="attr" for="chk_' . $field['name'] . '_' . $count . '">' . $v . '</lable></li>'; 
+				$return .= 	'<li style="display:inline;margin-right:20px;"><input id="chk_' . $field['name'] . '_' . $count . '" name="' . $field['name'] . '[]" type="checkbox" value="' . 
+				            $key . '" ' . (in_array($key, $default) ? 'checked="checked"' : '') . ' class="form-check-input"/> <lable class="attr" for="chk_' . $field['name'] . '_' . $count . '">' . $v . '</lable></li>'; 
 				$count ++;
 			}
 		}
