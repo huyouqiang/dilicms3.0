@@ -8,7 +8,7 @@
         <tr>
             <td>
                 <div align="center"><br />
-                    <div style="color:red;font-weight:bold"><?php echo $msg; ?></div>
+                    <div style="color:#0f6fec;font-weight:bold"><?php echo $msg; ?></div>
                     <br />
                     <br />
                     <br />
@@ -21,7 +21,7 @@
                             }
                             setTimeout("redirect('<?php echo $goto; ?>');", <?php echo $pause; ?>);
                         </script>
-                        <a href="<?php echo $goto; ?>" style="text-decoration:underline"><?php echo "页面正在自动转向，你也可以点此直接跳转！"; ?></a>
+                        <a href="<?php echo $goto; ?>" style="text-decoration:underline;"><?php echo "页面正在自动转向，你也可以点此直接跳转！"; ?></a>
                         <br />
                         <br />
                         <br />

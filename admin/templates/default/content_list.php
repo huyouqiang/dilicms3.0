@@ -3,36 +3,94 @@
 <script src="js/colorPicker/colorpicker.js" type="text/javascript"></script>
 <script src="js/dili_utility/jquery.ld.js" type="text/javascript"></script>
 <link rel="stylesheet" media="screen" type="text/css" href="js/colorPicker/css/colorpicker.css" />
-<!-- <style>
+<style>
+    .content .table{
+      overflow:auto;
+      width:100%;
+      height:300px; /* 固定高度 */
+      /* border:1px solid #999; */
+      /* border-bottom: 0;
+      border-right: 0; */
+    }
 
-table tbody {
-		display: block;
-		height: calc(100vh - 80px);
-		overflow-y: auto;
-	}
-		
-	table thead,
-	tbody tr {
-		display: table;
-		width: 100%;
-		height: 20px;
-		table-layout: fixed;/*重要  表格固定算法*/
-	}
-		
-	table thead {/*留出滚动条的位置*/
-		width: calc(100%)
+
+    .content table {
+      /* border-collapse:separate; */
+      table-layout: fixed;
+      width: 100%; /* 固定寬度 */
+    }
+
+
+    .content td, th {
+      /* border-right :1px solid #999; */
+      /* border-bottom :1px solid #999; */
+      /* box-sizing: border-box; */
+      /* 单元格宽高 */
+      width:150px;
+      height:30px;
+	  background: #eef0f2;
+    }
+    .content th {
+      background-color:#eef0f2;
+    }
+	.content thead tr {
+		background-color:#eef0f2;
 	}
 
-	.table-hover tbody tr:hover{
-		background-color: #f8f9fa;
-	}
-	
-/* .card-body img {
-	width: 100%;
-	height: 100%;
-} */
 
-</style> -->
+    /* 表头固定 */
+	.content thead tr th {
+		position: sticky;
+		top: 0;
+		background: #eef0f2;
+		height: 30px;
+	}
+
+	/* 首列固定/最后一列固定*/
+	.content th:first-child,
+	td:first-child {
+		position: sticky;
+		left: 0;
+		background: #eef0f2;
+		/* text-align: center; */
+		right: 0px;
+		border-left: 1px solid #DDDDDD ;
+		width: 50px;
+	}
+
+	/* 首列固定/最后一列固定*/
+	.content th:last-child,
+	td:last-child {
+		position: sticky;
+		left: 0;
+		background: #eef0f2;
+		/* text-align: center; */
+		right: 0px;
+		border-left: 1px solid #DDDDDD ;
+		width: 150px;
+	}
+
+
+
+	/* 表头首列和最后一列强制最顶层 */
+	.content th:last-child,
+	th:first-child {
+		z-index: 3;
+		/*左上角单元格z-index，切记要设置，不然表格纵向横向滚动时会被该单元格右方或者下方的单元格遮挡*/
+		background: #eef0f2;
+	}
+
+	.search table td {
+		width: 300px;
+		border: 0px;
+		background-color: rgb(238, 238, 238);
+	}
+
+	.search ul {
+		padding-left: 0px;
+	}
+
+  </style>
 <div class="headbar">
 	<div class="alert alert-primary"><?=$bread?>(<?php echo $provider['total_rows']; ?>)</div>
 	<div class="operating" style="position:relative; overflow:visible;margin:10px 20px 0px 0px;">
@@ -47,9 +105,9 @@ table tbody {
         <a href="<?php echo backend_url('excel/exportExcel','model='.$s);?>;"><button class="btn btn-sm btn-primary" type="button"><span class="export">导出EXCEL</span></button></a>
         <?php if($model['searchable']) : ?>
             <a href="javascript:void(0)" onclick="$('#content_search_form').slideToggle('slow');" ><button class="btn btn-sm btn-primary" type="button"><span class="remove">筛选</span></button></a>
-            <div id="content_search_form" style="display: none;background-color: #eeeeee;margin:10px 0px;padding:10px 10px;max-height:300px;overflow-y: auto;" class="card">
+            <div id="content_search_form" style="display: none;background-color: #eeeeee;margin:10px 0px;padding:10px 10px;max-height:300px;overflow-y: auto;" class="card search">
                 <?php echo form_open('content/view?model='.$model['name']); ?>
-                    <table class="form_table">
+                    <table class="form_table" style="background-color: #eeeeee;">
                         <colgroup><col width="150px"><col></colgroup><tbody>
 						<tr>
 							<td>ID</td>
@@ -65,7 +123,7 @@ table tbody {
                         <?php endforeach; ?>
                         <tr>
                             <td></td>
-                            <td><button class="btn btn-sm btn-primary" type="submit"><span>搜索</span></button></td>
+                            <td><button class="btn btn-sm btn-primary" type="submit" style="margin-top: 10px;"><span>搜索</span></button></td>
                         </tr>
                     </tbody></table>
                 <?php echo form_close(); ?>
@@ -91,14 +149,10 @@ table tbody {
 	</div> -->
 </div>
 
-<div class="content" style="margin: 10px 0px;">
+<div class="content" style="margin: 10px 0px;overflow: auto;height:1000px;">
     <?php echo form_open('content/del?model='.$model['name'], array('id' => 'content_list_form')); ?>
-		<table id="list_table" class="table table-sm table-bordered table-hover table-striped" style="display: block;width:100%;
-		height: calc(100vh - 280px);overflow-y: auto;">
-			<thead style="display: table;
-		width: calc(100%);
-		height: 20px;
-		table-layout: fixed;/*重要  表格固定算法*/">
+		<table id="list_table" class="table table-sm table-bordered table-hover table-striped" >
+			<thead>
 				<tr>
                 	<th></th>
                     <th>序号</th>
@@ -110,10 +164,7 @@ table tbody {
                     <th>操作选项</th>
 				</tr>
 			</thead>
-			<tbody style="display: table;
-		width: 100%;
-		height: 20px;
-		table-layout: fixed;/*重要  表格固定算法*/">
+			<tbody>
             <?php foreach($provider['list'] as $key => $v) : ?>
             	<tr>
                 	<td><input type="checkbox" class="form-check-input" name="id[]" value="<?php echo $v->id; ?>" /></td>
