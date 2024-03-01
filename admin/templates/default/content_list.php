@@ -28,7 +28,7 @@
       /* 单元格宽高 */
       width:150px;
       height:30px;
-	  background: #eef0f2;
+	  /* background: #eef0f2; */
     }
     .content th {
       background-color:#eef0f2;
