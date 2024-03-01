@@ -410,7 +410,7 @@ class Form
      */
 	private function _datetime($field, $default)
 	{
-		return '<input class="Wdate" style="width:150px;" type="text" name="' . $field['name'] . '" id="' . 
+		return '<input class="Wdate form-control" style="width:150px;height:40px;" type="text" name="' . $field['name'] . '" id="' . 
 		       $field['name'] . '" value="' . $default . '" onFocus="WdatePicker({isShowClear:false,readOnly:true,dateFmt:\'yyyy-MM-dd HH:mm:ss\'})"/>';	
 	}
 	
