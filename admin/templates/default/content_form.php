@@ -32,7 +32,7 @@
                 <?php foreach( $model['fields'] as $v) :  ?>
                 <?php if($v['editable']): ?>
                 <tr>
-                    <th> <?php echo $v['description'];?>：</th>
+                    <th style="width: 200px;"> <?php echo $v['description'];?>：</th>
                     <td>
                         <?php $this->field_behavior->on_form($v , isset($content[$v['name']]) ? $content[$v['name']] : '', TRUE, $model['hasattach']); ?>
                         <span style="color: red;font-weight: bold;"><?php echo form_error($v['name']); ?></span>
