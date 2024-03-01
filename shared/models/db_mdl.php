@@ -127,7 +127,7 @@ class Db_mdl extends CI_Model
                 unset($files[$k]);
                 continue;
             }
-            $file['volume'] = preg_replace("/(.*)\-(\d{1})(.*)/", "$2", $file['name']);
+            $file['volume'] = preg_replace("/(.*)\-(\d[1])(.*)/", "$2", $file['name']);
             if ($file['volume'] == $file['name'])
             {
                 $file['volume'] = '未知';

@@ -301,7 +301,7 @@ class Category_content extends Admin_Controller
 			if ($data['parentid'] > 0)
 			{
 				//如果不是顶级分类，就读其path数据
-				$data['path'] = '{0}';
+				$data['path'] = '[0]';
 				$data['level'] = 1;
 				$parent_class = $this->db->where('classid', $data['parentid'])->get($this->db->dbprefix('u_c_') . $model)->row();
 
@@ -316,7 +316,7 @@ class Category_content extends Admin_Controller
                 }
 				$data['path'] .= ',{'.$data['parentid'].'}';
 			} else {
-                $data['path'] = '{0}';
+                $data['path'] = '[0]';
                 $data['level'] = 1;
             }
 			$attachment = $this->input->post('uploadedfile', TRUE);

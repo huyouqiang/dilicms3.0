@@ -211,7 +211,7 @@
          * @return bool
          */
         public function validPhoneNumber($number){
-            if(preg_match("/^1[345678]{1}\d{9}$/",$number)){
+            if(preg_match("/^1[345678][1]\d{9}$/",$number)){
                 return true;
             }else{
                 return false;

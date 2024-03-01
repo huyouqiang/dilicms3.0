@@ -8,10 +8,10 @@ function validate(value,pattern)
 		case 'required': pattern = /\S+/i;break;
 		case 'email': pattern = /^\w+([-+.]\w+)*@\w+([-.]\w+)+$/i;break;
 		case 'qq':  pattern = /^[1-9][0-9]{4,}$/i;break;
-		case 'id': pattern = /^\d{15}(\d{2}[0-9x])?$/i;break;
-		case 'ip': pattern = /^(([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])\.){3}([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])$/i;break;
+		case 'id': pattern = /^\d{15}(\d[2][0-9x])?$/i;break;
+		case 'ip': pattern = /^(([0-9]|[1-9][0-9]|1[0-9][2]|2[0-4][0-9]|25[0-5])\.)[3]([0-9]|[1-9][0-9]|1[0-9][2]|2[0-4][0-9]|25[0-5])$/i;break;
 		case 'zip': pattern = /^\d{6}$/i;break;
-		case 'phone': pattern = /^((\d{3,4})|\d{3,4}-)?\d{7,8}(-\d{3})*$/i;break;
+		case 'phone': pattern = /^((\d{3,4})|\d{3,4}-)?\d{7,8}(-\d[3])*$/i;break;
 		case 'mobi': pattern = /^1[358]\d{9}$/i;break;
 		case 'url': pattern = /^[a-zA-z]+:\/\/(\w+(-\w+)*)(\.(\w+(-\w+)*))+(\/?\S*)?$/i;break;
 	}
