@@ -269,7 +269,7 @@ class Form
 		{
 			$field['height'] = 100;
 		}
-		return '<textarea class="hack_xheditor" id="' . $field['name'] . '" name="' . $field['name'] . 
+		return '<textarea class="form-control" id="' . $field['name'] . '" name="' . $field['name'] . 
 		       '" style="width:' . $field['width'] . 'px;height:' . $field['height'] . 'px">' . $default . '</textarea>';
 	}
 	
