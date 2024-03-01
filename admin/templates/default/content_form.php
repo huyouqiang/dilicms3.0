@@ -7,6 +7,11 @@
 <script src="js/dili_utility/jquery.ld.js" type="text/javascript"></script>
 <link rel="stylesheet" media="screen" type="text/css" href="js/colorPicker/css/colorpicker.css" />
 <script src="js/dili_utility/content_form.js" type="text/javascript"></script>
+<style>
+ul {
+    padding-left:0px;
+}
+</style>
 <div class="headbar">
     <div class="alert alert-primary"><?=$bread?></div>
     <div class="operating" style="overflow:visible;display:none;">
