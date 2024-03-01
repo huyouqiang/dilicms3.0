@@ -134,7 +134,7 @@ table tbody {
                  <?php endforeach; ?>
                     <td>
                     	<a href="<?php echo backend_url('content/form/','model='.$model['name'].'&id='.$v->id); ?>" type="button" class="btn btn-sm btn-primary">修改</a>
-                        <a href="<?php echo backend_url('content/del','model='.$model['name'].'&id='.$v->id); ?>" type="button" class="btn btn-sm btn-primary">删除</a>
+                        <a href="<?php echo backend_url('content/del','model='.$model['name'].'&id='.$v->id); ?>" type="button" class="btn btn-sm btn-primary confirm_delete">删除</a>
                         <?php $this->plugin_manager->trigger('row_buttons', $v); ?>
                     </td>
                 </tr>
