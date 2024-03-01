@@ -8,6 +8,7 @@ bootstrap5分支，将系统ui全部更换为bootstrap5,目前已完成系统设
 
 ![Image text](https://raw.githubusercontent.com/huyouqiang/dilicms3.0/main/preview/img-1.png)
 ![Image text](https://raw.githubusercontent.com/huyouqiang/dilicms3.0/main/preview/img-2.png)
+![Image text](https://raw.githubusercontent.com/huyouqiang/dilicms3.0/main/preview/img-3.png)
 
 #### 环境要求
 
