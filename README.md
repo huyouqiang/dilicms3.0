@@ -4,6 +4,8 @@
 
 DIlICMS3.0是基于2.4版本开发的通用mysql数据库管理系统，原来的开发者已停止迭代开发，3.0版本主要给表单添加分组，同时兼容PHP7+而开发
 
+bootstrap5分支，将系统ui全部更换为bootstrap5,目前已完成系统设置部分,数据表格ui正在开发中
+
 ![Image text](https://raw.githubusercontent.com/huyouqiang/dilicms3.0/main/preview/img-1.png)
 ![Image text](https://raw.githubusercontent.com/huyouqiang/dilicms3.0/main/preview/img-2.png)
 
