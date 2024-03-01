@@ -1,11 +1,16 @@
 <?php if ( ! defined('IN_DILICMS')) exit('No direct script access allowed');?>
 <div class="headbar">
-	<div class="position"><?=$bread?></div>
+	<div class="alert alert-primary"><?=$bread?></div>
 </div>
+<style>
+th {
+    width: 200px;
+}
+</style>
 <div class="content_box">
 	<div class="content form_content">
         <?php echo form_open('model/edit/'.$model->id); ?>
-			<table class="form_table dili_tabs" id="site_basic" >
+			<table class="table" id="site_basic" >
 				<col width="150px" />
 				<col />
 				<tr>
@@ -72,7 +77,7 @@
 				<tr>
 					<th></th>
 					<td>
-						<button class="submit" type='submit'><span>修改内容模型</span></button>
+						<button class="btn btn-sm btn-primary" type='submit'><span>修改内容模型</span></button>
 					</td>
 				</tr>
 			</table>

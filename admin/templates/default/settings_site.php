@@ -4,88 +4,121 @@
 <script charset="utf-8" src="js/kindeditor/lang/zh_CN.js"></script>
 <?php $current_tab =  $this->input->get('tab') ? $this->input->get('tab') : 'site_basic' ; ?>
 <div class="headbar">
-	<div class="position"><span>系统</span><span>></span><span>系统设置</span><span>></span><span>站点设置</span></div>
-    <ul class='tab' name='conf_menu'>
-		<li <?php echo $current_tab == 'site_basic' ? 'class="selected"' : ''; ?>><a href="javascript:void(0);" onclick="select_tab('site_basic',this);">基本设置</a></li>
-		<li <?php echo $current_tab == 'site_status' ? 'class="selected"' : ''; ?>><a href="javascript:void(0);" onclick="select_tab('site_status',this);">站点状态</a></li>
+	<div class="alert alert-primary"><span>系统</span><span>></span><span>系统设置</span><span>></span><span>站点设置</span></div>
+
+    <ul class="nav nav-tabs" id="myTab" role="tablist">
+        <li class="nav-item" role="presentation">
+            <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home-tab-pane" type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true" onclick="select_tab('site_basic',this);">基本设置</button>
+        </li>
+        <li class="nav-item" role="presentation">
+            <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile-tab-pane" type="button" role="tab" aria-controls="profile-tab-pane" aria-selected="false" onclick="select_tab('site_status',this);">站点状态</button>
+        </li>
+        <li class="nav-item" role="presentation">
+            <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact-tab-pane" type="button" role="tab" aria-controls="contact-tab-pane" aria-selected="false" onclick="select_tab('site_attachment',this);">附件设置</button>
+        </li>
+        <li class="nav-item" role="presentation">
+            <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact-tab-pane" type="button" role="tab" aria-controls="contact-tab-pane" aria-selected="false" onclick="select_tab('site_terms',this);">注册协议</button>
+        </li>
+        <li class="nav-item" role="presentation">
+            <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact-tab-pane" type="button" role="tab" aria-controls="contact-tab-pane" aria-selected="false" onclick="select_tab('site_theme',this);">主题设置</button>
+        </li>
+        
+    </ul>
+    <!-- <ul class='tab nav nav-tabs' name='conf_menu' id="myTab" role="tablist"> -->
+		<!-- <li class="nav-item" role="presentation"><a href="javascript:void(0);" onclick="select_tab('site_basic',this);" id="home-tab" data-bs-toggle="tab" data-bs-target="#home-tab-pane" type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true">基本设置</a></li> -->
+		<!-- <li <?php echo $current_tab == 'site_status' ? 'class="selected"' : ''; ?>><a href="javascript:void(0);" onclick="select_tab('site_status',this);">站点状态</a></li>
         <li <?php echo $current_tab == 'site_attachment' ? 'class="selected"' : ''; ?>><a href="javascript:void(0);" onclick="select_tab('site_attachment',this);">附件设置</a></li>
         <li <?php echo $current_tab == 'site_terms' ? 'class="selected"' : ''; ?>><a href="javascript:void(0);" onclick="select_tab('site_terms',this);">注册协议</a></li>
-        <li <?php echo $current_tab == 'site_theme' ? 'class="selected"' : ''; ?>><a href="javascript:void(0);" onclick="select_tab('site_theme',this);">主题设置</a></li>
-	</ul>
+        <li <?php echo $current_tab == 'site_theme' ? 'class="selected"' : ''; ?>><a href="javascript:void(0);" onclick="select_tab('site_theme',this);">主题设置</a></li> -->
+	<!-- </ul> -->
 </div>
 <div class="content_box">
 	<div class="content form_content">
-        <?php echo form_open('setting/site?tab=site_basic'); ?>
-			<!--基本设置!-->
-			<table class="form_table dili_tabs" id="site_basic" style="<?php echo $current_tab == 'site_basic' ? '' : 'display:none'; ?>">
-				<col width="150px" />
-				<col />
-				<tr>
-					<th> 站点名称：</th>
-					<td><input type='text' class='normal' name='site_name'  id="site_name" value="<?php echo $site->site_name; ?>" /></td>
-				</tr>
-				<tr>
-					<th>站点网址：</th>
-					<td>
-						<input type='text' class='normal' name='site_domain'  id="site_domain" value="<?php echo $site->site_domain; ?>" /></td>
-				</tr>
-				<tr>
-					<th> 站点logo：</th>
-					<td><input type='text' class='normal' name='site_logo' id="site_logo" value="<?php echo $site->site_logo; ?>" /></td>
-				</tr>
-				<tr>
-					<th>备案号：</th>
-					<td><input type='text' class='normal' name='site_icp' id="site_icp" value="<?php echo $site->site_icp; ?>" /></td>
-				</tr>
-				<tr>
-					<th>统计代码：</th>
-					<td><textarea name='site_stats'  id="site_stats" class="noeditor"><?php echo $site->site_stats; ?></textarea></td>
-				</tr>
-				<tr>
-					<th>站点底部：</th>
-					<td><textarea name='site_footer'  id="site_footer" style="height:300px;width:100%" data-editor="kindeditor" data-editor-mode="simple" data-upload="false"><?php echo $site->site_footer;?></textarea></td>
-				</tr>
-				<tr>
-					<th>站点关键字：</th>
-					<td><input type='text' class='normal'  name='site_keyword' id="site_keyword" value="<?php echo $site->site_keyword; ?>"  /></td>
-				</tr>
-				<tr>
-					<th>站点描述：</th>
-					<td><input type='text' class='normal'  name='site_description' id="site_description" value="<?php echo $site->site_description; ?>"  /></td>
-				</tr>
-				<tr>
-					<th></th>
-					<td>
-						<button class="submit" type='submit'><span>保存基本设置</span></button>
-					</td>
-				</tr>
-			</table>
-		<?php echo form_close(); ?>
+    
+        <div class="tab-content" id="myTabContent">
+            <div class="tab-pane fade show active" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab" tabindex="0">
 
-        <?php echo form_open('setting/site?tab=site_status') ?>
-			<!--站点状态!-->
-			<table class="form_table dili_tabs" id="site_status" style="<?php echo $current_tab == 'site_status' ? '' : 'display:none'; ?>">
-				<col width="150px" />
-				<col />
-				<tr>
-					<th>站点状态：</th>
-					<td>
-                    	<input type="radio" name="site_status" value="1" <?php echo $site->site_status == 1 ? 'checked="checked"' : ''; ?>>开启
-                        <input type="radio" name="site_status" value="0" <?php echo $site->site_status == 0 ? 'checked="checked"' : ''; ?>>关闭
-                    </td>
-				</tr>
-				<tr>
-					<th>站点关闭原因：</th>
-					<td><textarea  name='site_close_reason' style="height:200px;width:100%" data-editor="kindeditor" data-editor-mode="simple" data-upload="false"><?php echo $site->site_close_reason; ?></textarea></td>
-				</tr>
-				<tr>
-					<th></th>
-					<td>
-						<button class="submit" type='submit'><span>保存站点状态</span></button>
-					</td>
-				</tr>
-			</table>
-        <?php echo form_close(); ?>
+            <?php echo form_open('setting/site?tab=site_basic'); ?>
+                <!--基本设置!-->
+                <table class="form_table dili_tabs table" id="site_basic" style="<?php echo $current_tab == 'site_basic' ? '' : 'display:none'; ?>">
+                    <col width="150px" />
+                    <col />
+                    <tr>
+                        <th> 站点名称：</th>
+                        <td><input type='text' class='form-control' name='site_name'  id="site_name" value="<?php echo $site->site_name; ?>" /></td>
+                    </tr>
+                    <tr>
+                        <th>站点网址：</th>
+                        <td>
+                            <input type='text' class='form-control' name='site_domain'  id="site_domain" value="<?php echo $site->site_domain; ?>" /></td>
+                    </tr>
+                    <tr>
+                        <th> 站点logo：</th>
+                        <td><input type='text' class='form-control' name='site_logo' id="site_logo" value="<?php echo $site->site_logo; ?>" /></td>
+                    </tr>
+                    <tr>
+                        <th>备案号：</th>
+                        <td><input type='text' class='form-control' name='site_icp' id="site_icp" value="<?php echo $site->site_icp; ?>" /></td>
+                    </tr>
+                    <tr>
+                        <th>统计代码：</th>
+                        <td><textarea name='site_stats'  id="site_stats" class="form-control"><?php echo $site->site_stats; ?></textarea></td>
+                    </tr>
+                    <tr>
+                        <th>站点底部：</th>
+                        <td><textarea name='site_footer'  id="site_footer" style="height:300px;width:100%" data-editor="kindeditor" data-editor-mode="simple" data-upload="false" class="form-control"><?php echo $site->site_footer;?></textarea></td>
+                    </tr>
+                    <tr>
+                        <th>站点关键字：</th>
+                        <td><input type='text' class='form-control'  name='site_keyword' id="site_keyword" value="<?php echo $site->site_keyword; ?>"  /></td>
+                    </tr>
+                    <tr>
+                        <th>站点描述：</th>
+                        <td><input type='text' class='form-control'  name='site_description' id="site_description" value="<?php echo $site->site_description; ?>"  /></td>
+                    </tr>
+                    <tr>
+                        <th></th>
+                        <td>
+                            <button class="btn btn-sm btn-primary" type='submit'><span>保存基本设置</span></button>
+                        </td>
+                    </tr>
+                </table>
+            <?php echo form_close(); ?>
+
+            </div>
+            <div class="tab-pane fade" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">
+                <?php echo form_open('setting/site?tab=site_status') ?>
+                    <!--站点状态!-->
+                    <table class="form_table dili_tabs table" id="site_status" style="<?php echo $current_tab == 'site_status' ? '' : 'display:none'; ?>">
+                        <col width="150px" />
+                        <col />
+                        <tr>
+                            <th>站点状态：</th>
+                            <td>
+                                <input type="radio" class="form-check-input" name="site_status" value="1" <?php echo $site->site_status == 1 ? 'checked="checked"' : ''; ?>>&nbsp;开启
+                                <input type="radio" class="form-check-input" name="site_status" value="0" <?php echo $site->site_status == 0 ? 'checked="checked"' : ''; ?>>&nbsp;关闭
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>站点关闭原因：</th>
+                            <td><textarea  name='site_close_reason' style="height:200px;width:100%" class="form-control" data-editor="kindeditor" data-editor-mode="simple" data-upload="false"><?php echo $site->site_close_reason; ?></textarea></td>
+                        </tr>
+                        <tr>
+                            <th></th>
+                            <td>
+                                <button class="btn btn-sm btn-primary" type='submit'><span>保存站点状态</span></button>
+                            </td>
+                        </tr>
+                    </table>
+                <?php echo form_close(); ?>
+            </div>
+            <div class="tab-pane fade" id="contact-tab-pane" role="tabpanel" aria-labelledby="contact-tab" tabindex="0"></div>
+            <div class="tab-pane fade" id="disabled-tab-pane" role="tabpanel" aria-labelledby="disabled-tab" tabindex="0"></div>
+        </div>
+        
+       
+
+        
 
         <?php echo form_open('setting/site?tab=site_attachment'); ?>
 			<!--附件设置!-->
@@ -94,19 +127,19 @@
 				<col />
 				<tr>
 					<th>访问路径：</th>
-					<td><input type='text' class='normal' name='attachment_url'  id="attachment_url" value="<?php echo $site->attachment_url; ?>" />附件访问前缀，末尾不包含/</td>
+					<td><input type='text' class='form-control' name='attachment_url'  id="attachment_url" value="<?php echo $site->attachment_url; ?>" />附件访问前缀，末尾不包含/</td>
 				</tr>
 				<tr>
 					<th>上传路径：</th>
-					<td><input type='text' class='normal' name='attachment_dir'  id="attachment_dir" value="<?php echo $site->attachment_dir; ?>" /></td>
+					<td><input type='text' class='form-control' name='attachment_dir'  id="attachment_dir" value="<?php echo $site->attachment_dir; ?>" /></td>
 				</tr>
                 <tr>
 					<th>上传类型：</th>
-					<td><input type='text' class='normal' name='attachment_type'  id="attachment_type" value="<?php echo $site->attachment_type; ?>" /></td>
+					<td><input type='text' class='form-control' name='attachment_type'  id="attachment_type" value="<?php echo $site->attachment_type; ?>" /></td>
 				</tr>
                 <tr>
 					<th>上传大小限制：</th>
-					<td><input type='text' class='small' name='attachment_maxupload'  id="attachment_maxupload" value="<?php echo $site->attachment_maxupload; ?>" />单位：字节</td>
+					<td><input type='text' class='form-control' name='attachment_maxupload'  id="attachment_maxupload" value="<?php echo $site->attachment_maxupload; ?>" />单位：字节</td>
 				</tr>
                 <tr>
                     <th>缩略图尺寸预设：</th>
@@ -114,14 +147,14 @@
                         <ul id="thumbs-preferences" data-url="<?php echo site_url('setting/thumbs'); ?>"></ul>
                         <ul id="thumbs-preferences-form" style="display: none" data-enabled="<?php echo extension_loaded('imagick') ? 'true' : 'false' ?>">
                             <li style="padding:4px 0;">
-                                <input type="text" class="small" value="" id="new-size">
+                                <input type="text" class="form-control" value="" id="new-size">
                                 <select id="new-rule">
                                     <option value="crop">Crop策略</option>
                                     <option value="fit">Fit策略</option>
                                     <option value="fill">Fill策略</option>
                                     <option value="fitWidth">FitWidth策略</option>
                                 </select>
-                                <button class="submit"  id="add-new-preference" type='button'><span>添加</span></button>
+                                <button class="btn btn-sm btn-primary"  id="add-new-preference" type='button'><span>添加</span></button>
                             </li>
                         </ul>
                         <div class="red_box" style="display: none" id="thumb-warning"><img src="images/error.gif">对不起，必须启用<a href="http://www.php.net/manual/zh/book.imagick.php" target="_blank"><b>php-imagick</b></a>扩展方可使用本功能!</div>
@@ -130,7 +163,7 @@
 				<tr>
 					<th></th>
 					<td>
-						<button class="submit" type='submit'><span>保存附件设置</span></button>
+						<button class="btn btn-sm btn-primary" type='submit'><span>保存附件设置</span></button>
 					</td>
 				</tr>
 			</table>
@@ -138,17 +171,17 @@
 
         <?php echo form_open('setting/site?tab=site_terms'); ?>
 			<!--注册协议!-->
-			<table class="form_table dili_tabs" id="site_terms" style="<?php echo $current_tab == 'site_terms' ? '' : 'display:none'; ?>">
+			<table class="form_table dili_tabs table" id="site_terms" style="<?php echo $current_tab == 'site_terms' ? '' : 'display:none'; ?>">
 				<col width="150px" />
 				<col />
 				<tr>
 					<th>注册协议：</th>
-					<td><textarea name='site_terms'  id="site_terms" style="height:300px;width:100%" data-editor="kindeditor" data-editor-mode="simple" data-upload="false"></textarea></td>
+					<td><textarea name='site_terms'  id="site_terms" style="height:300px;width:100%" class="form-control" data-editor="kindeditor" data-editor-mode="simple" data-upload="false"></textarea></td>
 				</tr>
 				<tr>
 					<th></th>
 					<td>
-						<button class="submit" type='submit'><span>保存注册协议</span></button>
+						<button class="btn btn-sm btn-primary" type='submit'><span>保存注册协议</span></button>
 					</td>
 				</tr>
 			</table>
@@ -156,17 +189,17 @@
 
         <?php echo form_open('setting/site?tab=site_theme'); ?>
 			<!--主题设置!-->
-			<table class="form_table dili_tabs" id="site_theme" style="<?php echo $current_tab == 'site_theme' ? '' : 'display:none'; ?>">
+			<table class="form_table dili_tabs table" id="site_theme" style="<?php echo $current_tab == 'site_theme' ? '' : 'display:none'; ?>">
 				<col width="150px" />
 				<col />
 				<tr>
 					<th> 主题名称：</th>
-					<td><input type='text' class='normal' name='site_theme'  id="site_theme" value="default" /></td>
+					<td><input type='text' class='form-control' name='site_theme'  id="site_theme" value="default" /></td>
 				</tr>
 				<tr>
 					<th></th>
 					<td>
-						<button class="submit" type='submit' ><span>保存主题设置</span></button>
+						<button class="btn btn-sm btn-primary" type='submit' ><span>保存主题设置</span></button>
 					</td>
 				</tr>
 			</table>
@@ -176,7 +209,7 @@
 </div>
 <script type="text/template" id="thumb-template">
     <%= size%> - <%= window.thumbRules[rule] %>
-    <a class="submit" style="padding:2px 4px" type='button'><span>x</span></a>
+    <a class="btn btn-sm btn-primary" style="padding:2px 4px" type='button'><span>x</span></a>
 </script>
 <script src="js/underscore-min.js"></script>
 <script src="js/backbone-min.js"></script>

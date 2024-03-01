@@ -1,11 +1,19 @@
 <?php if ( ! defined('IN_DILICMS')) exit('No direct script access allowed');?>
 <div class="headbar">
-	<div class="position"><span>系统</span><span>></span><span>用户组管理</span><span>></span><span>修改用户组</span></div>
+	<div class="alert alert-primary"><span>系统</span><span>></span><span>用户组管理</span><span>></span><span>修改用户组</span></div>
 </div>
+<style>
+th {
+	width: 200px;
+}
+ul {
+	padding-left: 0rem;
+}
+</style>
 <div class="content_box">
 	<div class="content form_content">
         <?php echo form_open('role/edit/'.$role->id); ?>
-			<table class="form_table">
+			<table class="table">
 				<col width="150px" />
 				<col />
 				<tr>
@@ -19,7 +27,7 @@
 							<?php
 							 $role->rights = explode(',',$role->rights);
 							 foreach($rights as $key=>$v): ?>
-                            <li><label class="attr"><input type="checkbox" <?php echo in_array($key,$role->rights) ? 'checked="checked"' : ''; ?> value="<?php echo $key; ?>" name="right[]"><?php echo $v; ?></label></li>
+                            <li style="display: inline;list-style: none;"><label class="attr"><input type="checkbox" <?php echo in_array($key,$role->rights) ? 'checked="checked"' : ''; ?> value="<?php echo $key; ?>" name="right[]"><?php echo $v; ?></label></li>
 							<?php endforeach; ?>
                         </ul>
                     </td>
@@ -31,7 +39,7 @@
 							<?php 
 							 $role->models = explode(',',$role->models);
 							foreach($models as $key=>$v): ?>
-                            <li><label class="attr"><input type="checkbox" <?php echo in_array($key,$role->models) ? 'checked="checked"' : ''; ?> value="<?php echo $key; ?>" name="model[]"><?php echo $v; ?></label></li>
+                            <li style="display: inline;list-style: none;"><label class="attr"><input type="checkbox" <?php echo in_array($key,$role->models) ? 'checked="checked"' : ''; ?> value="<?php echo $key; ?>" name="model[]"><?php echo $v; ?></label></li>
 							<?php endforeach; ?>
                         </ul>
                     </td>
@@ -63,7 +71,7 @@
 				<tr>
 					<th></th>
 					<td>
-						<button class="submit" type='submit'><span>修改用户组</span></button>
+						<button class="btn btn-sm btn-primary" type='submit'><span>修改用户组</span></button>
 					</td>
 				</tr>
 			</table>

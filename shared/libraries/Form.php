@@ -124,7 +124,7 @@ class Form
 	public function show_class_edit( & $category, $name, $default )
 	{
 		$this->_find_real_value($name, $default);
-		$html = '<select name="' . $name . '" id="' . $name .'" style="width:158px;height:22px;border:1px #d7d7d7 solid;">'.
+		$html = '<select name="' . $name . '" id="' . $name .'" class="form-select" style="width:150px;">'.
                   '<option value="">请选择</option>';
 	    foreach ($category as $v)
 		{
@@ -195,7 +195,7 @@ class Form
      */
 	private function _int($field, $default)
 	{
-		return '<input class="normal" name="' . $field['name'] . '" id="' . $field['name'] . 
+		return '<input class="form-control" name="' . $field['name'] . '" id="' . $field['name'] . 
 			   '" type="text" style="width:50px" autocomplete="off" value="' . $default . '" />';
 	}
 	
@@ -211,7 +211,7 @@ class Form
      */
 	private function _float($field, $default)
 	{
-		return '<input class="normal" name="' . $field['name'] . '" id="' .$field['name'] . 
+		return '<input class="form-control" name="' . $field['name'] . '" id="' .$field['name'] . 
 		       '" type="text" style="width:50px" autocomplete="off" value="' . $default . '" />';	
 	}
 
@@ -228,7 +228,7 @@ class Form
 	private function _password($field, $default)
 	{
 		$field['width'] =  $field['width'] ? $field['width'] : 150;
-		return '<input class="normal" name="' . $field['name'] . '" id="' . $field['name'] . 
+		return '<input class="form-control" name="' . $field['name'] . '" id="' . $field['name'] . 
 		       '" type="password" style="width:' . $field['width'] . 'px" autocomplete="off" />';
 	}
 	
@@ -245,7 +245,7 @@ class Form
 	private function _input($field, $default)
 	{
 		$field['width'] =  $field['width'] ? $field['width'] : 150;
-		return '<input class="normal" name="' . $field['name'] . '" id="' . $field['name'] . 
+		return '<input class="form-control" name="' . $field['name'] . '" id="' . $field['name'] . 
 		       '" type="text" style="width:' . $field['width'] . 'px" autocomplete="off" value="' . $default . '" />';
 	}
 	
@@ -285,7 +285,7 @@ class Form
      */
 	private function _select($field, $default)
 	{
-		$return = '<select name="' . $field['name'] . '" id="' . $field['name'] . '">'.
+		$return = '<select name="' . $field['name'] . '" id="' . $field['name'] . '" class="form-select" style="width:150px;">'.
                   '<option value="">请选择</option>';
 	    foreach ($field['values'] as $key=>$v)
 		{
@@ -319,8 +319,8 @@ class Form
 		$count = 1;
 	    foreach ($field['values'] as $key=>$v)
 		{
-			$return .= '<li><input id="rad_' . $field['name'] . '_' . $count . '" name="' . $field['name'] . '" type="radio" value="' . 
-			           $key . '" ' . ($default == $key ? 'checked="checked"' : '') . ' /><lable class="attr" for="rad_' . $field['name'] . '_' . $count . '">' . $v . '</lable></li>';
+			$return .= '<li style="display:inline;margin-right:20px;"><input id="rad_' . $field['name'] . '_' . $count . '" name="' . $field['name'] . '" type="radio" value="' . 
+			           $key . '" ' . ($default == $key ? 'checked="checked"' : '') . ' class="form-check-input"/> <lable class="attr" for="rad_' . $field['name'] . '_' . $count . '">' . $v . '</lable></li>';
 			$count ++;
 		}
 		$return .= '</ul>';
@@ -479,7 +479,7 @@ class Form
 		{
 			return '不存在的字段名称!';
 		}
-		$html = '<input class="small" name="' . $field['name'] . '" id="' . $field['name'] . 
+		$html = '<input class="form-control" name="' . $field['name'] . '" id="' . $field['name'] . 
 			   '" type="text" autocomplete="off" value="' . $default . '" />';
 		// 如果有默认值，则需要走数据库读取默认值
 	    $default_label = '';

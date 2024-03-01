@@ -181,8 +181,225 @@ $setting['menus']=array (
           array (
             'class_name' => 'content',
             'method_name' => 'view',
-            'extra' => 'user',
-            'menu_name' => '用户信息',
+            'extra' => 'notice_read_record',
+            'menu_name' => '通知阅读记录',
+          ),
+          1 => 
+          array (
+            'class_name' => 'content',
+            'method_name' => 'view',
+            'extra' => 'class',
+            'menu_name' => '班级列表',
+          ),
+          2 => 
+          array (
+            'class_name' => 'content',
+            'method_name' => 'view',
+            'extra' => 'course',
+            'menu_name' => '课程产品列表',
+          ),
+          3 => 
+          array (
+            'class_name' => 'content',
+            'method_name' => 'view',
+            'extra' => 'school',
+            'menu_name' => '学校列表',
+          ),
+          4 => 
+          array (
+            'class_name' => 'content',
+            'method_name' => 'view',
+            'extra' => 'headmaster',
+            'menu_name' => '后台账户信息',
+          ),
+          5 => 
+          array (
+            'class_name' => 'content',
+            'method_name' => 'view',
+            'extra' => 'student',
+            'menu_name' => '学员信息',
+          ),
+          6 => 
+          array (
+            'class_name' => 'content',
+            'method_name' => 'view',
+            'extra' => 'notice',
+            'menu_name' => '通知消息',
+          ),
+          7 => 
+          array (
+            'class_name' => 'content',
+            'method_name' => 'view',
+            'extra' => 'school_district',
+            'menu_name' => '校区列表',
+          ),
+          8 => 
+          array (
+            'class_name' => 'content',
+            'method_name' => 'view',
+            'extra' => 'class_performance',
+            'menu_name' => '学员课堂表现',
+          ),
+          9 => 
+          array (
+            'class_name' => 'content',
+            'method_name' => 'view',
+            'extra' => 'notice_img',
+            'menu_name' => '通知图片',
+          ),
+          10 => 
+          array (
+            'class_name' => 'content',
+            'method_name' => 'view',
+            'extra' => 'templateLog',
+            'menu_name' => '模板消息日志',
+          ),
+          11 => 
+          array (
+            'class_name' => 'content',
+            'method_name' => 'view',
+            'extra' => 'course_rename',
+            'menu_name' => '课程备注',
+          ),
+          12 => 
+          array (
+            'class_name' => 'content',
+            'method_name' => 'view',
+            'extra' => 'class_times',
+            'menu_name' => '班级课次库',
+          ),
+          13 => 
+          array (
+            'class_name' => 'content',
+            'method_name' => 'view',
+            'extra' => 'class_time',
+            'menu_name' => '班级课次',
+          ),
+          14 => 
+          array (
+            'class_name' => 'content',
+            'method_name' => 'view',
+            'extra' => 'student_evaluate',
+            'menu_name' => '学员评价',
+          ),
+          15 => 
+          array (
+            'class_name' => 'content',
+            'method_name' => 'view',
+            'extra' => 'wonderful_moment',
+            'menu_name' => '学员精彩瞬间',
+          ),
+          16 => 
+          array (
+            'class_name' => 'content',
+            'method_name' => 'view',
+            'extra' => 'parent_comments',
+            'menu_name' => '家长点评',
+          ),
+          17 => 
+          array (
+            'class_name' => 'content',
+            'method_name' => 'view',
+            'extra' => 'parents_reply',
+            'menu_name' => '通知家长回复',
+          ),
+          18 => 
+          array (
+            'class_name' => 'content',
+            'method_name' => 'view',
+            'extra' => 'notice_title',
+            'menu_name' => '通知标题列表',
+          ),
+          19 => 
+          array (
+            'class_name' => 'content',
+            'method_name' => 'view',
+            'extra' => 'curriculum',
+            'menu_name' => '课程列表',
+          ),
+          20 => 
+          array (
+            'class_name' => 'content',
+            'method_name' => 'view',
+            'extra' => 'lesson_sign',
+            'menu_name' => '课次出勤',
+          ),
+          21 => 
+          array (
+            'class_name' => 'content',
+            'method_name' => 'view',
+            'extra' => 'edit_lesson_record',
+            'menu_name' => '编辑课次记录',
+          ),
+          22 => 
+          array (
+            'class_name' => 'content',
+            'method_name' => 'view',
+            'extra' => 'lesson_access_record',
+            'menu_name' => '课次访问记录',
+          ),
+          23 => 
+          array (
+            'class_name' => 'content',
+            'method_name' => 'view',
+            'extra' => 'term_mid_end',
+            'menu_name' => '期中/末/学情报告',
+          ),
+          24 => 
+          array (
+            'class_name' => 'content',
+            'method_name' => 'view',
+            'extra' => 'report_comment',
+            'menu_name' => '学员报告评价',
+          ),
+          25 => 
+          array (
+            'class_name' => 'content',
+            'method_name' => 'view',
+            'extra' => 'enclosure',
+            'menu_name' => '学员附件',
+          ),
+          26 => 
+          array (
+            'class_name' => 'content',
+            'method_name' => 'view',
+            'extra' => 'qrcode_statistics',
+            'menu_name' => '小助手统计',
+          ),
+          27 => 
+          array (
+            'class_name' => 'content',
+            'method_name' => 'view',
+            'extra' => 'new_year_report',
+            'menu_name' => '新年成绩单',
+          ),
+          28 => 
+          array (
+            'class_name' => 'content',
+            'method_name' => 'view',
+            'extra' => 'timetable',
+            'menu_name' => '课表信息',
+          ),
+          29 => 
+          array (
+            'class_name' => 'content',
+            'method_name' => 'view',
+            'extra' => 'class_remind',
+            'menu_name' => '课前提醒',
+          ),
+          30 => 
+          array (
+            'class_name' => 'content',
+            'method_name' => 'view',
+            'extra' => 'class_preview',
+            'menu_name' => '课前预习',
+          ),
+          31 => 
+          array (
+            'class_name' => 'content',
+            'method_name' => 'view',
+            'extra' => 'h5_default_template',
+            'menu_name' => '课次默认模板',
           ),
         ),
       ),

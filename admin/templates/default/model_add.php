@@ -1,6 +1,6 @@
 <?php if ( ! defined('IN_DILICMS')) exit('No direct script access allowed');?>
 <div class="headbar">
-	<div class="position"><?=$bread?></div>
+	<div class="alert alert-primary"><?=$bread?></div>
 </div>
 <div class="content_box">
 	<div class="content form_content">
@@ -49,7 +49,7 @@
                                 <?php foreach ($preferences as $pref): ?>
                                     <tr>
                                         <td>
-                                            <input type="checkbox" name="thumbnail[<?php echo $pref->size; ?>]" value="1">
+                                            <input type="checkbox" name="thumbnail[<?php echo $pref->size; ?>]" value="1" class="form-control">
                                         </td>
                                         <td><?php echo $pref->size; ?></td>
                                         <td><input type="radio" value="<?php echo $pref->size; ?>" name="thumb_default"></td>
@@ -68,7 +68,7 @@
 				<tr>
 					<th></th>
 					<td>
-						<button class="submit" type='submit'><span>添加内容模型</span></button>
+						<button class="btn btn-sm btn-primary" type='submit'><span>添加内容模型</span></button>
 					</td>
 				</tr>
 			</table>

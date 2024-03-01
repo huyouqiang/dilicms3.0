@@ -1,12 +1,12 @@
 <?php if ( ! defined('IN_DILICMS')) exit('No direct script access allowed');?>
 <div class="headbar">
-	<div class="position"><span>数据库管理</span><span>></span><span>数据库优化</span></div>
+	<div class="alert alert-primary"><span>数据库管理</span><span>></span><span>数据库优化</span></div>
     <div class="operating">
-        <a href="javascript:$('form').submit();"><button class="operating_btn" type="button"><span class="sel_all">立即优化</span></button></a>
+        <a href="javascript:$('form').submit();"><button class="btn btn-sm btn-primary" type="button"><span class="sel_all">立即优化</span></button></a>
     </div>
     <div class="red_box" style="margin-bottom: 10px"><b>说明：</b>数据表(MyISAM存储引擎)优化可以去除数据文件中的碎片，使记录排列紧密，提高读写速度。</div>
-    <div class="field">
-        <table class="list_table">
+    <!-- <div class="field">
+        <table class="table">
             <thead>
                 <tr>
                     <th>数据表</th>
@@ -18,11 +18,21 @@
                 </tr>
             </thead>
         </table>
-    </div>
+    </div> -->
 </div>
-<div class="content">
+<div class="content" style="margin-top: 10px;">
     <?php echo form_open('database/optimize'); ?>
-    <table id="list_table" class="list_table">
+    <table id="list_table" class="table">
+            <thead>
+                <tr>
+                    <th>数据表</th>
+                    <th>类型</th>
+                    <th>记录数</th>
+                    <th>数据</th>
+                    <th>索引</th>
+                    <th>碎片</th>
+                </tr>
+            </thead>
         <?php foreach($tables as $table):?>
             <tr>
                 <?php foreach($table as $v):?>

@@ -77,7 +77,7 @@ function linked_menu_real_val(container) {
 function autocomplete_wrapper(target, server_script, label) {
     $existed = 3000000 + $('input[id*="_wrapper_input"]').length * -1;
     $('#' + target).css('display', 'none')
-        .after('<div class="autocomplete_wrapper" style="z-index:' + $existed + '"><input autocomplete="off" class="normal" id="' + target + '_wrapper_input" type="input" value="' + (label ? label : '' ) + '" /><div></div></div>');
+        .after('<div class="autocomplete_wrapper" style="z-index:' + $existed + '"><input autocomplete="off" class="form-control" id="' + target + '_wrapper_input" type="input" value="' + (label ? label : '' ) + '" /><div></div></div>');
     var _event = $.browser.msie ? 'propertychange' : 'input';
     $('#' + target + '_wrapper_input').bind(_event,
         function () {

@@ -1,6 +1,6 @@
 <?php if ( ! defined('IN_DILICMS')) exit('No direct script access allowed');?>
 <div class="headbar">
-	<div class="position"><span>系统</span><span>></span><span>用户管理</span><span>></span><span>编辑用户</span></div>
+	<div class="alert alert-primary"><span>系统</span><span>></span><span>用户管理</span><span>></span><span>编辑用户</span></div>
 </div>
 <div class="content_box">
 	<div class="content form_content">
@@ -14,11 +14,11 @@
 				</tr>
                 <tr>
 					<th> 用户密码：</th>
-					<td><input class="normal" type="password" maxlength="16" name="password" /><label>*6-16位用户密码,不修改请留空.</label><?php echo form_error('password'); ?></td>
+					<td><input class="form-control" type="password" maxlength="16" name="password" /><label>*6-16位用户密码,不修改请留空.</label><?php echo form_error('password'); ?></td>
 				</tr>
                 <tr>
 					<th> 重复用户密码：</th>
-					<td><input class="normal" type="password" maxlength="16" name="confirm_password" /><label>*6-16位用户密码,不修改请留空.</label><?php echo form_error('confirm_password'); ?></td>
+					<td><input class="form-control" type="password" maxlength="16" name="confirm_password" /><label>*6-16位用户密码,不修改请留空.</label><?php echo form_error('confirm_password'); ?></td>
 				</tr>
                 <tr>
 					<th> 用户EMAIL：</th>
@@ -35,7 +35,7 @@
 				<tr>
 					<th></th>
 					<td>
-						<button class="submit" type='submit'><span>编辑用户</span></button>
+						<button class="btn btn-sm btn-primary" type='submit'><span>编辑用户</span></button>
 					</td>
 				</tr>
 			</table>

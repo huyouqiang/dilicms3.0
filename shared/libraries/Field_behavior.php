@@ -299,7 +299,7 @@ class Field_behavior
 							}
 							break;
 				default :
-							echo urldecode($value->$fieldName);
+							echo mb_substr(urldecode($value->$fieldName),0,10);
 
 			}
 		}

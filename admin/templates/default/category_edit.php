@@ -1,11 +1,11 @@
 <?php if ( ! defined('IN_DILICMS')) exit('No direct script access allowed');?>
 <div class="headbar">
-	<div class="position"><?=$bread;?></div>
+	<div class="alert alert-primary"><?=$bread;?></div>
 </div>
 <div class="content_box">
 	<div class="content form_content">
         <?php echo form_open('category/edit/'.$model->id); ?>
-			<table class="form_table dili_tabs" id="site_basic" >
+			<table class="table" id="site_basic" >
 				<col width="150px" />
 				<col />
 				<tr>
@@ -45,7 +45,7 @@
                                 <?php foreach ($preferences as $pref): ?>
                                     <tr>
                                         <td>
-                                            <input type="checkbox" name="thumbnail[<?php echo $pref->size; ?>]" value="1" <?php echo ($model->thumb_preferences and in_array($pref->size, $model->thumb_preferences->enabled)) ? 'checked' : '' ?>>
+                                            <input type="checkbox"  class="form-check-input" name="thumbnail[<?php echo $pref->size; ?>]" value="1" <?php echo ($model->thumb_preferences and in_array($pref->size, $model->thumb_preferences->enabled)) ? 'checked' : '' ?>>
                                         </td>
                                         <td><?php echo $pref->size; ?></td>
                                         <td><input type="radio" value="<?php echo $pref->size; ?>" name="thumb_default" <?php echo ($model->thumb_preferences and $pref->size == $model->thumb_preferences->default) ? 'checked' : '' ?>></td>
@@ -71,7 +71,7 @@
 				<tr>
 					<th></th>
 					<td>
-						<button class="submit" type='submit'><span>修改分类模型</span></button>
+						<button class="btn btn-sm btn-primary" type='submit'><span>修改分类模型</span></button>
 					</td>
 				</tr>
 			</table>

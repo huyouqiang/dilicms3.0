@@ -1,11 +1,11 @@
 <?php if ( ! defined('IN_DILICMS')) exit('No direct script access allowed');?>
 <div class="headbar">
-	<div class="position"><?=$bread?></div>
+	<div class="alert alert-primary"><?=$bread?></div>
 	<div class="operating">
-		<a class="hack_ie" href="<?php echo backend_url($this->uri->rsegment(1).'/add_field/'.$model->id); ?>"><button class="operating_btn" type="button"><span class="addition">添加新字段</span></button></a>
+		<a class="hack_ie" href="<?php echo backend_url($this->uri->rsegment(1).'/add_field/'.$model->id); ?>"><button class="btn btn-sm btn-primary" type="button"><span class="addition">添加新字段</span></button></a>
 	</div>
 	<div class="field">
-		<table class="list_table">
+		<table class="table">
 			<col width="40px" />
 			<col />
 			<thead>
@@ -23,7 +23,7 @@
 </div>
 
 <div class="content">
-		<table id="list_table" class="list_table">
+		<table id="list_table" class="table">
 			<col width="40px" />
 			<col />
 			<tbody>

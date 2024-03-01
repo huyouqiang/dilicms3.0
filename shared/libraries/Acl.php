@@ -144,19 +144,26 @@ class Acl
 		{
 			if ($v['sub_menus'])
 			{
-				echo '<li><span>' . $v['menu_name'] . '</span>
-					     <ul name="menu">';
+				echo '<li class="mb-1">
+				<button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#home-collapse" aria-expanded="true">' . $v['menu_name'] . '</button>
+				<div class="collapse show" id="home-collapse">
+				  <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">';
 						 foreach ($v['sub_menus'] as $j)
 						 {
 						   $extra = '';
 						   $this->_current_menu ==  1 AND $extra =  'model=' . $j['extra'] ;
-						   if ($this->_current_menu ==  2) {
-						        echo '<li class="' . (isset($j['current']) ? 'selected' : '') .'"><a href="' . 
-						   	        plugin_url($key, $j['class_name'], $j['method_name']) . '">' . $j['menu_name'] . '</a></li>';
+
+						//    print_r($_SERVER);
+						//    print_r($j);
+
+						//    die();
+						   if (strpos($_SERVER['REQUEST_URI'],$j['class_name'].'/'.$j['method_name']) !==  false) {
+						        echo '<li class=" ' . (isset($j['current']) ? 'selected' : '') .'"><a href="' . 
+						   	        plugin_url($key, $j['class_name'], $j['method_name']) . '" class="link-dark rounded" style="background-color:#9ec5fe;">' . $j['menu_name'] . '</a></li>';
 						   	    continue;
 						   } 
-						   echo '<li class="' . (isset($j['current']) ? 'selected' : '') .'"><a href="' . 
-						   	 backend_url($j['class_name'] . '/' . $j['method_name'], $extra) . '">' . $j['menu_name'] . '</a></li>';
+						   echo '<li class="  ' . (isset($j['current']) ? 'selected' : '') .'"><a href="' . 
+						   	 backend_url($j['class_name'] . '/' . $j['method_name'], $extra) . '" class="link-dark rounded">' . $j['menu_name'] . '</a></li>';
 						 }
 				echo	 '</ul>
 				      </li>';	

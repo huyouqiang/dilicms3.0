@@ -1,6 +1,6 @@
 <?php if ( ! defined('IN_DILICMS')) exit('No direct script access allowed');?>
 <div class="headbar">
-	<div class="position"><?=$bread?></div>
+	<div class="alert alert-primary"><?=$bread?></div>
 </div>
 <div class="content_box">
 	<div class="content form_content">
@@ -59,7 +59,7 @@
 				<tr>
 					<th></th>
 					<td>
-						<button class="submit" type='submit'><span>修改字段</span></button>
+						<button class="btn btn-sm btn-primary" type='submit'><span>修改字段</span></button>
 					</td>
 				</tr>
 			</table>

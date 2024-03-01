@@ -1,16 +1,16 @@
 <?php if ( ! defined('IN_DILICMS')) exit('No direct script access allowed');?>
 <div class="headbar">
-	<div class="position"><span>插件</span><span>></span><span>插件管理</span><span>></span><span>插件列表</span></div>
+	<div class="alert alert-primary"><span>插件</span><span>></span><span>插件管理</span><span>></span><span>插件列表</span></div>
 	<div class="operating">
-    	<a class="hack_ie" href="javascript:void(0)" onclick="selectAll('id[]');"><button class="operating_btn" type="button"><span class="sel_all">全选</span></button></a>
-		<a class="hack_ie" href="<?php echo backend_url('plugin/add'); ?>"><button class="operating_btn" type="button"><span class="addition">设计新插件</span></button></a>
-        <a class="hack_ie" onclick="operate_plugins('<?php echo backend_url('plugin/active'); ?>');" href="javascript:void(0);"><button class="operating_btn" type="button"><span class="recover">启用所选插件</span></button></a>
-        <a class="hack_ie" href="javascript:void(0);" onclick="operate_plugins('<?php echo backend_url('plugin/deactive'); ?>');"><button class="operating_btn" type="button"><span class="delete">禁用所选插件</span></button></a>
-        <a class="hack_ie" onclick="operate_plugins('<?php echo backend_url('plugin/export'); ?>');" href="javascript:void(0);"><button class="operating_btn" type="button"><span class="download">导出插件</span></button></a>
-        <a class="hack_ie" href="<?php echo backend_url('plugin/import'); ?>"><button class="operating_btn" type="button"><span class="import">导入插件</span></button></a>
+    	<a class="hack_ie" href="javascript:void(0)" onclick="selectAll('id[]');"><button class="btn btn-sm btn-primary" type="button"><span class="sel_all">全选</span></button></a>
+		<a class="hack_ie" href="<?php echo backend_url('plugin/add'); ?>"><button class="btn btn-sm btn-primary" type="button"><span class="addition">设计新插件</span></button></a>
+        <a class="hack_ie" onclick="operate_plugins('<?php echo backend_url('plugin/active'); ?>');" href="javascript:void(0);"><button class="btn btn-sm btn-primary" type="button"><span class="recover">启用所选插件</span></button></a>
+        <a class="hack_ie" href="javascript:void(0);" onclick="operate_plugins('<?php echo backend_url('plugin/deactive'); ?>');"><button class="btn btn-sm btn-primary" type="button"><span class="delete">禁用所选插件</span></button></a>
+        <a class="hack_ie" onclick="operate_plugins('<?php echo backend_url('plugin/export'); ?>');" href="javascript:void(0);"><button class="btn btn-sm btn-primary" type="button"><span class="download">导出插件</span></button></a>
+        <a class="hack_ie" href="<?php echo backend_url('plugin/import'); ?>"><button class="btn btn-sm btn-primary" type="button"><span class="import">导入插件</span></button></a>
 	</div>
-	<div class="field">
-		<table class="list_table">
+	<!-- <div class="field">
+		<table class="table">
 			<col width="40px" />
 			<col />
 			<thead>
@@ -24,14 +24,24 @@
 				</tr>
 			</thead>
 		</table>
-	</div>
+	</div> -->
 </div>
 
-<div class="content">
+<div class="content" style="margin-top:10px;">
         <?php echo form_open('', array('id' => 'plugin_list_form')); ?>
-		<table id="list_table" class="list_table">
+		<table id="list_table" class="table">
 			<col width="40px" />
 			<col />
+			<thead>
+				<tr>
+                	<th></th>
+					<th>插件标识</th>
+					<th>插件名称</th>
+                    <th>插件作者</th>
+                    <th>是否启用</th>
+                    <th>操作选项</th>
+				</tr>
+			</thead>
 			<tbody>
             <?php foreach($list as $v) : ?>
             	<tr>

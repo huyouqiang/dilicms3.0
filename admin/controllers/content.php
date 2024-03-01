@@ -428,19 +428,22 @@ class Content extends Admin_Controller
 
 		if(is_array($group)){
 			foreach ($group as $key => $value) {
-				$menuHtml.="<li><span>".$value['description']."</span>";
+				$menuHtml.='<li class="mb-1">
+				<button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#home-collapse" aria-expanded="true">' . $value['description'] . '</button>
+				<div class="collapse show" id="home-collapse">
+				  <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">';
 				$tab =$this->db->query("select * from ge_models where belong_group='{$value['id']}' order by model_sort asc")
 							   ->result_array();
 				if(is_array($tab)){
-					$menuHtml.="<ul name='menu'>";
+					// $menuHtml.="<ul name='menu'>";
 					foreach ($tab as $key1 => $value1) {
 						if($value1['name']==$get['tab']){
-							$activeClass="'selected'";
+							$activeClass="background-color:#9ec5fe;";
 						}
 						else{
 							$activeClass="";
 						}
-						$menuHtml.="<li class=".$activeClass."><a href='".$_SERVER['SCRIPT_NAME']."/content/view?model=".$value1['name']."'>".$value1['description']."</a></li>";
+						$menuHtml.='<li class=""><a class="link-dark rounded" href="'.$_SERVER['SCRIPT_NAME'].'/content/view?model='.$value1['name'].'"'.'style="'.$activeClass.'">'.$value1['description'].'</a></li>';
 					}
 					$menuHtml.="</ul>";
 				}

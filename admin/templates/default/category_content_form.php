@@ -8,7 +8,7 @@
 <link rel="stylesheet" media="screen" type="text/css" href="js/colorPicker/css/colorpicker.css" />
 <script src="js/dili_utility/content_form.js" type="text/javascript"></script>
 <div class="headbar">
-	<div class="position"><?=$bread?></div>
+	<div class="alert alert-primary"><?=$bread?></div>
 	<?php if($model['hasattach']): ?>
         <div class="operating" style="overflow:visible">
             <div class="search f_r" style="position:relative">
@@ -43,7 +43,7 @@
                         <?php $this->form->show_hidden('uploadedfile','0',true); ?>
                         <?php endif; ?>
 						<?php $this->form->show_hidden('parentid', $parentid ,true); ?>
-                    	<button class="submit" type='submit'><span><?php echo $button_name; ?></span></button>
+                    	<button class="btn btn-sm btn-primary" type='submit'><span><?php echo $button_name; ?></span></button>
 					</td>
 				</tr>
 			</table>

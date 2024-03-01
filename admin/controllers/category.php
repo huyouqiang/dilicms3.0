@@ -212,6 +212,9 @@ class Category extends Admin_Controller
 				'分类模型管理' => site_url('category/view'),
 				'编辑 :: ' . $target_model->description => '',
 			));
+			// print_r($data);
+
+			// die('hu');
 			$this->_template('category_edit', $data);
 		}
 	}

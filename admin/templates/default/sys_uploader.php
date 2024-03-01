@@ -19,7 +19,7 @@
         <?php if(isset($attachment)): ?>
             <?php foreach($attachment as $v): ?>
                 <li id="attachment_<?php echo $v['aid']; ?>">
-                    <span class="title"><input type="text" class="normal" value="<?php echo $v_url = $this->platform->file_url($v['folder'].'/'.$v['name'].'.'.$v['type']); ?>" /></span>
+                    <span class="title"><input type="text" class="form-control" value="<?php echo $v_url = $this->platform->file_url($v['folder'].'/'.$v['name'].'.'.$v['type']); ?>" /></span>
                     <?php if($v['image'] == 1): ?>
                         <a href="<?php echo $v_url; ?>" target="_blank">预览</a>
                     <?php endif;?>

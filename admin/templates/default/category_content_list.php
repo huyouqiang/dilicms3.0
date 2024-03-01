@@ -1,17 +1,17 @@
 <?php if ( ! defined('IN_DILICMS')) exit('No direct script access allowed');?>
 <div class="headbar">
-	<div class="position"><?=$bread?></div>
+	<div class="alert alert-primary"><?=$bread?></div>
 	<div class="operating">
-    	<a href="javascript:void(0)" onclick="selectAll('classid[]');"><button class="operating_btn" type="button"><span class="sel_all">全选</span></button></a>
-		<a class="hack_ie" href="<?php echo backend_url('category_content/form','model='.$model['name'].'&u_c_level='.$provider['where']['u_c_level']); ?>"><button class="operating_btn" type="button"><span class="addition">添加</span></button></a>
-        <a href="javascript:void(0)" onclick="multi_delete();"><button class="operating_btn" type="button"><span class="delete">批量删除</span></button></a>
+    	<a href="javascript:void(0)" onclick="selectAll('classid[]');"><button class="btn btn-sm btn-primary" type="button"><span class="sel_all">全选</span></button></a>
+		<a class="hack_ie" href="<?php echo backend_url('category_content/form','model='.$model['name'].'&u_c_level='.$provider['where']['u_c_level']); ?>"><button class="btn btn-sm btn-primary" type="button"><span class="addition">添加</span></button></a>
+        <a href="javascript:void(0)" onclick="multi_delete();"><button class="btn btn-sm btn-primary" type="button"><span class="delete">批量删除</span></button></a>
         <?php if($provider['next_level'] > 1): ?>
-        <a class="hack_ie" href="<?php echo backend_url('category_content/view','model='.$model['name'].'&u_c_level='.($provider['parent'] ? $provider['parent']->parentid  : '0')); ?>"><button class="operating_btn" type="button"><span class="grade">返回上一级</span></button></a>
+        <a class="hack_ie" href="<?php echo backend_url('category_content/view','model='.$model['name'].'&u_c_level='.($provider['parent'] ? $provider['parent']->parentid  : '0')); ?>"><button class="btn btn-sm btn-primary" type="button"><span class="grade">返回上一级</span></button></a>
         <?php endif; ?>
         <?php $this->plugin_manager->trigger('buttons'); ?>
 	</div>
 	<div class="field">
-		<table class="list_table">
+		<table class="table">
 			<col width="40px" />
 			<col />
 			<thead>
@@ -29,13 +29,13 @@
 
 <div class="content">
     <?php echo form_open('category_content/del?model='.$model['name'], array('id' => 'category_content_list_form')); ?>
-		<table id="list_table" class="list_table">
+		<table id="list_table" class="table">
 			<col width="40px" />
 			<col />
 			<tbody>
             <?php foreach($provider['list'] as $v) : ?>
             	<tr>
-                	<td><input type="checkbox" name="classid[]" value="<?php echo $v->classid; ?>" /></td>
+                	<td><input type="checkbox" name="classid[]" value="<?php echo $v->classid; ?>" class="form-check-input"/></td>
                 	<?php foreach($model['listable'] as $vt): ?>
                     <td>
                     <?php $this->field_behavior->on_list($model['fields'][$vt],$v); ?>

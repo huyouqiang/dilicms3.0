@@ -1,6 +1,6 @@
 <?php if ( ! defined('IN_DILICMS')) exit('No direct script access allowed');?>
 <div class="headbar">
-	<div class="position"><span>插件</span><span>></span><span>插件管理</span><span>></span><span>设计新插件</span></div>
+	<div class="alert alert-primary"><span>插件</span><span>></span><span>插件管理</span><span>></span><span>设计新插件</span></div>
 </div>
 <div class="content_box">
 	<div class="content form_content">
@@ -10,12 +10,12 @@
 				<col />
 				<tr>
 					<th> 安装文件URL：</th>
-					<td><input name="plugin" class="normal" /><label>*安装文件的XML文件地址!</label></td>
+					<td><input name="plugin" class="form-control" /><label>*安装文件的XML文件地址!</label></td>
 				</tr>
 				<tr>
 					<th></th>
 					<td>
-						<button class="submit" type='submit'><span>导入插件</span></button>
+						<button class="btn btn-sm btn-primary" type='submit'><span>导入插件</span></button>
 					</td>
 				</tr>
 			</table>

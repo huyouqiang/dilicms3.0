@@ -1,6 +1,6 @@
 <?php if ( ! defined('IN_DILICMS')) exit('No direct script access allowed');?>
 <div style="margin:100px auto; width:500px;">
-    <table width="400px" cellspacing="0" cellpadding="5" class="border_table_org" align="center" >
+    <div width="400px" cellspacing="0" cellpadding="5" class="alert alert-primary" align="center" >
         <thead>
         <tr><th>提示信息</th></tr>
         </thead>
@@ -31,7 +31,7 @@
             </td>
         </tr>
         </tbody>
-    </table>
+    </div>
 </div>
 
 
