@@ -94,8 +94,8 @@ class Acl
 		if ($this->ci->_admin->role != 1)
 		{
 			$this->ci->settings->load('acl/role_' . $this->ci->_admin->role . '.php');//加载权限数据
-			$this->top_menus = & setting('menus');
-			$this->rights = & setting('current_role');
+			$this->top_menus = setting('menus');
+			$this->rights = setting('current_role');
 		}
 		$this->_filter_menus();
 	}
