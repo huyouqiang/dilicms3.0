@@ -273,7 +273,7 @@ Header START -->
 			<!-- Main content END -->
 
 			<!-- Right sidebar START -->
-			<div class="col-lg-10">
+			<div class="col-lg-10" style="margin-bottom: 80px;">
 				<div class="row g-4">
 				<!-- Card News START -->
 				<div class="col-sm-6 col-lg-12">
@@ -337,7 +337,7 @@ Header START -->
 
 <!-- footer -->
 	<!-- footer START -->
-	<footer class="bg-mode py-3">
+	<footer class="bg-mode py-3 fixed-bottom">
 	<div class="container">
 		<div class="row">
 		<div class="col-md-6">
