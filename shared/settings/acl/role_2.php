@@ -5,13 +5,13 @@ $setting['current_role']=array (
   'rights' => 
   array (
     0 => 'system@cache',
-    1 => 'content@view',
-    2 => 'content@form@edit',
-    3 => 'content@save@edit',
+    1 => 'model@view',
+    2 => 'content@view',
+    3 => 'content@form@edit',
   ),
   'models' => 
   array (
-    0 => '0',
+    0 => 'student',
   ),
   'category_models' => 
   array (

@@ -2,10 +2,15 @@
 <div class="headbar">
 	<div class="alert alert-primary"><?=$bread?></div>
 </div>
+<style>
+ul {
+    padding-left:0px;
+}
+</style>
 <div class="content_box">
 	<div class="content form_content">
         <?php echo form_open($this->uri->rsegment(1).'/add_field/'.$model->id); ?>
-			<table class="form_table dili_tabs" id="site_basic" >
+			<table class="form_table dili_tabs table" id="site_basic" >
 				<col width="150px" />
 				<col />
 				<tr>

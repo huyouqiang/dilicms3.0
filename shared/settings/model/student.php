@@ -329,6 +329,46 @@ $setting['models']['student']=array (
       'order' => '10',
       'editable' => '1',
     ),
+    1103 => 
+    array (
+      'id' => '1103',
+      'name' => 'user_select',
+      'description' => '下拉框',
+      'model' => '164',
+      'type' => 'select',
+      'length' => '10',
+      'values' => 
+      array (
+        1 => '选项1',
+        2 => '选项2',
+      ),
+      'width' => '0',
+      'height' => '0',
+      'rules' => '',
+      'ruledescription' => '',
+      'searchable' => '1',
+      'listable' => '1',
+      'order' => '20',
+      'editable' => '1',
+    ),
+    1104 => 
+    array (
+      'id' => '1104',
+      'name' => 'user_editor',
+      'description' => '编辑器',
+      'model' => '164',
+      'type' => 'wysiwyg_basic',
+      'length' => '1000',
+      'values' => '',
+      'width' => '0',
+      'height' => '0',
+      'rules' => '',
+      'ruledescription' => '',
+      'searchable' => '1',
+      'listable' => '1',
+      'order' => '23',
+      'editable' => '1',
+    ),
   ),
   'listable' => 
   array (
@@ -347,6 +387,8 @@ $setting['models']['student']=array (
     12 => '974',
     13 => '1102',
     14 => '901',
+    15 => '1103',
+    16 => '1104',
   ),
   'searchable' => 
   array (
@@ -366,5 +408,7 @@ $setting['models']['student']=array (
     13 => '974',
     14 => '1102',
     15 => '901',
+    16 => '1103',
+    17 => '1104',
   ),
 );

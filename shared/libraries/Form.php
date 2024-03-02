@@ -95,7 +95,7 @@ class Form
 	public function show_class( & $category, $name, $default )
 	{
 		$this->_find_real_value($name, $default);
-		$html = '<select name="' . $name . '" id="' . $name .'" style="width:158px;height:22px;border:1px #d7d7d7 solid;">'.
+		$html = '<select name="' . $name . '" id="' . $name .'" class="form-select" style="width:158px;">'.
                   '<option value="" selected="selected">请选择</option>';
 	    foreach ($category as $v)
 		{
@@ -356,8 +356,8 @@ class Form
 		}
 		else
 		{
-			$return .= 	'<li><input id="chk_' . $field['name'] . '" name="' . $field['name'] . '" type="checkbox" value="1" ' . 
-			            ($default == 1 ? 'checked="checked"' : '') . ' /><lable class="attr" for="chk_' . $field['name'] . '">' . $field['values'] . '</lable></li>';
+			$return .= 	'<li style="display:inline;margin-right:20px;"><input id="chk_' . $field['name'] . '" name="' . $field['name'] . '" type="checkbox" value="1" ' . 
+			            ($default == 1 ? 'checked="checked"' : '') . ' class="form-check-input"/><lable class="attr" for="chk_' . $field['name'] . '">' . $field['values'] . '</lable></li>';
 		}
 		$return .= '</ul>';
 		return $return;	

@@ -2,10 +2,15 @@
 <div class="headbar">
 	<div class="alert alert-primary"><?=$bread?></div>
 </div>
+<style>
+ul {
+    padding-left:0px;
+}
+</style>
 <div class="content_box">
 	<div class="content form_content">
         <?php echo form_open('model/add'); ?>
-			<table class="form_table"  >
+			<table class="form_table table"  >
 				<col width="150px" />
 				<col />
 				<tr>

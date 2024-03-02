@@ -5,12 +5,12 @@
 <div class="content_box">
 	<div class="content form_content">
         <?php echo form_open('category/add'); ?>
-			<table class="form_table dili_tabs" id="site_basic" >
+			<table class="form_table dili_tabs table" id="site_basic" >
 				<col width="150px" />
 				<col />
 				<tr>
 					<th> 分类模型标识：</th>
-					<td><?php $this->form->show('name','input',''); ?><label>*3-20位的仅包含字母数字以及下划线破折号的字符，将用作数据库表名。</label><?php echo form_error('name'); ?></td>
+					<td><?php $this->form->show('name','input',''); ?><label>*3-20位的仅包含字母数字以及下划线破折号的字符，将用作模块分类名称。</label><?php echo form_error('name'); ?></td>
 				</tr>
                 <tr>
 					<th> 分类模型名称：</th>
