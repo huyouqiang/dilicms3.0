@@ -7,7 +7,7 @@
     .content .table{
       overflow:auto;
       width:100%;
-      height:300px; /* 固定高度 */
+      min-height:50px; /* 固定高度 */
       /* border:1px solid #999; */
       /* border-bottom: 0;
       border-right: 0; */
