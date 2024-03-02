@@ -240,7 +240,7 @@ Header START -->
 		<div class="container-fluid">
 			<div class="row g-4">
 			<!-- Main content START -->
-			<div class="col-lg-2">
+			<div class="col-lg-2" style="margin-bottom: 80px;">
 				<div class="bg-mode p-4 card" style="padding: 0px;">
 				<!-- <h3 class="h5 mb-4" style="font-size: 16px;">&nbsp;&nbsp;&nbsp;系统菜单</h3> -->
 				<a href="javascript:void(0)" class="d-flex align-items-center pb-3 mb-3 link-dark text-decoration-none border-bottom">
@@ -249,13 +249,7 @@ Header START -->
 				</a>
 				
 				<div class="list-group list-group-flush" style="border: 0px;">
-	<!-- <a href="#" class="list-group-item list-group-item-action active" aria-current="true" style="padding-top: 15px;padding-bottom: 15px;">
-		The current link item
-	</a>
-
-	<a href="#" class="list-group-item list-group-item-action" aria-current="true" style="padding-top: 10px;padding-bottom: 10px;">
-		The current link item
-	</a> -->
+	
 
 		<ul class="list-unstyled ps-0" id="submenu">
 			<?php if(!strpos($_SERVER['REQUEST_URI'],'content')): ?>
