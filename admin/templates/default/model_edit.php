@@ -6,6 +6,9 @@
 th {
     width: 200px;
 }
+ul {
+    padding-left:0px;
+}
 </style>
 <div class="content_box">
 	<div class="content form_content">
@@ -47,7 +50,7 @@ th {
                 <tr id="thumb-preferences" class="thumb-control" <?php echo $model->hasattach ? '' : 'style="display: none"' ?>>
                     <th> 缩略图设置：</th>
                     <td>
-                        <table style="width:300px;text-align: center">
+                        <table style="width:300px;">
                             <?php $preferences = json_decode(setting('thumbs_preferences')); ?>
                             <?php if ($preferences and is_array($preferences) and count($preferences) > 1): ?>
                                 <tr>
