@@ -429,7 +429,7 @@ class Content extends Admin_Controller
 		if(is_array($group)){
 			foreach ($group as $key => $value) {
 				$menuHtml.='<li class="mb-1">
-				<button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#home-collapse" aria-expanded="true">' . $value['description'] . '</button>
+				<button class="btn btn-toggle align-items-center rounded">' . $value['description'] . '</button>
 				<div class="collapse show" id="home-collapse">
 				  <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">';
 				$tab =$this->db->query("select * from ge_models where belong_group='{$value['id']}' order by model_sort asc")

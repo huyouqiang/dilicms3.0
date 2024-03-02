@@ -104,44 +104,23 @@ Header START -->
 				<div class="dropdown-menu dropdown-animation dropdown-menu-end dropdown-menu-size-md p-0 shadow-lg border-0" aria-labelledby="notifDropdown">
 				<div class="card">
 					<div class="card-header d-flex justify-content-between align-items-center">
-					<h6 class="m-0">消息 <span class="badge bg-danger bg-opacity-10 text-danger ms-1">0</span></h6>
+					<h6 class="m-0">消息 <span class="badge bg-danger bg-opacity-10 text-danger ms-1">1</span></h6>
 					</div>
 					<div class="card-body p-0">
 					<ul class="list-group list-group-flush list-unstyled p-2">
-															<li>
+						<li>
 						<a href="#" class="list-group-item list-group-item-action rounded d-flex border-0 p-3 mb-1">
 							<div class="avatar text-center d-none d-sm-inline-block">
 							<img class="avatar-img rounded-circle" src="<?php echo setting('backend_logo');  ?>" alt="">
 							</div>
 							<div class="ms-sm-3 d-flex">
-							<p class="small mb-2"><b>XIAOHU</b> 文章详情-添加相关文章推荐，pc/手机端均适配</p>
-							<p class="small ms-3 text-nowrap">01-29</p>
+							<p class="small mb-2"><b>DEV</b> 系统用户消息推送功能，正在集成中</p>
+							<p class="small ms-3 text-nowrap">03-01</p>
 							</div>
 						</a>
 						</li>
-																			<li>
-						<a href="#" class="list-group-item list-group-item-action rounded d-flex border-0 p-3 mb-1">
-							<div class="avatar text-center d-none d-sm-inline-block">
-							<img class="avatar-img rounded-circle" src="<?php echo setting('backend_logo');  ?>" alt="">
-							</div>
-							<div class="ms-sm-3 d-flex">
-							<p class="small mb-2"><b>XIAOHU</b> 上线2024龙年主题、canvas烟花动画，支持鼠标点击、跟随</p>
-							<p class="small ms-3 text-nowrap">01-16</p>
-							</div>
-						</a>
-						</li>
-																			<li>
-						<a href="#" class="list-group-item list-group-item-action rounded d-flex border-0 p-3 mb-1">
-							<div class="avatar text-center d-none d-sm-inline-block">
-							<img class="avatar-img rounded-circle" src="<?php echo setting('backend_logo');  ?>" alt="">
-							</div>
-							<div class="ms-sm-3 d-flex">
-							<p class="small mb-2"><b>XIAOHU</b> 所有域名xiaohu365.com都指向hutc.top，望各位周知</p>
-							<p class="small ms-3 text-nowrap">12-13</p>
-							</div>
-						</a>
-						</li>
-														</ul>
+						
+						</ul>
 					</div>
 					<!-- <div class="card-footer text-center">
 					<a href="#" class="btn btn-sm btn-primary-soft">所有消息</a>
@@ -164,26 +143,26 @@ Header START -->
 						<img class="avatar-img rounded-circle" src="<?php echo setting('backend_logo');  ?>" alt="avatar">
 					</div>
 					<div>
-						<a class="h6 stretched-link" href="#">XIAOHU</a>
-						<p class="small m-0">PHP DEVELOPER</p>
+						<a class="h6 stretched-link" href="#">未知用户</a>
+						<p class="small m-0">未知身份</p>
 					</div>
 					</div>
 									<a class="dropdown-item btn btn-danger-soft btn-sm my-2 text-center" href="/admin/login">未登录</a>
 								</li>
 				<!-- Links -->
-				<li><a class="dropdown-item" href="https://github.com/huyouqiang" target="_blank"><i class="bi bi-github fa-fw me-2"></i>github.com/huyouqiang</a></li>
 				<li> 
-					<a class="dropdown-item" href="#">
-					<i class="fa-fw bi bi-chat-right-dots me-2"></i>1451984637@qq.com
-					</a> 
-				</li>
-				<li> 
-					<a class="dropdown-item" href="#">
-					<i class="fa-fw bi bi-tiktok me-2"></i>huyouqiang
-					</a> 
-				</li>
-				<li class="dropdown-divider"></li>
-							<li><a class="dropdown-item bg-danger-soft-hover" href="/admin/index.php/login"><i class="bi bi-power fa-fw me-2"></i>登录</a></li>
+				<a class="dropdown-item" href="<?php echo backend_url('system/home'); ?>">
+				<i class="fa-fw bi bi-gear-fill me-2"></i>后台首页
+				</a> 
+			</li>
+			<li> 
+				<a class="dropdown-item" href="<?php echo base_url().'../'; ?>" target='_blank'>
+				<i class="fa-fw bi bi-house me-2"></i>站点首页
+				</a> 
+			</li>
+			<li class="dropdown-divider"></li>
+						<li><a class="dropdown-item" href="<?php echo backend_url('login/quit'); ?>"><i class="bi bi-door-open fa-fw me-2"></i>退出管理</a></li>
+						</ul>
 							</ul>
 			</li>
 			<!-- Profile START -->

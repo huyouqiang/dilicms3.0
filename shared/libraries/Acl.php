@@ -145,7 +145,7 @@ class Acl
 			if ($v['sub_menus'])
 			{
 				echo '<li class="mb-1">
-				<button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#home-collapse" aria-expanded="true">' . $v['menu_name'] . '</button>
+				<button class="btn btn-toggle align-items-center rounded">' . $v['menu_name'] . '</button>
 				<div class="collapse show" id="home-collapse">
 				  <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">';
 						 foreach ($v['sub_menus'] as $j)

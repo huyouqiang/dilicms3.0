@@ -162,44 +162,22 @@ Header START -->
 			<div class="dropdown-menu dropdown-animation dropdown-menu-end dropdown-menu-size-md p-0 shadow-lg border-0" aria-labelledby="notifDropdown">
 			<div class="card">
 				<div class="card-header d-flex justify-content-between align-items-center">
-				<h6 class="m-0">消息 <span class="badge bg-danger bg-opacity-10 text-danger ms-1">0</span></h6>
+				<h6 class="m-0">消息 <span class="badge bg-danger bg-opacity-10 text-danger ms-1">1</span></h6>
 				</div>
 				<div class="card-body p-0">
 				<ul class="list-group list-group-flush list-unstyled p-2">
-														<li>
+					<li>
 					<a href="#" class="list-group-item list-group-item-action rounded d-flex border-0 p-3 mb-1">
 						<div class="avatar text-center d-none d-sm-inline-block">
 						<img class="avatar-img rounded-circle" src="<?php echo setting('backend_logo');  ?>" alt="">
 						</div>
 						<div class="ms-sm-3 d-flex">
-						<p class="small mb-2"><b>XIAOHU</b> 文章详情-添加相关文章推荐，pc/手机端均适配</p>
-						<p class="small ms-3 text-nowrap">01-29</p>
+						<p class="small mb-2"><b>DEV</b> 系统用户消息推送功能，正在集成中</p>
+						<p class="small ms-3 text-nowrap">03-01</p>
 						</div>
 					</a>
-					</li>
-																		<li>
-					<a href="#" class="list-group-item list-group-item-action rounded d-flex border-0 p-3 mb-1">
-						<div class="avatar text-center d-none d-sm-inline-block">
-						<img class="avatar-img rounded-circle" src="<?php echo setting('backend_logo');  ?>" alt="">
-						</div>
-						<div class="ms-sm-3 d-flex">
-						<p class="small mb-2"><b>XIAOHU</b> 上线2024龙年主题、canvas烟花动画，支持鼠标点击、跟随</p>
-						<p class="small ms-3 text-nowrap">01-16</p>
-						</div>
-					</a>
-					</li>
-																		<li>
-					<a href="#" class="list-group-item list-group-item-action rounded d-flex border-0 p-3 mb-1">
-						<div class="avatar text-center d-none d-sm-inline-block">
-						<img class="avatar-img rounded-circle" src="<?php echo setting('backend_logo');  ?>" alt="">
-						</div>
-						<div class="ms-sm-3 d-flex">
-						<p class="small mb-2"><b>XIAOHU</b> 所有域名xiaohu365.com都指向hutc.top，望各位周知</p>
-						<p class="small ms-3 text-nowrap">12-13</p>
-						</div>
-					</a>
-					</li>
-													</ul>
+					</li>				
+				</ul>
 				</div>
 				<!-- <div class="card-footer text-center">
 				<a href="#" class="btn btn-sm btn-primary-soft">所有消息</a>
