@@ -11,12 +11,12 @@ jQuery(function(){
 		$('#admin_right .content').height(h2);
 	}
 	//一级菜单切换
-	$("#menu ul li:first-child").addClass("first");
-	$("#menu ul li:last-child").addClass("last");
-	$(":[name='menu']>li").click(function(){
-		$(this).siblings().removeClass("selected");
-        $(this).addClass("selected");					   
-	});	
+	// $("#menu ul li:first-child").addClass("first");
+	// $("#menu ul li:last-child").addClass("last");
+	// $(":[name='menu']>li").click(function(){
+	// 	$(this).siblings().removeClass("selected");
+    //     $(this).addClass("selected");					   
+	// });	
 	//二级菜单展示效果
 	$("ul.submenu>li>span").toggle(
 		function(){
@@ -52,14 +52,14 @@ jQuery(function(){
 	);
 	
 	//烦人的IE
-	 if ( $.browser.msie ) {
-		//绑定事件，来支持IE下<a><button>a失效的问题
-		$('a.hack_ie').click(function(){
-			location = $(this).attr('href');	
-		});
-		//kill the fucking focus
-		$('button').attr('hideFocus',true);
-	 }
+	//  if ( $.browser.msie ) {
+	// 	//绑定事件，来支持IE下<a><button>a失效的问题
+	// 	$('a.hack_ie').click(function(){
+	// 		location = $(this).attr('href');	
+	// 	});
+	// 	//kill the fucking focus
+	// 	$('button').attr('hideFocus',true);
+	//  }
 
     //kindeditor 初始化绑定
     if (typeof KindEditor !== 'undefined') {
