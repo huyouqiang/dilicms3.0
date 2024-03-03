@@ -299,7 +299,8 @@ class Field_behavior
 							}
 							break;
 				default :
-							echo mb_substr(urldecode($value->$fieldName),0,10);
+							$more=strlen($value->$fieldName)>15 ? '...':'';
+							echo mb_substr(urldecode($value->$fieldName),0,15).$more;
 
 			}
 		}
