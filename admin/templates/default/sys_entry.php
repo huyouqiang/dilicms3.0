@@ -362,55 +362,21 @@ Header START -->
 	</footer>
 <!-- footer END --> 
 <script type='text/javascript'>
-	//隔行换色
-	// $(".list_table tr::nth-child(even)").addClass('even');
-	// $(".list_table tr").hover(
-	// 	function () {
-	// 		$(this).addClass("sel");
-	// 	},
-	// 	function () {
-	// 		$(this).removeClass("sel");
-	// 	}
-	// );
 
 	// 左侧菜单栏
 	var str = "<?php echo $_SERVER['REQUEST_URI']; ?>";
 
 	if(str.indexOf("content") != -1){
 		$.ajax({
-			url:"<?php echo $_SERVER['SCRIPT_NAME']; ?>/content/menuLeft?tab=<?php echo $_GET['model']; ?>",
+			url:"<?php echo $_SERVER['SCRIPT_NAME']; ?>/content/menuLeft?tab=<?php if(isset($_GET['model'])){echo $_GET['model'];}else{echo '';}?>",
 			success:function(result){
-				console.log(result);
+				// console.log(result);
 				$("#submenu").html("");
         		$("#submenu").append(result);
-
         	}
         });
-		// $("#submenu").text("这是表单列表");
-	}
-
-	// 左侧菜单点击事件
-	// $("#submenu span").live("click", function() {
-	// 	if(typeof($(this).attr("class")) == "undefined" || $(this).attr("class")==""){
-	// 		$(this).addClass("selected");   
-	// 		$(this).next().hide();
-	// 	}
-	// 	else{
-	// 		$(this).removeClass("selected");   
-	// 		$(this).next().show();
-	// 	}
-		 
-	// });
-
-	/* global bootstrap: false */
-	(function () {
-		'use strict'
-		var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
-		tooltipTriggerList.forEach(function (tooltipTriggerEl) {
-		new bootstrap.Tooltip(tooltipTriggerEl)
-		})
-	})()
 		
+	}
 	
 </script>
 </body>

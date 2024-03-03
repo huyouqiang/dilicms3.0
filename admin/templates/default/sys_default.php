@@ -71,7 +71,7 @@
     </div>
 </div>
 <script language="javascript">
-if ( $.browser.msie && parseInt($.browser.version) < 8 ) {
-		$('#lower_ie').show();
-	}
+// if ( $.browser.msie && parseInt($.browser.version) < 8 ) {
+// 		$('#lower_ie').show();
+// 	}
 </script>
