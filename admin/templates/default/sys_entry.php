@@ -302,7 +302,7 @@ Header START -->
 		</div>
 		<div class="col-md-6">
 			<!-- Copyright START -->
-			<p class="text-center text-md-end mb-0">©2024 <a class="text-body" target="_blank" href="https://beian.miit.gov.cn/#/Integrated/index"> <?php echo setting('site_icp'); ?> </a></p>
+			<p class="text-center text-md-end mb-0"><a class="text-body" target="_blank" href="https://beian.miit.gov.cn/#/Integrated/index"> <?php echo setting('site_icp'); ?> </a></p>
 			<!-- Copyright END -->
 		</div>
 		</div>
