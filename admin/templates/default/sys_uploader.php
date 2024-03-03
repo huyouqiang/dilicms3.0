@@ -1,6 +1,6 @@
 <?php if ( ! defined('IN_DILICMS')) exit('No direct script access allowed');?>
 <div id="dili_uploader">
-    <div class="red_box" style="margin-bottom:2px;"><img src="images/error.gif" />上传完附件请注意一定要提交表单，以免附件丢失。</div>
+    <div class="red_box" style="margin-bottom:2px;">上传完附件请注意一定要提交表单，以免附件丢失。</div>
     <div style="position:relative;text-align:left;">
         <p style="line-height:30px;"><a style="margin-left:5px;" id="uploaderSwitcher" onclick="toggleUploader();"  href="javascript:void(0)">打开上传控件</a>允许上传的格式:<b><?php echo setting('attachment_type'); ?></b>,大小限制:<b><?php echo number_format($maxsize = setting('attachment_maxupload')/1024/1024,2); ?>MB</b> </p>
         <div id="uploaderContainer" style="position:absolute;z-index:3000000;display:none;background:#ccc;">

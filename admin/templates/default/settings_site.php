@@ -157,7 +157,7 @@
                                 <button class="btn btn-sm btn-primary"  id="add-new-preference" type='button'><span>添加</span></button>
                             </li>
                         </ul>
-                        <div class="red_box" style="display: none" id="thumb-warning"><img src="images/error.gif">对不起，必须启用<a href="http://www.php.net/manual/zh/book.imagick.php" target="_blank"><b>php-imagick</b></a>扩展方可使用本功能!</div>
+                        <div class="red_box" style="display: none" id="thumb-warning">对不起，必须启用<a href="http://www.php.net/manual/zh/book.imagick.php" target="_blank"><b>php-imagick</b></a>扩展方可使用本功能!</div>
                     </td>
                 </tr>
 				<tr>
