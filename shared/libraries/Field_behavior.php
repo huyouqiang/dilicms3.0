@@ -298,6 +298,12 @@ class Field_behavior
 								echo '-';
 							}
 							break;
+				case 'wysiwyg':
+							echo '富文本请至详情查看';
+							break;
+				case 'wysiwyg_basic':
+					echo '富文本请至详情查看';
+					break;
 				default :
 							$more=strlen($value->$fieldName)>15 ? '...':'';
 							echo mb_substr(urldecode($value->$fieldName),0,15).$more;
