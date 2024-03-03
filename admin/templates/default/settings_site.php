@@ -122,7 +122,7 @@
 
         <?php echo form_open('setting/site?tab=site_attachment'); ?>
 			<!--附件设置!-->
-			<table class="form_table dili_tabs" id="site_attachment" style="<?php echo $current_tab == 'site_attachment' ? '' : 'display:none'; ?>">
+			<table class="form_table dili_tabs table" id="site_attachment" style="<?php echo $current_tab == 'site_attachment' ? '' : 'display:none'; ?>">
 				<col width="150px" />
 				<col />
 				<tr>

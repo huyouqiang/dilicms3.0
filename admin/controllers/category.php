@@ -206,7 +206,7 @@ class Category extends Admin_Controller
 		else
 		{
 			$data['model'] = $target_model;
-            $data['model']->thumb_preferences = json_decode($target_model->thumb_preferences);
+            // $data['model']->thumb_preferences = json_decode($target_model->thumb_preferences);
 			$data['bread'] = make_bread(Array(
 				'模型管理' => '',
 				'分类模型管理' => site_url('category/view'),
