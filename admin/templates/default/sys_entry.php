@@ -284,7 +284,7 @@ Header START -->
 					</div>
 					<!-- Card header END -->
 					<!-- Card body START -->
-					<div class="card-body" style="padding-left: 20px;margin-top: 0px;">
+					<div class="card-body" style="padding-left: 20px;margin-top: 0px;padding-top:0px;">
 						
 
 						<?php if($this->uri->rsegment(1) != 'module'): ?>
@@ -377,7 +377,7 @@ Header START -->
         });
 		
 	}
-	
+
 </script>
 </body>
 </html>
