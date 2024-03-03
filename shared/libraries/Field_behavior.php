@@ -245,12 +245,12 @@ class Field_behavior
 			{
 				case 'radio' 	:
 				case 'select'	:
-							echo isset($field['values'][$value->$fieldName]) ?  $field['values'][$value->$fieldName] : 'undefined' ;
+							echo isset($field['values'][$value->$fieldName]) ?  $field['values'][$value->$fieldName] : '未知' ;
 							break;
 				case 'checkbox' :
 							foreach (explode(',', $value->$fieldName) as $t)
 							{
-								echo isset($field['values'][$t]) ?  $field['values'][$t] . '<br />' : 'undefined' . '<br />';
+								echo isset($field['values'][$t]) ?  $field['values'][$t] . '<br />' : '未知' . '<br />';
 							}
 							break;
 				case 'radio_from_model':
@@ -306,7 +306,7 @@ class Field_behavior
 					break;
 				default :
 							$more=strlen($value->$fieldName)>15 ? '...':'';
-							echo mb_substr(urldecode($value->$fieldName),0,15).$more;
+							echo mb_substr(urldecode($value->$fieldName),0,18).$more;
 
 			}
 		}
