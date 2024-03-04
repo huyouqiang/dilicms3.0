@@ -2,6 +2,11 @@
 <div class="headbar">
 	<div class="alert alert-primary"><span>数据库管理</span><span>></span><span>数据库备份</span></div>
 </div>
+<style>
+ul {
+    padding-left:0px;
+}
+</style>
 <div class="content_box">
     <div class="red_box"><b>说明：</b>数据备份功能根据您的选择备份数据表，导出的数据文件可用“数据恢复”功能或phpMyAdmin 导入。<br/><b>提示：</b><span style="color:red">如果您的数据库过大请使用其他专业数据库备份软件或者在服务器通过脚本备份</span>。</div>
 	<div class="content form_content">
@@ -22,18 +27,18 @@
                         <?php if($tables):?>
                             <ul class="attr_list">
                             <?php foreach($tables as $table):?>
-                                <li>
+                                <li style="display: inline;">
                                     <label class="attr">
-                                        <input class="checkbox" type="checkbox" name="tables[]" value="<?php echo $table; ?>" >&nbsp;&nbsp;<?php echo $table; ?>
+                                        <input class="checkbox form-check-input" type="checkbox" name="tables[]" value="<?php echo $table; ?>" >&nbsp;&nbsp;<?php echo $table; ?>
                                     </label>
                                 </li>
                             <?php endforeach;?>
                             </ul>
                         <?php endif; ?>
                         <ul class="attr_list" style="clear:both">
-                            <li>
+                            <li style="display: inline;">
                                 <label>
-                                    <input onclick="selectAll('tables[]');" type='checkbox' id='chkall' value='check' >&nbsp;&nbsp;全选/反选
+                                    <input onclick="selectAll('tables[]');" class="form-check-input" type='checkbox' id='chkall' value='check' >&nbsp;&nbsp;全选/反选
                                 </label>
                             </li>
                         </ul>
@@ -48,15 +53,15 @@
                 <tr>
                     <th> 压缩备份文件：</th>
                     <td>
-                        <label><input type="radio" name="is_compress" value="1"> zip压缩</label>&nbsp;&nbsp;
-                        <label><input type="radio" name="is_compress" value="0" checked> 不压缩</label>
+                        <label><input class="form-check-input" type="radio" name="is_compress" value="1"> zip压缩</label>&nbsp;&nbsp;
+                        <label><input class="form-check-input" type="radio" name="is_compress" value="0" checked> 不压缩</label>
                     </td>
                 </tr>
                 <tr>
                     <th> 扩展方式插入：<br />(Extended Insert)</th>
                     <td>
-                        <label><input type="radio" name="is_extend_insert" value="1"> 是</label>&nbsp;&nbsp;
-                        <label><input type="radio" name="is_extend_insert" value="0" checked> 否</label>
+                        <label><input class="form-check-input" type="radio" name="is_extend_insert" value="1"> 是</label>&nbsp;&nbsp;
+                        <label><input class="form-check-input" type="radio" name="is_extend_insert" value="0" checked> 否</label>
                     </td>
                 </tr>
                 <tr>
