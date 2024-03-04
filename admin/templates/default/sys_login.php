@@ -7,9 +7,6 @@
 <title><?php echo setting('backend_title');  ?></title>
 <link rel="stylesheet" href="images/admin.css"  type="text/css" />
 <link rel="stylesheet" href="images/bootstrap-icons.css"  type="text/css" />
-<!-- =======================
-JS libraries, plugins and custom scripts -->
-<script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
 <!-- Bootstrap JS -->
 <script src="images/bootstrap.bundle.min.js"></script>
 </head>

@@ -33,9 +33,9 @@
 	<!-- </ul> -->
 </div>
 <div class="content_box">
-	<div class="content form_content">
+	<!-- <div class="content form_content"> -->
     
-        <div class="tab-content" id="myTabContent">
+        <div class="tab-content" id="myTabContent" style="padding: 0px 0px;">
             <div class="tab-pane fade show active" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab" tabindex="0">
 
             <?php echo form_open('setting/site?tab=site_basic'); ?>
@@ -205,7 +205,7 @@
 			</table>
         <?php echo form_close(); ?>
         
-	</div>
+	<!-- </div> -->
 </div>
 <script type="text/template" id="thumb-template">
     <%= size%> - <%= window.thumbRules[rule] %>
