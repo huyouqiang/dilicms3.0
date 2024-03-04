@@ -7,16 +7,11 @@ $setting=array (
     'input' => '单行文本框(VARCHAR)',
     'textarea' => '文本区域(VARCHAR)',
     'select' => '下拉菜单(VARCHAR)',
-    'select_from_model' => '下拉菜单(模型数据)(INT)',
-    'linked_menu' => '联动下拉菜单(VARCHAR)',
     'radio' => '单选按钮(VARCHAR)',
-    'radio_from_model' => '单选按钮(模型数据)(INT)',
     'checkbox' => '复选框(VARCHAR)',
-    'checkbox_from_model' => '复选框(模型数据)(VARCHAR)',
     'wysiwyg' => '编辑器(TEXT)',
     'wysiwyg_basic' => '编辑器(简)(TEXT)',
     'datetime' => '日期时间(VARCHAR)',
-    'content' => '内容模型调用(INT)',
   ),
   'extra_fieldtypes' => 
   array (

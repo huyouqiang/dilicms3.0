@@ -369,6 +369,28 @@ $setting['models']['student']=array (
       'order' => '23',
       'editable' => '1',
     ),
+    1105 => 
+    array (
+      'id' => '1105',
+      'name' => 'select_1',
+      'description' => '下拉框-模型数据',
+      'model' => '164',
+      'type' => 'select',
+      'length' => '30',
+      'values' => 
+      array (
+        1 => '选项1',
+        2 => '选项2',
+      ),
+      'width' => '0',
+      'height' => '0',
+      'rules' => '',
+      'ruledescription' => '',
+      'searchable' => '1',
+      'listable' => '1',
+      'order' => '30',
+      'editable' => '1',
+    ),
   ),
   'listable' => 
   array (
@@ -389,6 +411,7 @@ $setting['models']['student']=array (
     14 => '901',
     15 => '1103',
     16 => '1104',
+    17 => '1105',
   ),
   'searchable' => 
   array (
@@ -410,5 +433,6 @@ $setting['models']['student']=array (
     15 => '901',
     16 => '1103',
     17 => '1104',
+    18 => '1105',
   ),
 );

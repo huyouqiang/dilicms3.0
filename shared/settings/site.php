@@ -1,6 +1,6 @@
 <?php if ( ! defined('IN_DILICMS')) exit('No direct script access allowed');
 $setting=array (
-  'site_name' => '正式-家校后台系统',
+  'site_name' => '通用数据库管理系统',
   'site_domain' => 'https://eick12nm.xyz',
   'site_logo' => 'images/logo_kp.png',
   'site_icp' => '©2024 皖ICP备XXXXXX号-X',
@@ -9,8 +9,8 @@ $setting=array (
   'site_footer' => '',
   'site_status' => '1',
   'site_close_reason' => '网站维护升级中......',
-  'site_keyword' => '正式-家校后台系统',
-  'site_description' => '正式-家校后台系统',
+  'site_keyword' => '通用数据库管理系统',
+  'site_description' => '通用数据库管理系统',
   'site_theme' => 'default',
   'attachment_url' => '/attachments',
   'attachment_dir' => 'attachments',

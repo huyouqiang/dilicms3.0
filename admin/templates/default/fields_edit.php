@@ -87,22 +87,15 @@ ul {
       <div class="modal-body">
         
 	  	<table class="table table-sm table-bordered">
-		<tbody><tr><td> 字段类型</td><td> 数据源说明</td></tr><tr><td> 整形</td><td>不用设置 </td></tr><tr><td> 浮点型</td><td>不用设置 </td></tr><tr><td> 单行文本框</td><td>不用设置 </td></tr><tr><td>文本区域<br>
+		<tbody><tr><td> <b>字段类型</b></td><td><b>数据源说明</b></td></tr><tr><td> 整形</td><td>不用设置 </td></tr><tr><td> 浮点型</td><td>不用设置 </td></tr><tr><td> 单行文本框</td><td>不用设置 </td></tr><tr><td>文本区域<br>
 		<br>
 		</td><td>不用设置</td></tr><tr><td>下拉菜单</font></td><td><font>设置如:“0=分类1|1=分类2”字符串<br>
 		<br>
-		</font></td></tr><tr><td><font>下拉菜单（模型数据）</font></td><td><font>设置格式如下"分类模型名称|显示的字段",如:class|name，建议1层分类模型使用<br>
-		<br>
-		</font></td></tr><tr><td><font>联动下拉菜单</font></td><td><font>设置格式如下"分类模型名称|显示的字段|分类的层级|最大选择量",如class|name|2|1,将生成1个2级联动菜单</font></td></tr><tr><td>单选按钮</td><td>同下拉菜单</td></tr><tr><td>复选框</td><td>同下拉菜单</td></tr><tr><td>编辑器</td><td>不用设置</td></tr><tr><td>日期时间</td><td>不用设置</td></tr><tr><td>颜色选择器</td><td>不用设置</td></tr></tbody>
+		</font></td></tr><tr><td>单选按钮</td><td>设置如:“0=分类1|1=分类2”字符串</td></tr><tr><td>复选框</td><td>设置如:“0=分类1|1=分类2”字符串</td></tr><tr><td>编辑器</td><td>不用设置</td></tr><tr><td>日期时间</td><td>不用设置</td></tr><tr><td>颜色选择器</td><td>不用设置</td></tr></tbody>
 		</table>
 
       </div>
- 
-      <!-- 模态框底部 -->
-      <div class="modal-footer">
-        <button type="button" class="btn btn-sm btn-primary" data-bs-dismiss="modal">关闭</button>
-      </div>
- 
+
     </div>
   </div>
 </div>
