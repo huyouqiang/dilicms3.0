@@ -32,7 +32,7 @@ ul {
                 
                 <tr>
 					<th> 数据源：</th>
-					<td><?php $this->form->show('values','input','',$field->values); ?><label>可以为某些字段类型提供数据源或者默认值，使用方式见手册。</label><?php echo form_error('values'); ?></td>
+					<td><?php $this->form->show('values','input','',$field->values); ?><label>可以为某些字段类型提供数据源或者默认值，使用方式<a href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#myModal">点击此处</a>。</label><?php echo form_error('values'); ?></td>
 				</tr>
                 <tr>
 					<th> 显示尺寸：</th>
@@ -70,4 +70,39 @@ ul {
 			</table>
 		<?php echo form_close(); ?>
 	</div>
+</div>
+
+<!-- 模态框 -->
+<div class="modal" id="myModal" style="margin-top: 50px;">
+  <div class="modal-dialog">
+    <div class="modal-content">
+ 
+      <!-- 模态框头部 -->
+      <div class="modal-header">
+        <h6 class="modal-title">数据源</h6>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+ 
+      <!-- 模态框内容 -->
+      <div class="modal-body">
+        
+	  	<table class="table table-sm table-bordered">
+		<tbody><tr><td> 字段类型</td><td> 数据源说明</td></tr><tr><td> 整形</td><td>不用设置 </td></tr><tr><td> 浮点型</td><td>不用设置 </td></tr><tr><td> 单行文本框</td><td>不用设置 </td></tr><tr><td>文本区域<br>
+		<br>
+		</td><td>不用设置</td></tr><tr><td>下拉菜单</font></td><td><font>设置如:“0=分类1|1=分类2”字符串<br>
+		<br>
+		</font></td></tr><tr><td><font>下拉菜单（模型数据）</font></td><td><font>设置格式如下"分类模型名称|显示的字段",如:class|name，建议1层分类模型使用<br>
+		<br>
+		</font></td></tr><tr><td><font>联动下拉菜单</font></td><td><font>设置格式如下"分类模型名称|显示的字段|分类的层级|最大选择量",如class|name|2|1,将生成1个2级联动菜单</font></td></tr><tr><td>单选按钮</td><td>同下拉菜单</td></tr><tr><td>复选框</td><td>同下拉菜单</td></tr><tr><td>编辑器</td><td>不用设置</td></tr><tr><td>日期时间</td><td>不用设置</td></tr><tr><td>颜色选择器</td><td>不用设置</td></tr></tbody>
+		</table>
+
+      </div>
+ 
+      <!-- 模态框底部 -->
+      <div class="modal-footer">
+        <button type="button" class="btn btn-sm btn-primary" data-bs-dismiss="modal">关闭</button>
+      </div>
+ 
+    </div>
+  </div>
 </div>
