@@ -299,16 +299,16 @@ Header START -->
 			<!-- Footer nav START -->
 			<ul class="nav justify-content-center justify-content-md-start lh-1">
 			<li class="nav-item">
-				<a class="nav-link" href="#">关于</a>
+				<a class="nav-link" href="javascript:void(0);">关于</a>
 			</li>
 			<li class="nav-item">
-				<a class="nav-link" href="#">支持 </a>
+				<a class="nav-link" href="javascript:void(0);">支持 </a>
 			</li>
 			<li class="nav-item">
-				<a class="nav-link" href="#">文档 </a>
+				<a class="nav-link" href="javascript:void(0);">文档 </a>
 			</li>
 			<li class="nav-item">
-				<a class="nav-link" href="#">隐私 & 协议</a>
+				<a class="nav-link" href="javascript:void(0);">隐私 & 协议</a>
 			</li>
 			</ul>
 			<!-- Footer nav START -->
