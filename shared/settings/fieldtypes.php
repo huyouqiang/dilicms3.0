@@ -5,6 +5,7 @@ $setting=array (
     'int' => '整形(INT)',
     'float' => '浮点型(FLOAT)',
     'input' => '单行文本框(VARCHAR)',
+    'textarea_json' => '文本区域(JSON)',
     'textarea' => '文本区域(VARCHAR)',
     'select_int' => '下拉菜单(INT)',
     'select' => '下拉菜单(VARCHAR)',

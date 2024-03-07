@@ -11,7 +11,7 @@
  Target Server Version : 50744 (5.7.44)
  File Encoding         : 65001
 
- Date: 07/03/2024 16:45:53
+ Date: 07/03/2024 20:39:28
 */
 
 SET NAMES utf8mb4;
@@ -59,7 +59,7 @@ CREATE TABLE `ge_attachments` (
   `image` tinyint(1) DEFAULT '0',
   `posttime` int(11) DEFAULT '0',
   PRIMARY KEY (`aid`) USING BTREE
-) ENGINE=MyISAM AUTO_INCREMENT=499 DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC;
+) ENGINE=MyISAM AUTO_INCREMENT=500 DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC;
 
 -- ----------------------------
 -- Records of ge_attachments
@@ -123,6 +123,7 @@ INSERT INTO `ge_attachments` (`aid`, `uid`, `model`, `from`, `content`, `name`, 
 INSERT INTO `ge_attachments` (`aid`, `uid`, `model`, `from`, `content`, `name`, `folder`, `realname`, `type`, `image`, `posttime`) VALUES (496, 1, 164, 0, 21698, '1709442555428451505df90bff', '2024/03', 'logo', 'jpeg', 1, 1709442555);
 INSERT INTO `ge_attachments` (`aid`, `uid`, `model`, `from`, `content`, `name`, `folder`, `realname`, `type`, `image`, `posttime`) VALUES (497, 1, 164, 0, 1, '1709568074e1c1965066c2ce51', '2024/03', 'logo', 'jpeg', 1, 1709568074);
 INSERT INTO `ge_attachments` (`aid`, `uid`, `model`, `from`, `content`, `name`, `folder`, `realname`, `type`, `image`, `posttime`) VALUES (498, 1, 164, 0, 2, '170975857462c27686df4ebe4e', '2024/03', 'logo', 'jpeg', 1, 1709758574);
+INSERT INTO `ge_attachments` (`aid`, `uid`, `model`, `from`, `content`, `name`, `folder`, `realname`, `type`, `image`, `posttime`) VALUES (499, 1, 164, 0, 3, '170981464547b55e3e4f9d8f12', '2024/03', 'logo', 'jpeg', 1, 1709814645);
 COMMIT;
 
 -- ----------------------------
@@ -220,6 +221,7 @@ BEGIN;
 INSERT INTO `ge_fieldtypes` (`k`, `v`) VALUES ('int', '整形(INT)');
 INSERT INTO `ge_fieldtypes` (`k`, `v`) VALUES ('float', '浮点型(FLOAT)');
 INSERT INTO `ge_fieldtypes` (`k`, `v`) VALUES ('input', '单行文本框(VARCHAR)');
+INSERT INTO `ge_fieldtypes` (`k`, `v`) VALUES ('textarea_json', '文本区域(JSON)');
 INSERT INTO `ge_fieldtypes` (`k`, `v`) VALUES ('textarea', '文本区域(VARCHAR)');
 INSERT INTO `ge_fieldtypes` (`k`, `v`) VALUES ('select_int', '下拉菜单(INT)');
 INSERT INTO `ge_fieldtypes` (`k`, `v`) VALUES ('select', '下拉菜单(VARCHAR)');
@@ -309,7 +311,7 @@ CREATE TABLE `ge_model_fields` (
   `description` varchar(40) NOT NULL,
   `model` smallint(10) unsigned NOT NULL DEFAULT '0',
   `type` varchar(20) DEFAULT NULL,
-  `length` smallint(10) unsigned DEFAULT NULL,
+  `length` smallint(10) unsigned DEFAULT '0',
   `values` text NOT NULL,
   `width` smallint(10) unsigned NOT NULL,
   `height` smallint(10) unsigned NOT NULL,
@@ -322,7 +324,7 @@ CREATE TABLE `ge_model_fields` (
   PRIMARY KEY (`id`) USING BTREE,
   UNIQUE KEY `name` (`name`,`model`) USING BTREE,
   KEY `model` (`model`) USING BTREE
-) ENGINE=MyISAM AUTO_INCREMENT=1106 DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC;
+) ENGINE=MyISAM AUTO_INCREMENT=1117 DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC;
 
 -- ----------------------------
 -- Records of ge_model_fields
@@ -362,11 +364,7 @@ INSERT INTO `ge_model_fields` (`id`, `name`, `description`, `model`, `type`, `le
 INSERT INTO `ge_model_fields` (`id`, `name`, `description`, `model`, `type`, `length`, `values`, `width`, `height`, `rules`, `ruledescription`, `searchable`, `listable`, `order`, `editable`) VALUES (784, 'class_id', '班级id', 165, 'textarea', 255, '', 0, 0, '', '【多个班级用英文逗号隔开，如：1,2,3】', 1, 1, 3, 1);
 INSERT INTO `ge_model_fields` (`id`, `name`, `description`, `model`, `type`, `length`, `values`, `width`, `height`, `rules`, `ruledescription`, `searchable`, `listable`, `order`, `editable`) VALUES (783, 'school_district_id', '校区id', 165, 'input', 10, '', 0, 0, '', '', 1, 1, 2, 1);
 INSERT INTO `ge_model_fields` (`id`, `name`, `description`, `model`, `type`, `length`, `values`, `width`, `height`, `rules`, `ruledescription`, `searchable`, `listable`, `order`, `editable`) VALUES (782, 'headmaster_id', '班主任id', 165, 'input', 10, '', 0, 0, 'required', '', 1, 1, 1, 1);
-INSERT INTO `ge_model_fields` (`id`, `name`, `description`, `model`, `type`, `length`, `values`, `width`, `height`, `rules`, `ruledescription`, `searchable`, `listable`, `order`, `editable`) VALUES (781, 'school_district_id', '所属校区id', 164, 'input', 10, '', 0, 0, '', '', 1, 1, 4, 1);
-INSERT INTO `ge_model_fields` (`id`, `name`, `description`, `model`, `type`, `length`, `values`, `width`, `height`, `rules`, `ruledescription`, `searchable`, `listable`, `order`, `editable`) VALUES (780, 'course_id', '课程id', 164, 'input', 10, '', 0, 0, '', '', 1, 1, 5, 1);
-INSERT INTO `ge_model_fields` (`id`, `name`, `description`, `model`, `type`, `length`, `values`, `width`, `height`, `rules`, `ruledescription`, `searchable`, `listable`, `order`, `editable`) VALUES (778, 'join_class_id', '班级id', 164, 'input', 10, '', 0, 0, '', '', 1, 1, 6, 1);
 INSERT INTO `ge_model_fields` (`id`, `name`, `description`, `model`, `type`, `length`, `values`, `width`, `height`, `rules`, `ruledescription`, `searchable`, `listable`, `order`, `editable`) VALUES (779, 'status', '状态', 164, 'radio', 10, '1=已分班|2=未分班', 0, 0, '', '', 1, 1, 7, 1);
-INSERT INTO `ge_model_fields` (`id`, `name`, `description`, `model`, `type`, `length`, `values`, `width`, `height`, `rules`, `ruledescription`, `searchable`, `listable`, `order`, `editable`) VALUES (777, 'telephone', '手机号', 164, 'input', 11, '', 0, 0, '', '', 1, 1, 3, 1);
 INSERT INTO `ge_model_fields` (`id`, `name`, `description`, `model`, `type`, `length`, `values`, `width`, `height`, `rules`, `ruledescription`, `searchable`, `listable`, `order`, `editable`) VALUES (776, 'gender', '性别', 164, 'radio', 10, '0=男|1=女|2=未知', 0, 0, '', '', 1, 1, 2, 1);
 INSERT INTO `ge_model_fields` (`id`, `name`, `description`, `model`, `type`, `length`, `values`, `width`, `height`, `rules`, `ruledescription`, `searchable`, `listable`, `order`, `editable`) VALUES (775, 'student_name', '姓名', 164, 'input', 30, '', 0, 0, 'required', '', 1, 1, 1, 1);
 INSERT INTO `ge_model_fields` (`id`, `name`, `description`, `model`, `type`, `length`, `values`, `width`, `height`, `rules`, `ruledescription`, `searchable`, `listable`, `order`, `editable`) VALUES (767, 'city_name', '城市名称', 155, 'input', 20, '', 0, 0, '', '', 1, 1, 3, 1);
@@ -379,7 +377,6 @@ INSERT INTO `ge_model_fields` (`id`, `name`, `description`, `model`, `type`, `le
 INSERT INTO `ge_model_fields` (`id`, `name`, `description`, `model`, `type`, `length`, `values`, `width`, `height`, `rules`, `ruledescription`, `searchable`, `listable`, `order`, `editable`) VALUES (799, 'notice_title', '通知标题', 165, 'input', 30, '', 0, 0, '', '', 1, 1, 7, 1);
 INSERT INTO `ge_model_fields` (`id`, `name`, `description`, `model`, `type`, `length`, `values`, `width`, `height`, `rules`, `ruledescription`, `searchable`, `listable`, `order`, `editable`) VALUES (800, 'head_portrait', '头像', 154, 'file', 100, '', 0, 0, '', '', 1, 1, 9, 1);
 INSERT INTO `ge_model_fields` (`id`, `name`, `description`, `model`, `type`, `length`, `values`, `width`, `height`, `rules`, `ruledescription`, `searchable`, `listable`, `order`, `editable`) VALUES (801, 'headmaster_id', '班主任id', 157, 'input', 50, '', 0, 0, '', '', 1, 1, 12, 1);
-INSERT INTO `ge_model_fields` (`id`, `name`, `description`, `model`, `type`, `length`, `values`, `width`, `height`, `rules`, `ruledescription`, `searchable`, `listable`, `order`, `editable`) VALUES (802, 'qrcode', '二维码', 164, 'file', 100, '', 0, 0, '', '', 1, 1, 8, 1);
 INSERT INTO `ge_model_fields` (`id`, `name`, `description`, `model`, `type`, `length`, `values`, `width`, `height`, `rules`, `ruledescription`, `searchable`, `listable`, `order`, `editable`) VALUES (803, 'class_hour', '课时', 156, 'input', 10, '', 0, 0, 'required', '', 1, 1, 3, 1);
 INSERT INTO `ge_model_fields` (`id`, `name`, `description`, `model`, `type`, `length`, `values`, `width`, `height`, `rules`, `ruledescription`, `searchable`, `listable`, `order`, `editable`) VALUES (805, 'semester', '学期', 156, 'input', 20, '', 0, 0, '', '', 1, 1, 3, 1);
 INSERT INTO `ge_model_fields` (`id`, `name`, `description`, `model`, `type`, `length`, `values`, `width`, `height`, `rules`, `ruledescription`, `searchable`, `listable`, `order`, `editable`) VALUES (806, 'begin_date', '开课时间', 157, 'input', 20, '', 0, 0, '', '', 1, 1, 5, 1);
@@ -394,7 +391,6 @@ INSERT INTO `ge_model_fields` (`id`, `name`, `description`, `model`, `type`, `le
 INSERT INTO `ge_model_fields` (`id`, `name`, `description`, `model`, `type`, `length`, `values`, `width`, `height`, `rules`, `ruledescription`, `searchable`, `listable`, `order`, `editable`) VALUES (816, 'fail_reason', '失败原因', 170, 'textarea', 100, '', 0, 0, '', '', 1, 1, 6, 1);
 INSERT INTO `ge_model_fields` (`id`, `name`, `description`, `model`, `type`, `length`, `values`, `width`, `height`, `rules`, `ruledescription`, `searchable`, `listable`, `order`, `editable`) VALUES (817, 'student_id', '学员id', 170, 'input', 10, '', 0, 0, 'required', '', 1, 1, 3, 1);
 INSERT INTO `ge_model_fields` (`id`, `name`, `description`, `model`, `type`, `length`, `values`, `width`, `height`, `rules`, `ruledescription`, `searchable`, `listable`, `order`, `editable`) VALUES (818, 'notice_id', '通知/课次/报告/课表/预习id', 170, 'input', 10, '', 0, 0, '', '', 1, 1, 1, 1);
-INSERT INTO `ge_model_fields` (`id`, `name`, `description`, `model`, `type`, `length`, `values`, `width`, `height`, `rules`, `ruledescription`, `searchable`, `listable`, `order`, `editable`) VALUES (819, 'student_name_en', '学生英文名', 164, 'input', 30, '', 0, 0, '', '', 1, 0, 1, 1);
 INSERT INTO `ge_model_fields` (`id`, `name`, `description`, `model`, `type`, `length`, `values`, `width`, `height`, `rules`, `ruledescription`, `searchable`, `listable`, `order`, `editable`) VALUES (820, 'course_rename', '课程备注名称', 171, 'input', 30, '', 0, 0, 'required', '', 1, 1, 1, 1);
 INSERT INTO `ge_model_fields` (`id`, `name`, `description`, `model`, `type`, `length`, `values`, `width`, `height`, `rules`, `ruledescription`, `searchable`, `listable`, `order`, `editable`) VALUES (821, 'course_product', '课程产品名称', 172, 'input', 30, '', 0, 0, 'required', '', 1, 1, 1, 1);
 INSERT INTO `ge_model_fields` (`id`, `name`, `description`, `model`, `type`, `length`, `values`, `width`, `height`, `rules`, `ruledescription`, `searchable`, `listable`, `order`, `editable`) VALUES (822, 'course_structure', '课程单元', 172, 'input', 20, '', 0, 0, '', '', 1, 1, 2, 1);
@@ -460,7 +456,6 @@ INSERT INTO `ge_model_fields` (`id`, `name`, `description`, `model`, `type`, `le
 INSERT INTO `ge_model_fields` (`id`, `name`, `description`, `model`, `type`, `length`, `values`, `width`, `height`, `rules`, `ruledescription`, `searchable`, `listable`, `order`, `editable`) VALUES (898, 'class_participaton', '课堂参与', 174, 'radio', 10, '=无|1=1颗星|2=2颗星|3=3颗星|4=4颗星|5=5颗星', 0, 0, '', '', 1, 0, 16, 1);
 INSERT INTO `ge_model_fields` (`id`, `name`, `description`, `model`, `type`, `length`, `values`, `width`, `height`, `rules`, `ruledescription`, `searchable`, `listable`, `order`, `editable`) VALUES (899, 'vocabulary_quiz', '词汇测试', 174, 'input', 10, '', 0, 0, '', '', 1, 0, 14, 1);
 INSERT INTO `ge_model_fields` (`id`, `name`, `description`, `model`, `type`, `length`, `values`, `width`, `height`, `rules`, `ruledescription`, `searchable`, `listable`, `order`, `editable`) VALUES (900, 'student_code', '学生id【业务】', 164, 'input', 30, '', 0, 0, '', '', 1, 1, 0, 1);
-INSERT INTO `ge_model_fields` (`id`, `name`, `description`, `model`, `type`, `length`, `values`, `width`, `height`, `rules`, `ruledescription`, `searchable`, `listable`, `order`, `editable`) VALUES (901, 'last_update_time', '最后更新时间', 164, 'input', 30, '', 0, 0, '', '', 1, 1, 10, 1);
 INSERT INTO `ge_model_fields` (`id`, `name`, `description`, `model`, `type`, `length`, `values`, `width`, `height`, `rules`, `ruledescription`, `searchable`, `listable`, `order`, `editable`) VALUES (902, 'headmaster_id', '用户id【业务】', 154, 'input', 30, '', 0, 0, '', '', 1, 1, 0, 1);
 INSERT INTO `ge_model_fields` (`id`, `name`, `description`, `model`, `type`, `length`, `values`, `width`, `height`, `rules`, `ruledescription`, `searchable`, `listable`, `order`, `editable`) VALUES (903, 'last_update_time', '最后更新时间', 154, 'input', 30, '', 0, 0, '', '', 1, 1, 12, 1);
 INSERT INTO `ge_model_fields` (`id`, `name`, `description`, `model`, `type`, `length`, `values`, `width`, `height`, `rules`, `ruledescription`, `searchable`, `listable`, `order`, `editable`) VALUES (906, 'video_1', '视频1', 178, 'textarea', 1000, '', 0, 0, '', '【存储腾讯云点播信息】', 1, 1, 3, 1);
@@ -529,7 +524,6 @@ INSERT INTO `ge_model_fields` (`id`, `name`, `description`, `model`, `type`, `le
 INSERT INTO `ge_model_fields` (`id`, `name`, `description`, `model`, `type`, `length`, `values`, `width`, `height`, `rules`, `ruledescription`, `searchable`, `listable`, `order`, `editable`) VALUES (971, 'student_id', '学生id', 175, 'input', 10, '', 0, 0, '', '', 1, 1, 4, 1);
 INSERT INTO `ge_model_fields` (`id`, `name`, `description`, `model`, `type`, `length`, `values`, `width`, `height`, `rules`, `ruledescription`, `searchable`, `listable`, `order`, `editable`) VALUES (972, 'student_id', '学生id', 178, 'input', 10, '', 0, 0, '', '', 1, 1, 2, 1);
 INSERT INTO `ge_model_fields` (`id`, `name`, `description`, `model`, `type`, `length`, `values`, `width`, `height`, `rules`, `ruledescription`, `searchable`, `listable`, `order`, `editable`) VALUES (973, 'is_del', '是否删除', 165, 'radio', 10, '=正常|1=正常|2=已删除', 0, 0, '', '', 1, 1, 10, 1);
-INSERT INTO `ge_model_fields` (`id`, `name`, `description`, `model`, `type`, `length`, `values`, `width`, `height`, `rules`, `ruledescription`, `searchable`, `listable`, `order`, `editable`) VALUES (974, 'isset_class', '是否转班', 164, 'radio', 10, '=正常|1=正常|0=已转班', 0, 0, '', '', 1, 1, 9, 1);
 INSERT INTO `ge_model_fields` (`id`, `name`, `description`, `model`, `type`, `length`, `values`, `width`, `height`, `rules`, `ruledescription`, `searchable`, `listable`, `order`, `editable`) VALUES (975, 'status', '状态', 180, 'radio', 10, '=正常|1=正常|2=已删除', 0, 0, '', '', 1, 1, 7, 1);
 INSERT INTO `ge_model_fields` (`id`, `name`, `description`, `model`, `type`, `length`, `values`, `width`, `height`, `rules`, `ruledescription`, `searchable`, `listable`, `order`, `editable`) VALUES (976, 'h5_template', 'H5模板', 173, 'radio', 10, '=默认|1=秋季模板|2=万圣节|3=感恩节|4=圣诞节|5=寒假|6=春季T4', 0, 0, '', '', 1, 1, 12, 1);
 INSERT INTO `ge_model_fields` (`id`, `name`, `description`, `model`, `type`, `length`, `values`, `width`, `height`, `rules`, `ruledescription`, `searchable`, `listable`, `order`, `editable`) VALUES (977, 'status', '状态', 172, 'radio', 10, '=显示|2=隐藏', 0, 0, '', '', 1, 1, 12, 1);
@@ -587,6 +581,7 @@ INSERT INTO `ge_model_fields` (`id`, `name`, `description`, `model`, `type`, `le
 INSERT INTO `ge_model_fields` (`id`, `name`, `description`, `model`, `type`, `length`, `values`, `width`, `height`, `rules`, `ruledescription`, `searchable`, `listable`, `order`, `editable`) VALUES (1029, 'video', '视频', 172, 'textarea', 500, '', 0, 0, '', '', 1, 1, 10, 1);
 INSERT INTO `ge_model_fields` (`id`, `name`, `description`, `model`, `type`, `length`, `values`, `width`, `height`, `rules`, `ruledescription`, `searchable`, `listable`, `order`, `editable`) VALUES (1030, 'video_cover', '视频封面', 173, 'textarea', 500, '', 0, 0, '', '', 1, 1, 10, 1);
 INSERT INTO `ge_model_fields` (`id`, `name`, `description`, `model`, `type`, `length`, `values`, `width`, `height`, `rules`, `ruledescription`, `searchable`, `listable`, `order`, `editable`) VALUES (1031, 'video', '视频', 173, 'textarea', 500, '', 0, 0, '', '', 1, 1, 10, 1);
+INSERT INTO `ge_model_fields` (`id`, `name`, `description`, `model`, `type`, `length`, `values`, `width`, `height`, `rules`, `ruledescription`, `searchable`, `listable`, `order`, `editable`) VALUES (1115, 'json_1', 'json_1', 164, 'textarea_json', 1000, '', 500, 300, '', '', 1, 1, 50, 1);
 INSERT INTO `ge_model_fields` (`id`, `name`, `description`, `model`, `type`, `length`, `values`, `width`, `height`, `rules`, `ruledescription`, `searchable`, `listable`, `order`, `editable`) VALUES (1036, 'pictures_video_6', '精彩瞬间6', 175, 'file', 500, '', 0, 0, '', '', 1, 1, 12, 1);
 INSERT INTO `ge_model_fields` (`id`, `name`, `description`, `model`, `type`, `length`, `values`, `width`, `height`, `rules`, `ruledescription`, `searchable`, `listable`, `order`, `editable`) VALUES (1037, 'text_6', '文案6', 175, 'textarea', 1000, '', 0, 0, '', '', 1, 1, 12, 1);
 INSERT INTO `ge_model_fields` (`id`, `name`, `description`, `model`, `type`, `length`, `values`, `width`, `height`, `rules`, `ruledescription`, `searchable`, `listable`, `order`, `editable`) VALUES (1038, 'rotate_6', '是否旋转6', 175, 'input', 10, '', 0, 0, '', '', 1, 1, 12, 1);
@@ -650,11 +645,10 @@ INSERT INTO `ge_model_fields` (`id`, `name`, `description`, `model`, `type`, `le
 INSERT INTO `ge_model_fields` (`id`, `name`, `description`, `model`, `type`, `length`, `values`, `width`, `height`, `rules`, `ruledescription`, `searchable`, `listable`, `order`, `editable`) VALUES (1096, 'leave_date', '离职日期', 154, 'datetime', 50, '', 0, 0, '', '', 1, 1, 11, 1);
 INSERT INTO `ge_model_fields` (`id`, `name`, `description`, `model`, `type`, `length`, `values`, `width`, `height`, `rules`, `ruledescription`, `searchable`, `listable`, `order`, `editable`) VALUES (1097, 'specific_time', '具体时间', 191, 'input', 30, '', 0, 0, '', '', 1, 1, 1, 1);
 INSERT INTO `ge_model_fields` (`id`, `name`, `description`, `model`, `type`, `length`, `values`, `width`, `height`, `rules`, `ruledescription`, `searchable`, `listable`, `order`, `editable`) VALUES (1104, 'user_editor', '编辑器', 164, 'wysiwyg', 1000, '', 0, 0, '', '', 1, 1, 23, 1);
-INSERT INTO `ge_model_fields` (`id`, `name`, `description`, `model`, `type`, `length`, `values`, `width`, `height`, `rules`, `ruledescription`, `searchable`, `listable`, `order`, `editable`) VALUES (1099, 'student_name_note', '学员名称备注', 164, 'input', 100, '', 0, 0, '', '', 1, 1, 1, 1);
 INSERT INTO `ge_model_fields` (`id`, `name`, `description`, `model`, `type`, `length`, `values`, `width`, `height`, `rules`, `ruledescription`, `searchable`, `listable`, `order`, `editable`) VALUES (1100, 'default_template', '默认模板', 192, 'radio', 10, '=默认|1=秋季模板|2=万圣节|3=感恩节|4=圣诞节|5=寒假|6=春季T4', 0, 0, 'required', '', 1, 1, 1, 1);
 INSERT INTO `ge_model_fields` (`id`, `name`, `description`, `model`, `type`, `length`, `values`, `width`, `height`, `rules`, `ruledescription`, `searchable`, `listable`, `order`, `editable`) VALUES (1103, 'user_select', '下拉框', 164, 'select', 10, '1=选项1|2=选项2', 0, 0, '', '', 1, 1, 20, 1);
-INSERT INTO `ge_model_fields` (`id`, `name`, `description`, `model`, `type`, `length`, `values`, `width`, `height`, `rules`, `ruledescription`, `searchable`, `listable`, `order`, `editable`) VALUES (1102, 'quit_hour', '已退课时', 164, 'radio', 10, '=正常|1=已退|2=正常', 0, 0, '', '', 1, 1, 9, 1);
-INSERT INTO `ge_model_fields` (`id`, `name`, `description`, `model`, `type`, `length`, `values`, `width`, `height`, `rules`, `ruledescription`, `searchable`, `listable`, `order`, `editable`) VALUES (1105, 'select_1', '下拉框-模型数据', 164, 'radio', 10, '1=选项1|2=选项2', 0, 0, '', '', 1, 1, 30, 1);
+INSERT INTO `ge_model_fields` (`id`, `name`, `description`, `model`, `type`, `length`, `values`, `width`, `height`, `rules`, `ruledescription`, `searchable`, `listable`, `order`, `editable`) VALUES (1105, 'select_1', '下拉框_int', 164, 'radio_int', 10, '1=选项1|2=选项2', 0, 0, '', '', 1, 1, 30, 1);
+INSERT INTO `ge_model_fields` (`id`, `name`, `description`, `model`, `type`, `length`, `values`, `width`, `height`, `rules`, `ruledescription`, `searchable`, `listable`, `order`, `editable`) VALUES (1116, 'json_2', 'json_2', 164, 'textarea_json', 1000, '', 0, 0, '', '', 1, 1, 66, 1);
 COMMIT;
 
 -- ----------------------------
@@ -851,7 +845,7 @@ CREATE TABLE `ge_sessions` (
 -- Records of ge_sessions
 -- ----------------------------
 BEGIN;
-INSERT INTO `ge_sessions` (`session_id`, `ip_address`, `user_agent`, `last_activity`, `user_data`) VALUES ('24fa3f2bc03f75be708f2d861dc3151f', '127.0.0.1', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36', 1709800917, 'a:4:{s:9:\"user_data\";s:0:\"\";s:3:\"uid\";s:1:\"1\";s:10:\"model_type\";s:5:\"model\";s:5:\"model\";s:7:\"student\";}');
+INSERT INTO `ge_sessions` (`session_id`, `ip_address`, `user_agent`, `last_activity`, `user_data`) VALUES ('57fbcd6012360fcd50c55ef076cedd97', '127.0.0.1', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36', 1709814889, 'a:4:{s:9:\"user_data\";s:0:\"\";s:3:\"uid\";s:1:\"1\";s:10:\"model_type\";s:5:\"model\";s:5:\"model\";s:7:\"student\";}');
 COMMIT;
 
 -- ----------------------------
@@ -8450,32 +8444,25 @@ CREATE TABLE `ge_u_m_student` (
   `update_user` tinyint(10) unsigned NOT NULL DEFAULT '0',
   `student_name` varchar(30) NOT NULL DEFAULT '',
   `gender` varchar(10) NOT NULL DEFAULT '',
-  `telephone` varchar(11) NOT NULL DEFAULT '',
-  `join_class_id` varchar(10) NOT NULL DEFAULT '',
   `status` varchar(10) NOT NULL DEFAULT '',
-  `course_id` varchar(10) NOT NULL DEFAULT '',
-  `school_district_id` varchar(10) NOT NULL DEFAULT '',
-  `qrcode` varchar(100) NOT NULL DEFAULT '',
   `notice_jurisdiction` varchar(10) NOT NULL DEFAULT '',
-  `student_name_en` varchar(30) NOT NULL DEFAULT '',
   `student_code` varchar(30) NOT NULL DEFAULT '',
-  `last_update_time` varchar(30) NOT NULL DEFAULT '',
   `del_status` varchar(10) NOT NULL DEFAULT '',
-  `isset_class` varchar(10) NOT NULL DEFAULT '',
-  `student_name_note` varchar(100) NOT NULL DEFAULT '',
-  `quit_hour` varchar(10) NOT NULL DEFAULT '',
   `user_select` varchar(10) NOT NULL DEFAULT '',
   `user_editor` text NOT NULL,
-  `select_1` varchar(10) NOT NULL DEFAULT '',
+  `select_1` int(10) NOT NULL DEFAULT '0',
+  `json_1` json NOT NULL,
+  `json_2` json NOT NULL,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC;
 
 -- ----------------------------
 -- Records of ge_u_m_student
 -- ----------------------------
 BEGIN;
-INSERT INTO `ge_u_m_student` (`id`, `create_time`, `update_time`, `create_user`, `update_user`, `student_name`, `gender`, `telephone`, `join_class_id`, `status`, `course_id`, `school_district_id`, `qrcode`, `notice_jurisdiction`, `student_name_en`, `student_code`, `last_update_time`, `del_status`, `isset_class`, `student_name_note`, `quit_hour`, `user_select`, `user_editor`, `select_1`) VALUES (1, 1709568074, 1709758494, 1, 1, '牛魔王', '0', '18888888888', '3', '1', '2', '1', 'attachments/2024/03/1709568074e1c1965066c2ce51.jpeg', '1,2,3', 'niu', '123456', '2024-03-05 08:00:00', '', '0', '牛魔王', '', '1', '123', '2');
-INSERT INTO `ge_u_m_student` (`id`, `create_time`, `update_time`, `create_user`, `update_user`, `student_name`, `gender`, `telephone`, `join_class_id`, `status`, `course_id`, `school_district_id`, `qrcode`, `notice_jurisdiction`, `student_name_en`, `student_code`, `last_update_time`, `del_status`, `isset_class`, `student_name_note`, `quit_hour`, `user_select`, `user_editor`, `select_1`) VALUES (2, 1709758574, 1709800085, 1, 1, '2', '0', '5', '8', '1', '7', '6', 'attachments/2024/03/170975857462c27686df4ebe4e.jpeg', '1,2,3', '3', '1', '123', '', '0', '4', '', '2', '123', '2');
+INSERT INTO `ge_u_m_student` (`id`, `create_time`, `update_time`, `create_user`, `update_user`, `student_name`, `gender`, `status`, `notice_jurisdiction`, `student_code`, `del_status`, `user_select`, `user_editor`, `select_1`, `json_1`, `json_2`) VALUES (1, 1709568074, 1709758494, 1, 1, '牛魔王', '0', '1', '1,2,3', '123456', '', '1', '123', 2, 'null', 'null');
+INSERT INTO `ge_u_m_student` (`id`, `create_time`, `update_time`, `create_user`, `update_user`, `student_name`, `gender`, `status`, `notice_jurisdiction`, `student_code`, `del_status`, `user_select`, `user_editor`, `select_1`, `json_1`, `json_2`) VALUES (2, 1709758574, 1709807485, 1, 1, '2', '0', '1', '1,2,3', '1', '', '2', '123', 2, '[1, 2, 3, 4, 5]', 'null');
+INSERT INTO `ge_u_m_student` (`id`, `create_time`, `update_time`, `create_user`, `update_user`, `student_name`, `gender`, `status`, `notice_jurisdiction`, `student_code`, `del_status`, `user_select`, `user_editor`, `select_1`, `json_1`, `json_2`) VALUES (3, 1709814645, 1709814889, 1, 1, '2', '0', '1', '1,2,3', '1', '1', '1', '123', 1, '{\"sku\": \"20223\", \"name\": \"John Smith\", \"price\": 23.95, \"billTo\": {\"zip\": \"12345\", \"city\": \"Pretendville\", \"name\": \"John Smith\", \"state\": \"NY\", \"address\": \"123 Maple Street\"}, \"shipTo\": {\"zip\": \"12345\", \"city\": \"Pretendville\", \"name\": \"Jane Smith\", \"state\": \"NY\", \"address\": \"123 Maple Street\"}}', '2');
 COMMIT;
 
 -- ----------------------------

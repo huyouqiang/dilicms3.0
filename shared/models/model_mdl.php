@@ -208,6 +208,8 @@ class Model_mdl extends CI_Model
 		$data['model'] = $model->id;
 		if ($this->db->insert($this->db->dbprefix('model_fields'), $data))
 		{
+			// print_r($data);
+			// die();
 			$this->dbforge->add_column('u_m_' . $model->name, $this->field_behavior->on_info($data));
 			return TRUE;
 		}

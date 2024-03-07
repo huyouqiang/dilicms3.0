@@ -275,6 +275,30 @@ class Form
 	
 	// ------------------------------------------------------------------------
 
+	/**
+     * 生成TEXTAREA类型控件HTML
+     *
+     * @access  private
+     * @param   array
+     * @param   string
+     * @return  string
+     */
+	private function _textarea_json($field, $default)
+	{
+		if ( ! $field['width'] )
+		{
+			$field['width'] = 300;
+		}
+		if ( ! $field['height'] )
+		{
+			$field['height'] = 100;
+		}
+		return '<textarea class="form-control" id="' . $field['name'] . '" name="' . $field['name'] . 
+		       '" style="width:' . $field['width'] . 'px;height:' . $field['height'] . 'px">' . $default . '</textarea>';
+	}
+	
+	// ------------------------------------------------------------------------
+
     /**
      * 生成SELECT类型控件HTML
      *

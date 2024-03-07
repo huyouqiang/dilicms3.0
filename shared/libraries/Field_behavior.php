@@ -177,6 +177,11 @@ class Field_behavior
 												 'default' => ''
 												) ;
 								break;
+				case 'textarea_json' : 
+					$field = array(
+										'type' => 'JSON'
+									) ;
+								break;
 				case 'wysiwyg' :
 				case 'wysiwyg_basic':
 								$field = array(
@@ -224,7 +229,7 @@ class Field_behavior
 		else
 		{
 			//查看是否有指定默认值,以下字段类型支持
-			$default_value_enabled = array('int','float','input','textarea','colorpicker','datetime');
+			$default_value_enabled = array('int','float','input','textarea','textarea_json','colorpicker','datetime');
 			if (in_array($field['type'], $default_value_enabled) AND $default == '' AND $field['values'] != '')
 			{
 				$default = $field['values'];
@@ -436,6 +441,7 @@ class Field_behavior
 						break;
 				case 'input':
 				case 'textarea':
+				case 'textarea_json':
 				case 'wysiwyg':
 				case 'wysiwyg_basic':
 						if ($keyword = $this->_ci->input->get_post($field['name'], TRUE))

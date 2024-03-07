@@ -267,7 +267,8 @@ class CI_DB_forge {
 			{
 				show_error('Field information is required.');
 			}
-
+			// print_r($field);
+			// die();
 			$sql = $this->_alter_table('ADD', $this->db->dbprefix.$table, $this->fields, $after_field);
 
 			$this->_reset();
