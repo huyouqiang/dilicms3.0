@@ -151,7 +151,19 @@ class Field_behavior
 												) ;
 								break;
 				case 'input' : 
+				case 'select_int': $field = array(
+												'type' => 'INT',
+												'constraint' => $data['length'] ? $data['length'] : 10 ,
+												'default' => 0
+												) ;
+									break;
 				case 'select':
+				case 'radio_int'   	: $field = array(
+													'type' => 'INT',
+														'constraint' => $data['length'] ? $data['length'] : 10 ,
+														'default' => 0
+													) ;
+									break;
 				case 'radio' :
 				case 'checkbox':
 				case 'checkbox_from_model':
@@ -244,7 +256,12 @@ class Field_behavior
 			switch ($field['type'])
 			{
 				case 'radio' 	:
+				case 'radio_int' 	:
 				case 'select'	:
+				case 'select_int'	:
+							// print_r($field);
+							// print_r($value);
+							// die();
 							echo isset($field['values'][$value->$fieldName]) ?  $field['values'][$value->$fieldName] : '未知' ;
 							break;
 				case 'checkbox' :
@@ -334,8 +351,10 @@ class Field_behavior
 			switch ($field['type'])
 			{
 				case 'select':
+				case 'select_int':
 				case 'checkbox':
 				case 'radio':
+				case 'radio_int':
 				case 'select_from_model':
 				case 'radio_from_model':
 				case 'checkbox_from_model':
@@ -385,7 +404,9 @@ class Field_behavior
 			switch ($field['type'])
 			{
 				case 'select':
+				case 'select_int':
 				case 'radio':
+				case 'radio_int':
 				case 'select_from_model':
 				case 'radio_from_model':
 				case 'colorpicker':

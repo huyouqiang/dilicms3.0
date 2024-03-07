@@ -78,9 +78,15 @@ if ( ! function_exists('update_cache'))
 {
 	function update_cache($array, $fix = '')
 	{
+		// print_r($array);
+		// print_r($fix);
+		// die();
 		$ci = &get_instance();
 		$ci->load->model('cache_mdl');
 		$array = is_array($array) ? $array : array($array);
+		// print_r($array);
+		// print_r($fix);
+		// die();
 		foreach ($array as $v)
 		{
 			$method = 'update_' . $v . '_cache';

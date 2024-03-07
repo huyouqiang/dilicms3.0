@@ -75,7 +75,9 @@ class Content extends Admin_Controller
 		$this->plugin_manager->trigger('reached');
 		$this->settings->load('model/' . $model);
 		$data['model'] = $this->settings->item('models');
+		// print_r($data);
 		$data['model'] = $data['model'][$model];
+		
 		$this->load->library('form');
 		$this->load->library('field_behavior');
 		$data['provider'] = $this->_pagination($data['model'],$id);
@@ -83,6 +85,7 @@ class Content extends Admin_Controller
 			'内容管理' => '',
 			$data['model']['description'] => site_url('content/view?model=' . $data['model']['name']),
 		));
+
 		
 		$this->_template('content_list', $data);
 	}
@@ -110,6 +113,9 @@ class Content extends Admin_Controller
         }
 
 		$data['where'] = array();
+
+		// print_r($model);
+		// die();
 		
 		foreach ($model['searchable'] as $v)
 		{
@@ -145,6 +151,10 @@ class Content extends Admin_Controller
 		$data['pagination'] = $this->pagination->create_links();
 
         $data['where'] = $condition;
+
+		// print_r($data);
+
+		// die();
 
 		return $data;
 	}
@@ -224,6 +234,7 @@ class Content extends Admin_Controller
             if ($thumb_preferences and $thumb_preferences->default != 'original') {
                 $data['thumb_default_size'] = $thumb_preferences->default;
             }
+			// print_r($data);
  			$this->_template('content_form', $data);
 		}
 		else

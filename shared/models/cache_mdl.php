@@ -97,7 +97,7 @@ class Cache_mdl extends CI_Model
 				{
 					array_push($model['searchable'], $v['id']);
 				}
-				if (in_array($v['type'], array('select', 'checkbox', 'radio')))
+				if (in_array($v['type'], array('select','select_int', 'checkbox', 'radio','radio_int')))
 				{
 					if ($v['values'] == '')
 					{
@@ -403,6 +403,9 @@ class Cache_mdl extends CI_Model
 		$cached_fieldtypes['extra_fieldtypes'] = array();
 		$cached_fieldtypes['validation'] = array();
 		$results = $this->db->get($this->db->dbprefix('fieldtypes'))->result_array();
+
+		// print_r($results);
+		// die();
 		foreach ($results as $v)
 		{
 			$cached_fieldtypes['fieldtypes'][$v['k']] = $v['v'];

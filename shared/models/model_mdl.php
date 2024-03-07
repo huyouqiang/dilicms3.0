@@ -276,6 +276,12 @@ class Model_mdl extends CI_Model
 		$old_name = $field->name;
 		if ($this->db->where('id', $field->id)->update($this->db->dbprefix('model_fields'), $data))
 		{
+			// print_r($data);
+			// print_r($old_name);
+			// print_r($model->name);
+			// print_r($model->name);
+			// print_r($this->field_behavior->on_info($data, $old_name));
+			// die();
 			$this->dbforge->modify_column('u_m_' . $model->name, $this->field_behavior->on_info($data, $old_name));
 			return TRUE;
 		}

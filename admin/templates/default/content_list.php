@@ -178,6 +178,7 @@
 					<?php foreach($model['listable'] as $vt): ?>
                     <td>
                     <?php   
+					// print_r($model['fields'][$vt]);
 					$this->field_behavior->on_list($model['fields'][$vt],$v);
 					?>
 <!--                        urldecode()-->

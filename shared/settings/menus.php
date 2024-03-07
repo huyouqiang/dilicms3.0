@@ -370,31 +370,24 @@ $setting['menus']=array (
           array (
             'class_name' => 'content',
             'method_name' => 'view',
-            'extra' => 'new_year_report',
-            'menu_name' => '新年成绩单',
-          ),
-          28 => 
-          array (
-            'class_name' => 'content',
-            'method_name' => 'view',
             'extra' => 'timetable',
             'menu_name' => '课表信息',
           ),
-          29 => 
+          28 => 
           array (
             'class_name' => 'content',
             'method_name' => 'view',
             'extra' => 'class_remind',
             'menu_name' => '课前提醒',
           ),
-          30 => 
+          29 => 
           array (
             'class_name' => 'content',
             'method_name' => 'view',
             'extra' => 'class_preview',
             'menu_name' => '课前预习',
           ),
-          31 => 
+          30 => 
           array (
             'class_name' => 'content',
             'method_name' => 'view',

@@ -362,6 +362,9 @@ class Model extends Admin_Controller
 		$data['model'] = $this->model_mdl->get_model_by_id($data['field']->model);
 		! $data['model'] AND $this->_message('不存在的内容模型!', '', FALSE);
 		$this->settings->load('fieldtypes');
+
+		// print_r($this->_get_post_data());
+		// die();
 		if ($this->_validate_field_form($data['field']->model, $data['field']->name))
 		{
 			$this->model_mdl->edit_field($data['model'],$data['field'], $this->_get_post_data());

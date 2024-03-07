@@ -305,6 +305,36 @@ class Form
 	
 	// ------------------------------------------------------------------------
 
+	/**
+     * 生成SELECT类型控件HTML
+     *
+     * @access  private
+     * @param   array
+     * @param   string
+     * @return  string
+     */
+	private function _select_int($field, $default)
+	{
+		$return = '<select name="' . $field['name'] . '" id="' . $field['name'] . '" class="form-select" style="width:150px;">'.
+                  '<option value="">请选择</option>';
+	    foreach ($field['values'] as $key=>$v)
+		{
+			$pre_fix = '';
+			if (isset($field['levels'][$key]) AND $field['levels'][$key] > 0)
+			{
+				for ($i = 0 ; $i < $field['levels'][$key] ; $i ++)
+				{
+					$pre_fix .= '&nbsp;&nbsp;';
+				}
+			}
+			$return .= 	'<option value="' . $key . '" ' . ($default == $key ? 'selected="selected"' : '') . '>' . $pre_fix . $v . '</option>';
+		}
+		$return .= '</select>';
+		return $return;
+	}
+	
+	// ------------------------------------------------------------------------
+
     /**
      * 生成RADIO类型控件HTML
      *
@@ -314,6 +344,30 @@ class Form
      * @return  string
      */
 	private function _radio($field, $default)
+	{
+		$return = '<ul class="attr_list">';
+		$count = 1;
+	    foreach ($field['values'] as $key=>$v)
+		{
+			$return .= '<li style="display:inline;margin-right:20px;"><input id="rad_' . $field['name'] . '_' . $count . '" name="' . $field['name'] . '" type="radio" value="' . 
+			           $key . '" ' . ($default == $key ? 'checked="checked"' : '') . ' class="form-check-input"/> <lable class="attr" for="rad_' . $field['name'] . '_' . $count . '">' . $v . '</lable></li>';
+			$count ++;
+		}
+		$return .= '</ul>';
+		return $return;
+	}
+	
+	// ------------------------------------------------------------------------
+
+	/**
+     * 生成RADIO类型控件HTML
+     *
+     * @access  private
+     * @param   array
+     * @param   string
+     * @return  string
+     */
+	private function _radio_int($field, $default)
 	{
 		$return = '<ul class="attr_list">';
 		$count = 1;
