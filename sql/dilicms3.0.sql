@@ -11,7 +11,7 @@
  Target Server Version : 50744 (5.7.44)
  File Encoding         : 65001
 
- Date: 07/03/2024 20:39:28
+ Date: 09/03/2024 17:14:50
 */
 
 SET NAMES utf8mb4;
@@ -324,7 +324,7 @@ CREATE TABLE `ge_model_fields` (
   PRIMARY KEY (`id`) USING BTREE,
   UNIQUE KEY `name` (`name`,`model`) USING BTREE,
   KEY `model` (`model`) USING BTREE
-) ENGINE=MyISAM AUTO_INCREMENT=1117 DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC;
+) ENGINE=MyISAM AUTO_INCREMENT=1118 DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC;
 
 -- ----------------------------
 -- Records of ge_model_fields
@@ -456,6 +456,7 @@ INSERT INTO `ge_model_fields` (`id`, `name`, `description`, `model`, `type`, `le
 INSERT INTO `ge_model_fields` (`id`, `name`, `description`, `model`, `type`, `length`, `values`, `width`, `height`, `rules`, `ruledescription`, `searchable`, `listable`, `order`, `editable`) VALUES (898, 'class_participaton', '课堂参与', 174, 'radio', 10, '=无|1=1颗星|2=2颗星|3=3颗星|4=4颗星|5=5颗星', 0, 0, '', '', 1, 0, 16, 1);
 INSERT INTO `ge_model_fields` (`id`, `name`, `description`, `model`, `type`, `length`, `values`, `width`, `height`, `rules`, `ruledescription`, `searchable`, `listable`, `order`, `editable`) VALUES (899, 'vocabulary_quiz', '词汇测试', 174, 'input', 10, '', 0, 0, '', '', 1, 0, 14, 1);
 INSERT INTO `ge_model_fields` (`id`, `name`, `description`, `model`, `type`, `length`, `values`, `width`, `height`, `rules`, `ruledescription`, `searchable`, `listable`, `order`, `editable`) VALUES (900, 'student_code', '学生id【业务】', 164, 'input', 30, '', 0, 0, '', '', 1, 1, 0, 1);
+INSERT INTO `ge_model_fields` (`id`, `name`, `description`, `model`, `type`, `length`, `values`, `width`, `height`, `rules`, `ruledescription`, `searchable`, `listable`, `order`, `editable`) VALUES (1117, 'last_update_time', '最后更新时间', 164, 'datetime', 50, '', 300, 0, '', '', 1, 1, 80, 1);
 INSERT INTO `ge_model_fields` (`id`, `name`, `description`, `model`, `type`, `length`, `values`, `width`, `height`, `rules`, `ruledescription`, `searchable`, `listable`, `order`, `editable`) VALUES (902, 'headmaster_id', '用户id【业务】', 154, 'input', 30, '', 0, 0, '', '', 1, 1, 0, 1);
 INSERT INTO `ge_model_fields` (`id`, `name`, `description`, `model`, `type`, `length`, `values`, `width`, `height`, `rules`, `ruledescription`, `searchable`, `listable`, `order`, `editable`) VALUES (903, 'last_update_time', '最后更新时间', 154, 'input', 30, '', 0, 0, '', '', 1, 1, 12, 1);
 INSERT INTO `ge_model_fields` (`id`, `name`, `description`, `model`, `type`, `length`, `values`, `width`, `height`, `rules`, `ruledescription`, `searchable`, `listable`, `order`, `editable`) VALUES (906, 'video_1', '视频1', 178, 'textarea', 1000, '', 0, 0, '', '【存储腾讯云点播信息】', 1, 1, 3, 1);
@@ -648,7 +649,7 @@ INSERT INTO `ge_model_fields` (`id`, `name`, `description`, `model`, `type`, `le
 INSERT INTO `ge_model_fields` (`id`, `name`, `description`, `model`, `type`, `length`, `values`, `width`, `height`, `rules`, `ruledescription`, `searchable`, `listable`, `order`, `editable`) VALUES (1100, 'default_template', '默认模板', 192, 'radio', 10, '=默认|1=秋季模板|2=万圣节|3=感恩节|4=圣诞节|5=寒假|6=春季T4', 0, 0, 'required', '', 1, 1, 1, 1);
 INSERT INTO `ge_model_fields` (`id`, `name`, `description`, `model`, `type`, `length`, `values`, `width`, `height`, `rules`, `ruledescription`, `searchable`, `listable`, `order`, `editable`) VALUES (1103, 'user_select', '下拉框', 164, 'select', 10, '1=选项1|2=选项2', 0, 0, '', '', 1, 1, 20, 1);
 INSERT INTO `ge_model_fields` (`id`, `name`, `description`, `model`, `type`, `length`, `values`, `width`, `height`, `rules`, `ruledescription`, `searchable`, `listable`, `order`, `editable`) VALUES (1105, 'select_1', '下拉框_int', 164, 'radio_int', 10, '1=选项1|2=选项2', 0, 0, '', '', 1, 1, 30, 1);
-INSERT INTO `ge_model_fields` (`id`, `name`, `description`, `model`, `type`, `length`, `values`, `width`, `height`, `rules`, `ruledescription`, `searchable`, `listable`, `order`, `editable`) VALUES (1116, 'json_2', 'json_2', 164, 'textarea_json', 1000, '', 0, 0, '', '', 1, 1, 66, 1);
+INSERT INTO `ge_model_fields` (`id`, `name`, `description`, `model`, `type`, `length`, `values`, `width`, `height`, `rules`, `ruledescription`, `searchable`, `listable`, `order`, `editable`) VALUES (1116, 'json_2', 'json_2', 164, 'textarea_json', 1000, '', 500, 300, '', '', 1, 1, 66, 1);
 COMMIT;
 
 -- ----------------------------
@@ -845,7 +846,8 @@ CREATE TABLE `ge_sessions` (
 -- Records of ge_sessions
 -- ----------------------------
 BEGIN;
-INSERT INTO `ge_sessions` (`session_id`, `ip_address`, `user_agent`, `last_activity`, `user_data`) VALUES ('57fbcd6012360fcd50c55ef076cedd97', '127.0.0.1', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36', 1709814889, 'a:4:{s:9:\"user_data\";s:0:\"\";s:3:\"uid\";s:1:\"1\";s:10:\"model_type\";s:5:\"model\";s:5:\"model\";s:7:\"student\";}');
+INSERT INTO `ge_sessions` (`session_id`, `ip_address`, `user_agent`, `last_activity`, `user_data`) VALUES ('f04d06f98bda44889ffa84255799b6b6', '127.0.0.1', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.3 Safari/605.1.15', 1709975163, 'a:4:{s:9:\"user_data\";s:0:\"\";s:3:\"uid\";s:1:\"1\";s:10:\"model_type\";s:5:\"model\";s:5:\"model\";s:7:\"student\";}');
+INSERT INTO `ge_sessions` (`session_id`, `ip_address`, `user_agent`, `last_activity`, `user_data`) VALUES ('ea6f9f9b271458ecea7efef08a8ec352', '127.0.0.1', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36', 1709975450, 'a:4:{s:9:\"user_data\";s:0:\"\";s:3:\"uid\";s:1:\"1\";s:10:\"model_type\";s:5:\"model\";s:5:\"model\";s:7:\"student\";}');
 COMMIT;
 
 -- ----------------------------
@@ -8453,6 +8455,7 @@ CREATE TABLE `ge_u_m_student` (
   `select_1` int(10) NOT NULL DEFAULT '0',
   `json_1` json NOT NULL,
   `json_2` json NOT NULL,
+  `last_update_time` varchar(50) NOT NULL DEFAULT '',
   PRIMARY KEY (`id`) USING BTREE
 ) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC;
 
@@ -8460,9 +8463,9 @@ CREATE TABLE `ge_u_m_student` (
 -- Records of ge_u_m_student
 -- ----------------------------
 BEGIN;
-INSERT INTO `ge_u_m_student` (`id`, `create_time`, `update_time`, `create_user`, `update_user`, `student_name`, `gender`, `status`, `notice_jurisdiction`, `student_code`, `del_status`, `user_select`, `user_editor`, `select_1`, `json_1`, `json_2`) VALUES (1, 1709568074, 1709758494, 1, 1, '牛魔王', '0', '1', '1,2,3', '123456', '', '1', '123', 2, 'null', 'null');
-INSERT INTO `ge_u_m_student` (`id`, `create_time`, `update_time`, `create_user`, `update_user`, `student_name`, `gender`, `status`, `notice_jurisdiction`, `student_code`, `del_status`, `user_select`, `user_editor`, `select_1`, `json_1`, `json_2`) VALUES (2, 1709758574, 1709807485, 1, 1, '2', '0', '1', '1,2,3', '1', '', '2', '123', 2, '[1, 2, 3, 4, 5]', 'null');
-INSERT INTO `ge_u_m_student` (`id`, `create_time`, `update_time`, `create_user`, `update_user`, `student_name`, `gender`, `status`, `notice_jurisdiction`, `student_code`, `del_status`, `user_select`, `user_editor`, `select_1`, `json_1`, `json_2`) VALUES (3, 1709814645, 1709814889, 1, 1, '2', '0', '1', '1,2,3', '1', '1', '1', '123', 1, '{\"sku\": \"20223\", \"name\": \"John Smith\", \"price\": 23.95, \"billTo\": {\"zip\": \"12345\", \"city\": \"Pretendville\", \"name\": \"John Smith\", \"state\": \"NY\", \"address\": \"123 Maple Street\"}, \"shipTo\": {\"zip\": \"12345\", \"city\": \"Pretendville\", \"name\": \"Jane Smith\", \"state\": \"NY\", \"address\": \"123 Maple Street\"}}', '2');
+INSERT INTO `ge_u_m_student` (`id`, `create_time`, `update_time`, `create_user`, `update_user`, `student_name`, `gender`, `status`, `notice_jurisdiction`, `student_code`, `del_status`, `user_select`, `user_editor`, `select_1`, `json_1`, `json_2`, `last_update_time`) VALUES (1, 1709568074, 1709975259, 1, 1, '牛魔王', '0', '1', '1,2,3', '123456', '', '1', '123', 2, 'null', 'null', '2024-03-09T17:07');
+INSERT INTO `ge_u_m_student` (`id`, `create_time`, `update_time`, `create_user`, `update_user`, `student_name`, `gender`, `status`, `notice_jurisdiction`, `student_code`, `del_status`, `user_select`, `user_editor`, `select_1`, `json_1`, `json_2`, `last_update_time`) VALUES (2, 1709758574, 1709975079, 1, 1, '2', '0', '1', '1,2,3', '1', '', '2', '123', 2, '[1, 2, 3, 4, 5]', 'null', '2024-03-09T17:05');
+INSERT INTO `ge_u_m_student` (`id`, `create_time`, `update_time`, `create_user`, `update_user`, `student_name`, `gender`, `status`, `notice_jurisdiction`, `student_code`, `del_status`, `user_select`, `user_editor`, `select_1`, `json_1`, `json_2`, `last_update_time`) VALUES (3, 1709814645, 1709975063, 1, 1, '2', '0', '1', '1,2,3', '1', '1', '1', '123', 1, '{\"sku\": \"20223\", \"name\": \"John Smith\", \"price\": 23.95, \"billTo\": {\"zip\": \"12345\", \"city\": \"Pretendville\", \"name\": \"John Smith\", \"state\": \"NY\", \"address\": \"123 Maple Street\"}, \"shipTo\": {\"zip\": \"12345\", \"city\": \"Pretendville\", \"name\": \"Jane Smith\", \"state\": \"NY\", \"address\": \"123 Maple Street\"}}', '{\"sku\": \"20224\", \"name\": \"John Smith\", \"price\": 23.95, \"billTo\": {\"zip\": \"12345\", \"city\": \"Pretendville\", \"name\": \"John Smith\", \"state\": \"NY\", \"address\": \"123 Maple Street\"}, \"shipTo\": {\"zip\": \"12345\", \"city\": \"Pretendville\", \"name\": \"Jane Smith\", \"state\": \"NY\", \"address\": \"123 Maple Street\"}}', '2024-03-09T17:02');
 COMMIT;
 
 -- ----------------------------

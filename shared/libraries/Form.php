@@ -488,8 +488,8 @@ class Form
      */
 	private function _datetime($field, $default)
 	{
-		return '<input class="Wdate form-control" style="width:150px;height:40px;" type="text" name="' . $field['name'] . '" id="' . 
-		       $field['name'] . '" value="' . $default . '" onFocus="WdatePicker({isShowClear:false,readOnly:true,dateFmt:\'yyyy-MM-dd HH:mm:ss\'})"/>';	
+		return '<input class=" form-control" style="width:200px;height:40px;" type="datetime-local" name="' . $field['name'] . '" id="' . 
+		       $field['name'] . '" value="' . $default . '" />';	
 	}
 	
 	// ------------------------------------------------------------------------
