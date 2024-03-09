@@ -255,6 +255,24 @@ $setting['models']['student']=array (
       'order' => '80',
       'editable' => '1',
     ),
+    1118 => 
+    array (
+      'id' => '1118',
+      'name' => 'file_upload',
+      'description' => '文件上传',
+      'model' => '164',
+      'type' => 'file',
+      'length' => '100',
+      'values' => '',
+      'width' => '0',
+      'height' => '0',
+      'rules' => '',
+      'ruledescription' => '',
+      'searchable' => '0',
+      'listable' => '1',
+      'order' => '100',
+      'editable' => '1',
+    ),
   ),
   'listable' => 
   array (
@@ -270,6 +288,7 @@ $setting['models']['student']=array (
     9 => '1115',
     10 => '1116',
     11 => '1117',
+    12 => '1118',
   ),
   'searchable' => 
   array (
