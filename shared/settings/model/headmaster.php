@@ -29,6 +29,27 @@ $setting['models']['headmaster']=array (
       'order' => '0',
       'editable' => '1',
     ),
+    1119 => 
+    array (
+      'id' => '1119',
+      'name' => 'user_checkbox',
+      'description' => '复选框',
+      'model' => '154',
+      'type' => 'checkbox',
+      'length' => '10',
+      'values' => 
+      array (
+        1 => '选项1',
+      ),
+      'width' => '0',
+      'height' => '0',
+      'rules' => '',
+      'ruledescription' => '',
+      'searchable' => '0',
+      'listable' => '0',
+      'order' => '0',
+      'editable' => '0',
+    ),
     774 => 
     array (
       'id' => '774',
@@ -254,6 +275,28 @@ $setting['models']['headmaster']=array (
       'order' => '12',
       'editable' => '1',
     ),
+    1120 => 
+    array (
+      'id' => '1120',
+      'name' => 'user_check',
+      'description' => '复选框',
+      'model' => '154',
+      'type' => 'checkbox',
+      'length' => '10',
+      'values' => 
+      array (
+        1 => '选项1',
+        2 => '选项2',
+      ),
+      'width' => '0',
+      'height' => '0',
+      'rules' => '',
+      'ruledescription' => '',
+      'searchable' => '1',
+      'listable' => '1',
+      'order' => '20',
+      'editable' => '1',
+    ),
   ),
   'listable' => 
   array (
@@ -270,6 +313,7 @@ $setting['models']['headmaster']=array (
     10 => '1095',
     11 => '1096',
     12 => '903',
+    13 => '1120',
   ),
   'searchable' => 
   array (
@@ -286,5 +330,6 @@ $setting['models']['headmaster']=array (
     10 => '1095',
     11 => '1096',
     12 => '903',
+    13 => '1120',
   ),
 );

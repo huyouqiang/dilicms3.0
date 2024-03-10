@@ -456,8 +456,10 @@ class Field_behavior
 				case 'linked_menu':
 						if ($keyword = $this->_ci->input->get_post($field['name'], TRUE))
 						{
-							$where[$field['name']] = $keyword;
-							$suffix .= '&' . $field['name'] . '=' .$keyword;
+							// print_r($keyword);
+							// print_r($field['name']);
+							$where[$field['name']] = $keyword['0'];
+							$suffix .= '&' . $field['name'] . '=' .$keyword['0'];
 							$keyword = is_array($keyword) ? $keyword : explode(( $field['type'] == 'linked_menu' ? '|' : ','), $keyword);
 							$real_condition = array();
 							foreach ($keyword as $k)
@@ -469,6 +471,12 @@ class Field_behavior
 								$this->_extra_condition = implode(' AND ', $real_condition);
 								$this->set_extra_condition(FALSE);
 							}
+
+							// print_r($keyword);
+							// print_r($field['name']);
+							// print_r($where);
+							// print_r($real_condition);
+
 						}
 						break;
 				default :

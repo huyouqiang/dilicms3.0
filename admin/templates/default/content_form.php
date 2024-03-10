@@ -2,7 +2,6 @@
 <link rel="stylesheet" href="js/kindeditor/themes/default/default.css" />
 <script charset="utf-8" src="js/kindeditor/kindeditor-all-min.js"></script>
 <script charset="utf-8" src="js/kindeditor/lang/zh_CN.js"></script>
-<script src="js/DatePicker/WdatePicker.js" type="text/javascript"></script>
 <script src="js/colorPicker/colorpicker.js" type="text/javascript"></script>
 <script src="js/dili_utility/jquery.ld.js" type="text/javascript"></script>
 <link rel="stylesheet" media="screen" type="text/css" href="js/colorPicker/css/colorpicker.css" />

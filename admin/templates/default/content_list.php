@@ -1,5 +1,4 @@
 <?php if ( ! defined('IN_DILICMS')) exit('No direct script access allowed');?>
-<script src="js/DatePicker/WdatePicker.js" type="text/javascript"></script>
 <script src="js/colorPicker/colorpicker.js" type="text/javascript"></script>
 <script src="js/dili_utility/jquery.ld.js" type="text/javascript"></script>
 <link rel="stylesheet" media="screen" type="text/css" href="js/colorPicker/css/colorpicker.css" />
@@ -105,6 +104,7 @@
         <a href="<?php echo backend_url('excel/exportExcel','model='.$s);?>;"><button class="btn btn-sm btn-primary" type="button"><span class="export">导出EXCEL</span></button></a>
         <?php if($model['searchable']) : ?>
             <a href="javascript:void(0)" onclick="$('#content_search_form').slideToggle('slow');" ><button class="btn btn-sm btn-primary" type="button"><span class="remove">筛选</span></button></a>
+			<a href="/admin/index.php/content/view?model=<?php echo isset($_GET['model']) ? $_GET['model']:''; ?>"><button class="btn btn-sm btn-primary" type="button"><span class="delete">重置</span></button></a>
             <div id="content_search_form" style="display: none;background-color: #eeeeee;margin:10px 0px;padding:10px 10px;max-height:300px;overflow-y: auto;" class="card search">
                 <?php echo form_open('content/view?model='.$model['name']); ?>
                     <table class="form_table" style="background-color: #eeeeee;">
