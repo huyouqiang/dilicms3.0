@@ -273,6 +273,42 @@ $setting['models']['student']=array (
       'order' => '100',
       'editable' => '1',
     ),
+    1124 => 
+    array (
+      'id' => '1124',
+      'name' => 'json_3',
+      'description' => 'json_3',
+      'model' => '164',
+      'type' => 'textarea_json',
+      'length' => '',
+      'values' => '',
+      'width' => '0',
+      'height' => '0',
+      'rules' => '',
+      'ruledescription' => '',
+      'searchable' => '1',
+      'listable' => '1',
+      'order' => '300',
+      'editable' => '1',
+    ),
+    1125 => 
+    array (
+      'id' => '1125',
+      'name' => 'text_3',
+      'description' => 'text_3',
+      'model' => '164',
+      'type' => 'wysiwyg',
+      'length' => '',
+      'values' => '',
+      'width' => '0',
+      'height' => '0',
+      'rules' => '',
+      'ruledescription' => '',
+      'searchable' => '1',
+      'listable' => '1',
+      'order' => '599',
+      'editable' => '1',
+    ),
   ),
   'listable' => 
   array (
@@ -289,6 +325,8 @@ $setting['models']['student']=array (
     10 => '1116',
     11 => '1117',
     12 => '1118',
+    13 => '1124',
+    14 => '1125',
   ),
   'searchable' => 
   array (
@@ -304,5 +342,7 @@ $setting['models']['student']=array (
     9 => '1115',
     10 => '1116',
     11 => '1117',
+    12 => '1124',
+    13 => '1125',
   ),
 );
