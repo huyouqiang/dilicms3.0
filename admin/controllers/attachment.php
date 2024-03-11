@@ -74,6 +74,8 @@ class Attachment extends CI_Controller
 			}
 			else
 			{
+				// print_r($this->config->item('attachment_type'));
+				// die();
 				if ( ! $_FILES['Filedata']['error'])
 				{
 					$data['folder'] = date('Y/m', $now);

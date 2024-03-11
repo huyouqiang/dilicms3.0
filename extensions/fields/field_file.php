@@ -198,11 +198,18 @@ class field_file
 
                 $extension_valid = TRUE;
             }
+
             //判断文件大小
-//             if ($_FILES[$field['name']]['size'] > setting('attachment_maxupload'))
-//             {
-//                 $extension_valid = FALSE;
-//             } 
+            if ($_FILES[$field['name']]['size'] > setting('attachment_maxupload'))
+            {
+                $extension_valid = FALSE;
+            } 
+
+            //判断文件允许上传类型
+            if ( strpos(setting('attachment_type'),substr($_FILES[$field['name']]['name'],strripos($_FILES[$field['name']]['name'],'.')+1))===false )
+            {
+                $extension_valid = FALSE;
+            } 
             
             if ($extension_valid)
             {
@@ -210,19 +217,11 @@ class field_file
                 $CI->load->helper('date');
                 $_timestamp = now();
                 $upload['folder'] = date('Y/m', $_timestamp);
-//                 $target_path = DILICMS_SHARE_PATH.'../'.setting('attachment_dir').'/'.$upload['folder'];
                 $target_path = DILICMS_SHARE_PATH.'../'.setting('attachment_dir').'/'.$upload['folder'];
                 $realname = explode('.', $_FILES[$field['name']]['name']);
                 $upload['type'] = strtolower(array_pop($realname));
                 $upload['realname'] = implode('.', $realname);
-                
-                //如果后缀是ipa 或者apk
-                if ($upload['type'] =='jpg'||$upload['type']=='gif'||$upload['type']=='png'||$upload['type']=='jpeg'||$upload['type']=='bmp'||$upload['type']=='mp4'){
-                    $upload['name'] = $_timestamp.substr(md5($upload['realname']. rand()), 0, 16);
-                }elseif ($upload['type'] =='ipa'||$upload['type']=='apk'||$upload['type'] =='mp3'){
-                    $upload['name'] = $upload['realname'];
-                }
-               
+                $upload['name'] = $_timestamp.substr(md5($upload['realname']. rand()), 0, 16);
                 $upload['posttime'] = $_timestamp;
                 $upload['uid'] = $CI->_admin->uid;
                 $target_file = $target_path.'/'.$upload['name'].'.'.$upload['type'];
