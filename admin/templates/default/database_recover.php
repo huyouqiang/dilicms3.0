@@ -25,7 +25,7 @@
 <style>
 table tbody {
 	display: block;
-	height: calc(100vh - 150px);;
+	height: calc(100vh - 150px);
 	overflow-y: scroll;
 }
 table thead,

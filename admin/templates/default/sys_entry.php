@@ -202,7 +202,7 @@ Header START -->
 			<div class="row g-4">
 			<!-- Main content START -->
 			<div class="col-lg-2" style="margin-bottom: 80px;">
-				<div class="bg-mode p-4 card" style="padding: 0px;">
+				<div class="bg-mode p-4 card" style="padding: 0px;overflow: auto;height: calc(85vh);">
 				<!-- <h3 class="h5 mb-4" style="font-size: 16px;">&nbsp;&nbsp;&nbsp;系统菜单</h3> -->
 				<a href="javascript:void(0)" class="d-flex align-items-center pb-3 mb-3 link-dark text-decoration-none border-bottom">
 				<svg class="bi me-2" width="30" height="24"><use xlink:href="#bootstrap"/></svg>
@@ -232,7 +232,7 @@ Header START -->
 				<div class="row g-4">
 				<!-- Card News START -->
 				<div class="col-sm-6 col-lg-12">
-					<div class="card">
+					<div class="card" style="padding: 0px;overflow: auto;height: calc(85vh);">
 					<!-- Card header START -->
 					<div class="card-header pb-0 border-0">
 						<h5 class="card-title mb-0" style="font-size: 16px;">
