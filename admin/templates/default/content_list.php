@@ -103,7 +103,7 @@
         ?>
         <a href="<?php echo backend_url('excel/exportExcel','model='.$s);?>;"><button class="btn btn-sm btn-primary" type="button"><span class="export">导出EXCEL</span></button></a>
         <?php if($model['searchable']) : ?>
-            <a href="javascript:void(0)" onclick="$('#content_search_form').slideToggle('slow');" ><button class="btn btn-sm btn-primary" type="button"><span class="remove">筛选</span></button></a>
+            <a href="javascript:void(0)" onclick="searchForm()" ><button class="btn btn-sm btn-primary" type="button"><span class="remove">筛选</span></button></a>
 			<a href="/admin/index.php/content/view?model=<?php echo isset($_GET['model']) ? $_GET['model']:''; ?>"><button class="btn btn-sm btn-primary" type="button"><span class="delete">重置</span></button></a>
             <div id="content_search_form" style="display: none;background-color: #eeeeee;margin:10px 0px;padding:10px 10px;max-height:300px;overflow-y: auto;" class="card search">
                 <?php echo form_open('content/view?model='.$model['name']); ?>
@@ -232,6 +232,11 @@
 				return false;	
 			}
 		}
+	}
+
+	function searchForm(){
+		$('#content_search_form').slideToggle('slow');
+		$('#content_search_form').attr('style','background-color: #eeeeee;margin:10px 0px;padding:10px 10px;max-height:300px;overflow-y: auto;');
 	}
 
 </script>

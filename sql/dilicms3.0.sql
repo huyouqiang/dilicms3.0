@@ -11,7 +11,7 @@
  Target Server Version : 50743 (5.7.43)
  File Encoding         : 65001
 
- Date: 11/03/2024 06:55:38
+ Date: 15/03/2024 06:51:10
 */
 
 SET NAMES utf8mb4;
@@ -59,7 +59,7 @@ CREATE TABLE `ge_attachments` (
   `image` tinyint(1) DEFAULT '0',
   `posttime` int(11) DEFAULT '0',
   PRIMARY KEY (`aid`) USING BTREE
-) ENGINE=MyISAM AUTO_INCREMENT=503 DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC;
+) ENGINE=MyISAM AUTO_INCREMENT=513 DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC;
 
 -- ----------------------------
 -- Records of ge_attachments
@@ -127,6 +127,16 @@ INSERT INTO `ge_attachments` (`aid`, `uid`, `model`, `from`, `content`, `name`, 
 INSERT INTO `ge_attachments` (`aid`, `uid`, `model`, `from`, `content`, `name`, `folder`, `realname`, `type`, `image`, `posttime`) VALUES (500, 1, 164, 0, 3, '1709975837f65acd2265137beb', '2024/03', 'logo', 'jpeg', 1, 1709975837);
 INSERT INTO `ge_attachments` (`aid`, `uid`, `model`, `from`, `content`, `name`, `folder`, `realname`, `type`, `image`, `posttime`) VALUES (501, 1, 164, 0, 4, '1710067224ca9b3deb8a9890c1', '2024/03', 'logo', 'jpeg', 1, 1710067224);
 INSERT INTO `ge_attachments` (`aid`, `uid`, `model`, `from`, `content`, `name`, `folder`, `realname`, `type`, `image`, `posttime`) VALUES (502, 1, 154, 0, 1, '171009140617d3852f2c9706df', '2024/03', 'logo', 'jpeg', 1, 1710091406);
+INSERT INTO `ge_attachments` (`aid`, `uid`, `model`, `from`, `content`, `name`, `folder`, `realname`, `type`, `image`, `posttime`) VALUES (503, 1, 164, 0, 5, NULL, '2024/03', 'tv', 'm3u', 0, 1710112079);
+INSERT INTO `ge_attachments` (`aid`, `uid`, `model`, `from`, `content`, `name`, `folder`, `realname`, `type`, `image`, `posttime`) VALUES (504, 1, 164, 0, 5, NULL, '2024/03', 'tv', 'm3u', 0, 1710112476);
+INSERT INTO `ge_attachments` (`aid`, `uid`, `model`, `from`, `content`, `name`, `folder`, `realname`, `type`, `image`, `posttime`) VALUES (505, 1, 164, 0, 5, NULL, '2024/03', '123', 'doc', 0, 1710112771);
+INSERT INTO `ge_attachments` (`aid`, `uid`, `model`, `from`, `content`, `name`, `folder`, `realname`, `type`, `image`, `posttime`) VALUES (506, 1, 164, 0, 5, NULL, '2024/03', '123', 'doc', 0, 1710112803);
+INSERT INTO `ge_attachments` (`aid`, `uid`, `model`, `from`, `content`, `name`, `folder`, `realname`, `type`, `image`, `posttime`) VALUES (507, 1, 164, 0, 5, NULL, '2024/03', '123', 'doc', 0, 1710112837);
+INSERT INTO `ge_attachments` (`aid`, `uid`, `model`, `from`, `content`, `name`, `folder`, `realname`, `type`, `image`, `posttime`) VALUES (508, 1, 164, 0, 8, '1710163823cfc1e6b2f54d2980', '2024/03', '截屏2023-11-24 05.25.03', 'png', 1, 1710163823);
+INSERT INTO `ge_attachments` (`aid`, `uid`, `model`, `from`, `content`, `name`, `folder`, `realname`, `type`, `image`, `posttime`) VALUES (509, 1, 164, 0, 8, NULL, '2024/03', 'yylunbo', 'm3u', 0, 1710163997);
+INSERT INTO `ge_attachments` (`aid`, `uid`, `model`, `from`, `content`, `name`, `folder`, `realname`, `type`, `image`, `posttime`) VALUES (510, 1, 164, 0, 8, 'tv', '2024/03', 'tv', 'm3u', 0, 1710179603);
+INSERT INTO `ge_attachments` (`aid`, `uid`, `model`, `from`, `content`, `name`, `folder`, `realname`, `type`, `image`, `posttime`) VALUES (511, 1, 164, 0, 8, '1710179660ae53c6df194601c4', '2024/03', 'tv', 'm3u', 0, 1710179660);
+INSERT INTO `ge_attachments` (`aid`, `uid`, `model`, `from`, `content`, `name`, `folder`, `realname`, `type`, `image`, `posttime`) VALUES (512, 1, 164, 0, 8, '17101797674126e10860e13cb8', '2024/03', '截屏2023-11-24 05.25.03', 'png', 1, 1710179767);
 COMMIT;
 
 -- ----------------------------
@@ -854,8 +864,7 @@ CREATE TABLE `ge_sessions` (
 -- Records of ge_sessions
 -- ----------------------------
 BEGIN;
-INSERT INTO `ge_sessions` (`session_id`, `ip_address`, `user_agent`, `last_activity`, `user_data`) VALUES ('ab3e8372ad97319bf9b9cf9a9c110a6e', '127.0.0.1', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/15.6.1 Safari/605.1.15', 1710109121, 'a:4:{s:9:\"user_data\";s:0:\"\";s:3:\"uid\";s:1:\"1\";s:10:\"model_type\";s:5:\"model\";s:5:\"model\";s:7:\"student\";}');
-INSERT INTO `ge_sessions` (`session_id`, `ip_address`, `user_agent`, `last_activity`, `user_data`) VALUES ('51686f983205080f861289959da06dee', '127.0.0.1', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36', 1710111159, 'a:5:{s:9:\"user_data\";s:0:\"\";s:17:\"throttles_adminer\";i:1;s:3:\"uid\";s:1:\"1\";s:10:\"model_type\";s:5:\"model\";s:5:\"model\";s:7:\"student\";}');
+INSERT INTO `ge_sessions` (`session_id`, `ip_address`, `user_agent`, `last_activity`, `user_data`) VALUES ('fc2710cccb2eba9878096a2ab5fa361c', '127.0.0.1', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36', 1710456262, 'a:4:{s:9:\"user_data\";s:0:\"\";s:3:\"uid\";s:1:\"1\";s:10:\"model_type\";s:5:\"model\";s:5:\"model\";s:7:\"student\";}');
 COMMIT;
 
 -- ----------------------------
@@ -886,7 +895,7 @@ CREATE TABLE `ge_site_settings` (
 -- Records of ge_site_settings
 -- ----------------------------
 BEGIN;
-INSERT INTO `ge_site_settings` (`site_name`, `site_domain`, `site_logo`, `site_icp`, `site_terms`, `site_stats`, `site_footer`, `site_status`, `site_close_reason`, `site_keyword`, `site_description`, `site_theme`, `attachment_url`, `attachment_dir`, `attachment_type`, `attachment_maxupload`, `thumbs_preferences`) VALUES ('通用数据库管理系统', 'https://eick12nm.xyz', 'images/logo_kp.png', '©2024 皖ICP备XXXXXX号-X', '', '', '', 1, '网站维护升级中......', '通用数据库管理系统', '通用数据库管理系统', 'default', '/attachments', 'attachments', '*.jpg;*.gif;*.png;*.doc', '2097152', '[]');
+INSERT INTO `ge_site_settings` (`site_name`, `site_domain`, `site_logo`, `site_icp`, `site_terms`, `site_stats`, `site_footer`, `site_status`, `site_close_reason`, `site_keyword`, `site_description`, `site_theme`, `attachment_url`, `attachment_dir`, `attachment_type`, `attachment_maxupload`, `thumbs_preferences`) VALUES ('通用数据库管理系统', 'https://eick12nm.xyz', 'images/logo_kp.png', '©2024 皖ICP备XXXXXX号-X', '', '', '', 1, '网站维护升级中......', '通用数据库管理系统', '通用数据库管理系统', 'default', '/attachments', 'attachments', '*.jpg;*.gif;*.png;*.doc;', '2097152', '[]');
 COMMIT;
 
 -- ----------------------------
@@ -1660,12 +1669,13 @@ CREATE TABLE `ge_u_m_course` (
   `semester` varchar(20) NOT NULL DEFAULT '',
   `last_update_time` varchar(30) NOT NULL DEFAULT '',
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC;
 
 -- ----------------------------
 -- Records of ge_u_m_course
 -- ----------------------------
 BEGIN;
+INSERT INTO `ge_u_m_course` (`id`, `create_time`, `update_time`, `create_user`, `update_user`, `course_name`, `belong_school`, `course_id`, `course_rename`, `class_hour`, `semester`, `last_update_time`) VALUES (1, 1710162889, 1710162889, 1, 1, '2', '6', '1', '3', '4', '5', '8');
 COMMIT;
 
 -- ----------------------------
@@ -6517,7 +6527,7 @@ CREATE TABLE `ge_u_m_notice_read_record` (
   `wx_user_id` varchar(10) NOT NULL DEFAULT '',
   `notice_id` varchar(10) NOT NULL DEFAULT '',
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE=InnoDB AUTO_INCREMENT=2444 DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC;
+) ENGINE=InnoDB AUTO_INCREMENT=2440 DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC;
 
 -- ----------------------------
 -- Records of ge_u_m_notice_read_record
@@ -8533,7 +8543,7 @@ CREATE TABLE `ge_u_m_student` (
   `json_3` json NOT NULL,
   `text_3` text NOT NULL,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC;
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC;
 
 -- ----------------------------
 -- Records of ge_u_m_student
@@ -8543,6 +8553,9 @@ INSERT INTO `ge_u_m_student` (`id`, `create_time`, `update_time`, `create_user`,
 INSERT INTO `ge_u_m_student` (`id`, `create_time`, `update_time`, `create_user`, `update_user`, `student_name`, `gender`, `status`, `notice_jurisdiction`, `student_code`, `del_status`, `user_select`, `user_editor`, `select_1`, `json_1`, `json_2`, `last_update_time`, `file_upload`, `json_3`, `text_3`) VALUES (2, 1709758574, 1710092912, 1, 1, '2', '0', '1', '1,2', '1', '', '2', '123', 2, '[1, 2, 3, 4, 5]', 'null', '2024-03-09T17:05', '', 'null', '');
 INSERT INTO `ge_u_m_student` (`id`, `create_time`, `update_time`, `create_user`, `update_user`, `student_name`, `gender`, `status`, `notice_jurisdiction`, `student_code`, `del_status`, `user_select`, `user_editor`, `select_1`, `json_1`, `json_2`, `last_update_time`, `file_upload`, `json_3`, `text_3`) VALUES (3, 1709814645, 1709975837, 1, 1, '2', '0', '1', '1,2,3', '1', '1', '1', '123', 1, '{\"sku\": \"20223\", \"name\": \"John Smith\", \"price\": 23.95, \"billTo\": {\"zip\": \"12345\", \"city\": \"Pretendville\", \"name\": \"John Smith\", \"state\": \"NY\", \"address\": \"123 Maple Street\"}, \"shipTo\": {\"zip\": \"12345\", \"city\": \"Pretendville\", \"name\": \"Jane Smith\", \"state\": \"NY\", \"address\": \"123 Maple Street\"}}', '{\"sku\": \"20224\", \"name\": \"John Smith\", \"price\": 23.95, \"billTo\": {\"zip\": \"12345\", \"city\": \"Pretendville\", \"name\": \"John Smith\", \"state\": \"NY\", \"address\": \"123 Maple Street\"}, \"shipTo\": {\"zip\": \"12345\", \"city\": \"Pretendville\", \"name\": \"Jane Smith\", \"state\": \"NY\", \"address\": \"123 Maple Street\"}}', '2024-03-09T17:02', 'attachments/2024/03/1709975837f65acd2265137beb.jpeg', 'null', '');
 INSERT INTO `ge_u_m_student` (`id`, `create_time`, `update_time`, `create_user`, `update_user`, `student_name`, `gender`, `status`, `notice_jurisdiction`, `student_code`, `del_status`, `user_select`, `user_editor`, `select_1`, `json_1`, `json_2`, `last_update_time`, `file_upload`, `json_3`, `text_3`) VALUES (4, 1710067224, 1710111182, 1, 1, '222', '0', '1', '0', '111', '1', '1', '123', 1, '1', '2', '2024-03-10T18:40', 'attachments/2024/03/1710067224ca9b3deb8a9890c1.jpeg', '666', '<span style=\"background-color:#E53333;\">555</span>');
+INSERT INTO `ge_u_m_student` (`id`, `create_time`, `update_time`, `create_user`, `update_user`, `student_name`, `gender`, `status`, `notice_jurisdiction`, `student_code`, `del_status`, `user_select`, `user_editor`, `select_1`, `json_1`, `json_2`, `last_update_time`, `file_upload`, `json_3`, `text_3`) VALUES (5, 1710112079, 1710112837, 1, 1, '222', '0', '1', '1,2,3', '111', '1', '2', '123', 1, '123', '123', '2024-03-11T07:07', 'attachments/2024/03/.doc', '123', '123');
+INSERT INTO `ge_u_m_student` (`id`, `create_time`, `update_time`, `create_user`, `update_user`, `student_name`, `gender`, `status`, `notice_jurisdiction`, `student_code`, `del_status`, `user_select`, `user_editor`, `select_1`, `json_1`, `json_2`, `last_update_time`, `file_upload`, `json_3`, `text_3`) VALUES (6, 1710163334, 1710163334, 1, 1, '1', '0', '1', '1', '1', '1', '1', '1', 1, '1', '1', '2024-03-11T21:16', '', '1', '1');
+INSERT INTO `ge_u_m_student` (`id`, `create_time`, `update_time`, `create_user`, `update_user`, `student_name`, `gender`, `status`, `notice_jurisdiction`, `student_code`, `del_status`, `user_select`, `user_editor`, `select_1`, `json_1`, `json_2`, `last_update_time`, `file_upload`, `json_3`, `text_3`) VALUES (8, 1710163395, 1710365304, 1, 1, '1', '0', '1', '1', '1', '1', '1', '1', 1, '1', '1', '2024-03-11T21:22', 'attachments/2024/03/17101797674126e10860e13cb8.png', '1', '1');
 COMMIT;
 
 -- ----------------------------
