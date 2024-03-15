@@ -272,7 +272,7 @@ class Field_behavior
 				case 'checkbox' :
 							foreach (explode(',', $value->$fieldName) as $t)
 							{
-								echo isset($field['values'][$t]) ?  $field['values'][$t] . '<br />' : '未知' . '<br />';
+								echo isset($field['values'][$t]) ?  $field['values'][$t] . '/' : '未知' . '/';
 							}
 							break;
 				case 'radio_from_model':
