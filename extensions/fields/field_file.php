@@ -117,7 +117,9 @@ class field_file
     public function on_list($field, $record)
     {
         $fieldName=$field['name'];
-        echo $record->$fieldName;
+        $more=strlen($record->$fieldName)>15 ? '...':'';
+		echo mb_substr(urldecode($record->$fieldName),0,15).$more;
+        // echo $record->$fieldName;
     }
     
     /**

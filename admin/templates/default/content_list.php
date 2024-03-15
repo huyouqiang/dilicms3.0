@@ -25,7 +25,7 @@
       /* border-bottom :1px solid #999; */
       /* box-sizing: border-box; */
       /* 单元格宽高 */
-      width:150px;
+      width:160px;
       height:30px;
 	  /* background: #eef0f2; */
     }
@@ -236,7 +236,6 @@
 
 	function searchForm(){
 		$('#content_search_form').slideToggle('slow');
-		$('#content_search_form').attr('style','background-color: #eeeeee;margin:10px 0px;padding:10px 10px;max-height:300px;overflow-y: auto;');
 	}
 
 </script>
