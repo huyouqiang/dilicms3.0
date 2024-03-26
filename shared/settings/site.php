@@ -14,7 +14,7 @@ $setting=array (
   'site_theme' => 'default',
   'attachment_url' => '/attachments',
   'attachment_dir' => 'attachments',
-  'attachment_type' => '*.jpg;*.gif;*.png;*.doc;',
+  'attachment_type' => '*.jpg;*.gif;*.png;*.doc',
   'attachment_maxupload' => '2097152',
   'thumbs_preferences' => '[]',
 );

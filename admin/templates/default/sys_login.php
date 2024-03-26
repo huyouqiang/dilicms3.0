@@ -229,7 +229,7 @@ Header START -->
 	<!-- footer -->
 	<!-- footer START -->
 	<footer class="bg-mode py-3">
-	<div class="container">
+	<div class="container-fluid">
 		<div class="row">
 		<div class="col-md-6">
 			<!-- Footer nav START -->
