@@ -53,7 +53,7 @@
 		background: #eef0f2;
 		/* text-align: center; */
 		right: 0px;
-		border-left: 1px solid #DDDDDD ;
+		/*border-left: 1px solid #DDDDDD ;*/
 		width: 50px;
 	}
 
@@ -65,8 +65,11 @@
 		background: #eef0f2;
 		/* text-align: center; */
 		right: 0px;
-		border-left: 1px solid #DDDDDD ;
+		/*border-left: 1px solid #DDDDDD ;*/
 		width: 150px;
+        /*background-color: #f9f9f9;*/
+        /*border-left: 1px solid #0f6fec;*/
+        /*box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.9); !* 水平偏移 垂直偏移 模糊半径 颜色 *!*/
 	}
 
 
@@ -79,16 +82,13 @@
 		background: #eef0f2;
 	}
 
-	.search table td {
-		width: 300px;
-		border: 0px;
-		background-color: rgb(238, 238, 238);
-	}
-
-	.search ul {
-		padding-left: 0px;
-	}
-
+    .shadow
+    {
+        background: linear-gradient(to right, white, white), linear-gradient(to right, rgba(128, 128, 128, 0.5), rgba(128, 128, 128, 0));
+        background-size: 100% 100%, 100% 1px;
+        background-repeat: no-repeat;
+        background-position: left bottom, left bottom;
+    }
   </style>
 <div class="headbar">
 	<div class="alert alert-primary"><?=$bread?>(<?php echo $provider['total_rows']; ?>)</div>
@@ -103,31 +103,47 @@
         ?>
         <a href="<?php echo backend_url('excel/exportExcel','model='.$s);?>;"><button class="btn btn-sm btn-primary" type="button"><span class="export">导出EXCEL</span></button></a>
         <?php if($model['searchable']) : ?>
-            <a href="javascript:void(0)" onclick="searchForm()" ><button class="btn btn-sm btn-primary" type="button"><span class="remove">筛选</span></button></a>
+            <a href="javascript:void(0)" onclick="searchForm()" ><button class="btn btn-sm btn-primary" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal"><span class="remove">筛选</span></button></a>
 			<a href="/admin/index.php/content/view?model=<?php echo isset($_GET['model']) ? $_GET['model']:''; ?>"><button class="btn btn-sm btn-primary" type="button"><span class="delete">重置</span></button></a>
-            <div id="content_search_form" style="display: none;background-color: #eeeeee;margin:10px 0px;padding:10px 10px;max-height:300px;overflow-y: auto;" class="card search">
-                <?php echo form_open('content/view?model='.$model['name']); ?>
-                    <table class="form_table" style="background-color: #eeeeee;">
-                        <colgroup><col width="150px"><col></colgroup><tbody>
-						<tr>
-							<td>ID</td>
-							<td> <?php $this->field_behavior->on_search(array('type'=>'input','name'=>'id','width'=>'0'),''); ?></td>
-						</tr>
-                        <?php foreach($model['searchable'] as $v): ?>
-                        <tr>
-                            <td><?php echo $model['fields'][$v]['description']; ?></td>
-                            <td>
-                                <?php $this->field_behavior->on_search($model['fields'][$v],(isset($provider['where'][$model['fields'][$v]['name']]) ? $provider['where'][$model['fields'][$v]['name']] : '' )); ?>
-                            </td>
-                        </tr>
-                        <?php endforeach; ?>
-                        <tr>
-                            <td></td>
-                            <td><button class="btn btn-sm btn-primary" type="submit" style="margin-top: 10px;"><span>搜索</span></button></td>
-                        </tr>
-                    </tbody></table>
-                <?php echo form_close(); ?>
+
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h6 class="modal-title" id="exampleModalLabel">筛选</h6>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body" style="height: calc(50vh);overflow: auto;">
+                            <?php echo form_open('content/view?model='.$model['name']); ?>
+                            <table class="table">
+                                <colgroup><col width="150px"><col></colgroup><tbody>
+                                <tr>
+                                    <td style="background-color: #ffffff;">ID</td>
+                                    <td style="background-color: #ffffff;"> <?php $this->field_behavior->on_search(array('type'=>'input','name'=>'id','width'=>'0'),''); ?></td>
+                                </tr>
+                                <?php foreach($model['searchable'] as $v): ?>
+                                    <tr>
+                                        <td style="background-color: #ffffff;"><?php echo $model['fields'][$v]['description']; ?></td>
+                                        <td style="background-color: #ffffff;">
+                                            <?php $this->field_behavior->on_search($model['fields'][$v],(isset($provider['where'][$model['fields'][$v]['name']]) ? $provider['where'][$model['fields'][$v]['name']] : '' )); ?>
+                                        </td>
+                                    </tr>
+                                <?php endforeach; ?>
+                                <tr>
+                                    <td style="background-color: #ffffff;"></td>
+                                    <td style="background-color: #ffffff;"><button class="btn btn-sm btn-primary" type="submit" style="margin-top: 10px;"><span>搜索</span></button></td>
+                                </tr>
+                                </tbody></table>
+                            <?php echo form_close(); ?>
+                        </div>
+<!--                        <div class="modal-footer">-->
+<!--                            <button type="submit" class="btn btn-secondary" data-bs-dismiss="modal">搜索</button>-->
+<!--                            <button type="button" class="btn btn-primary">Save changes</button>-->
+<!--                        </div>-->
+                    </div>
+                </div>
             </div>
+
         <?php endif; ?>
 		<?php $this->plugin_manager->trigger('buttons'); ?>
 	</div>
@@ -149,9 +165,9 @@
 	</div> -->
 </div>
 
-<div class="content" style="margin: 10px 0px;overflow: auto;height: calc(60vh);">
+<div class="content" style="margin: 10px 0px;overflow: auto;height: calc(53vh);">
     <?php echo form_open('content/del?model='.$model['name'], array('id' => 'content_list_form')); ?>
-		<table id="list_table" class="table table-sm table-bordered table-hover table-striped" >
+		<table id="list_table" class="table table-sm table-hover table-striped" >
 			<thead>
 				<tr>
                 	<th></th>
@@ -184,7 +200,7 @@
 <!--                        urldecode()-->
                     </td>
                  <?php endforeach; ?>
-                    <td>
+                    <td class="shadow">
                     	<a href="<?php echo backend_url('content/form/','model='.$model['name'].'&id='.$v->id); ?>" type="button" class="btn btn-sm btn-primary">修改</a>
                         <a href="<?php echo backend_url('content/del','model='.$model['name'].'&id='.$v->id); ?>" type="button" class="btn btn-sm btn-primary confirm_delete">删除</a>
                         <?php $this->plugin_manager->trigger('row_buttons', $v); ?>
@@ -241,3 +257,8 @@
 </script>
 <script src="js/dili_utility/content_form.js" type="text/javascript"></script>
 <?php $this->plugin_manager->trigger('listed', $provider['list']); ?>
+<script>
+    // alert($(window).height());
+
+
+</script>
