@@ -27,8 +27,10 @@ body{
     /* 让背景图基于容器大小伸缩 */
     background-size: cover;
 	font-size: 14px;
+    height: 100%; /* 确保<body>和<html>的高度为100% */
+    margin: 0; /* 移除默认的边距 */
 	}
-html{}main{display:flex;flex-wrap:nowrap;overflow-x:auto;overflow-y:auto}.b-example-divider{flex-shrink:0;width:1.5rem;background-color:rgba(0,0,0,.1);border:solid rgba(0,0,0,.15);border-width:1px 0;box-shadow:inset 0 .5em 1.5em rgba(0,0,0,.1),inset 0 .125em .5em rgba(0,0,0,.15)}.bi{vertical-align:-.125em;pointer-events:none;fill:currentColor}.dropdown-toggle{outline:0}.nav-flush .nav-link{border-radius:0}.btn-toggle{display:inline-flex;align-items:center;padding:.25rem .5rem;font-weight:600;color:rgba(0,0,0,.65);background-color:transparent;border:0}.btn-toggle:hover,.btn-toggle:focus{color:rgba(0,0,0,.85);background-color:#9ec5fe}.btn-toggle::before{width:1.25em;line-height:0;content:url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='rgba%280,0,0,.5%29' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M5 14l6-6-6-6'/%3e%3c/svg%3e");transition:transform .35s ease;transform-origin:.5em 50%}.btn-toggle[aria-expanded="true"]{color:rgba(0,0,0,.85)}.btn-toggle[aria-expanded="true"]::before{transform:rotate(90deg)}.btn-toggle-nav a{display:inline-flex;padding:.1875rem .5rem;margin-top:.125rem;margin-left:1.25rem;text-decoration:none}.btn-toggle-nav a:hover,.btn-toggle-nav a:focus{background-color:#9ec5fe}.scrollarea{overflow-y:auto}.fw-semibold{font-weight:600}.lh-tight{line-height:1.25}.bd-placeholder-img{font-size:1.125rem;text-anchor:middle;-webkit-user-select:none;-moz-user-select:none;user-select:none}@media (min-width:768px){.bd-placeholder-img-lg{font-size:3.5rem}}</style>
+html{}main{display:flex;flex-wrap:nowrap;overflow-x:auto;overflow-y:auto}.b-example-divider{flex-shrink:0;width:1.5rem;background-color:rgba(0,0,0,.1);border:solid rgba(0,0,0,.15);border-width:1px 0;box-shadow:inset 0 .5em 1.5em rgba(0,0,0,.1),inset 0 .125em .5em rgba(0,0,0,.15)}.bi{vertical-align:-.125em;pointer-events:none;fill:currentColor}.dropdown-toggle{outline:0}.nav-flush .nav-link{border-radius:0}.btn-toggle{display:inline-flex;align-items:center;padding:.25rem .5rem;font-weight:600;color:rgba(0,0,0,.65);background-color:transparent;border:0}.btn-toggle:hover,.btn-toggle:focus{color:rgba(0,0,0,.85);background-color:#9ec5fe}.btn-toggle::before{width:1.25em;line-height:0;content:url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='rgba%280,0,0,.5%29' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M5 14l6-6-6-6'/%3e%3c/svg%3e");transition:transform .35s ease;transform-origin:.5em 50%}.btn-toggle[aria-expanded="true"]{color:rgba(0,0,0,.85)}.btn-toggle[aria-expanded="true"]::before{transform:rotate(90deg)}.btn-toggle-nav a{display:inline-flex;padding:.1875rem .5rem;margin-top:.125rem;margin-left:1.25rem;text-decoration:none}.btn-toggle-nav a:hover,.btn-toggle-nav a:focus{background-color:#9ec5fe}.scrollarea{overflow-y:auto}.fw-semibold{font-weight:600}.lh-tight{line-height:1.25}.bd-placeholder-img{font-size:1.125rem;text-anchor:middle;-webkit-user-select:none;-moz-user-select:none;user-select:none}@media (min-width:768px){.bd-placeholder-img-lg{font-size:3.5rem}}</style>
 <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
   <symbol id="bootstrap" viewBox="0 0 118 94">
     <title>Bootstrap</title>
@@ -37,7 +39,7 @@ html{}main{display:flex;flex-wrap:nowrap;overflow-x:auto;overflow-y:auto}.b-exam
 </svg>
 </head>
 <body>
-<div class="container-fluid">
+<!--<div class="container-fluid">-->
 
 	<!-- =======================
 Header START -->
@@ -177,15 +179,15 @@ Header START -->
     <!-- <main> -->
       
 		<!-- LEFT START -->
-		<div class="container-fluid" style="margin-top: 80px;">
-			<div class="row g-4">
+		<div class="container-fluid" style="margin-top: 56px;width: 100%;padding: 0px 0px;">
+			<div class="row g-4" style="width: 100%;">
 			<!-- Main content START -->
-			<div class="col-lg-2">
-				<div class="bg-mode p-4 card menu" style="padding: 0px;overflow: auto;height: calc(83vh);">
+			<div class="col-lg-2" style="margin-left: 0px;padding: 0px 0px;">
+				<div class="bg-mode p-4 card menu" style="margin-left: 0px;overflow: auto;height: calc(100vh - 56px);">
 				<!-- <h3 class="h5 mb-4" style="font-size: 16px;">&nbsp;&nbsp;&nbsp;系统菜单</h3> -->
 				<a href="javascript:void(0)" class="d-flex align-items-center pb-3 mb-3 link-dark text-decoration-none border-bottom">
 				<svg class="bi me-2" width="30" height="24"><use xlink:href="#bootstrap"/></svg>
-				<span class="fs-6 fw-semibold">系统菜单</span>
+				<span class="fs-8 fw-semibold">系统菜单</span>
 				</a>
 				
 				<div class="list-group list-group-flush" style="border: 0px;">
@@ -207,24 +209,23 @@ Header START -->
 			<!-- Main content END -->
 
 			<!-- Right sidebar START -->
-			<div class="col-lg-10">
-				<div class="row g-4">
+			<div class="col-lg-10" style="margin-left: 0px;margin-right:0px;padding: 0px 0px;">
+				<div class="row g-4" style="padding: 0px 0px;">
 				<!-- Card News START -->
-				<div class="col-sm-6 col-lg-12">
-					<div class="card dataCenter" style="padding: 0px;height: calc(83vh);overflow: auto;">
-					<!-- Card header START -->
-					<div class="card-header pb-0 border-0">
-						<h5 class="card-title mb-0" style="font-size: 16px;">
-						<!-- 数据平台 -->
-						</h5>
-						<a href="javascript:void(0)" class="d-flex align-items-center pb-3 mb-3 link-dark text-decoration-none border-bottom">
-						<svg class="bi me-2" width="30" height="24"><use xlink:href="#bootstrap"/></svg>
-						<span class="fs-6 fw-semibold">数据平台</span>
-						</a>
-					</div>
+				<div class="col-sm-6 col-lg-12" style="padding: 0px 0px;margin-right:0px;">
+					<div class="card dataCenter" style="padding: 0px 0px;overflow: auto;height:calc(100vh - 56px);border-radius: 0px;margin-right: 0px;">
+                        <div class="card-header pb-0 border-0">
+                            <h5 class="card-title mb-0" style="font-size: 16px;">
+                                <!-- 数据平台 -->
+                            </h5>
+                            <a href="javascript:void(0)" class="d-flex align-items-center pb-3 mb-3 link-dark text-decoration-none border-bottom">
+                                <svg class="bi me-2" width="30" height="24"><use xlink:href="#bootstrap"/></svg>
+                                <span class="fs-8 fw-semibold">数据平台</span>
+                            </a>
+                        </div>
 					<!-- Card header END -->
 					<!-- Card body START -->
-					<div class="card-body" style="padding-left: 20px;margin-top: 0px;padding-top:0px;">
+					<div class="card-body" style="padding-left: 5px;padding-right: 5px;margin-top: 0px;padding-top:0px;">
 						
 
 						<?php if($this->uri->rsegment(1) != 'module'): ?>
@@ -267,40 +268,9 @@ Header START -->
 
 	
 	<div id="separator"></div>
-</div>
+<!--</div>-->
 
-<!-- footer -->
-	<!-- footer START -->
-	<footer class="bg-mode py-3 fixed-bottom">
-	<div class="container-fluid">
-		<div class="row">
-		<div class="col-md-6">
-			<!-- Footer nav START -->
-			<ul class="nav justify-content-center justify-content-md-start lh-1">
-			<li class="nav-item">
-				<a class="nav-link" href="javascript:void(0);">关于</a>
-			</li>
-			<li class="nav-item">
-				<a class="nav-link" href="javascript:void(0);">支持 </a>
-			</li>
-			<li class="nav-item">
-				<a class="nav-link" href="javascript:void(0);">文档 </a>
-			</li>
-			<li class="nav-item">
-				<a class="nav-link" href="javascript:void(0);">隐私 & 协议</a>
-			</li>
-			</ul>
-			<!-- Footer nav START -->
-		</div>
-		<div class="col-md-6">
-			<!-- Copyright START -->
-			<p class="text-center text-md-end mb-0"><a class="text-body" target="_blank" href="https://beian.miit.gov.cn/#/Integrated/index"> <?php echo setting('site_icp'); ?> </a></p>
-			<!-- Copyright END -->
-		</div>
-		</div>
-	</div>
-	</footer>
-<!-- footer END --> 
+
 <script type='text/javascript'>
 
 	// 左侧菜单栏
@@ -318,9 +288,9 @@ Header START -->
 		
 	}
 
-    var windowHeight = $(window).height();
-    $('.menu').height(windowHeight-150);
-    $('.dataCenter').height(windowHeight-150);
+    // var windowHeight = $(window).height();
+    // $('.menu').height(windowHeight-150);
+    // $('.dataCenter').height(windowHeight-150);
 
 
 </script>

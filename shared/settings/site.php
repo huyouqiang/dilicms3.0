@@ -2,7 +2,7 @@
 $setting=array (
   'site_name' => '通用数据库管理系统',
   'site_domain' => 'https://eick12nm.xyz',
-  'site_logo' => 'images/logo_kp.png',
+  'site_logo' => 'images/logo.png',
   'site_icp' => '©2024 皖ICP备XXXXXX号-X',
   'site_terms' => '',
   'site_stats' => '',
@@ -14,7 +14,7 @@ $setting=array (
   'site_theme' => 'default',
   'attachment_url' => '/attachments',
   'attachment_dir' => 'attachments',
-  'attachment_type' => '*.jpg;*.gif;*.png;*.doc',
+  'attachment_type' => '*.jpg;*.gif;*.png;*.doc;',
   'attachment_maxupload' => '2097152',
   'thumbs_preferences' => '[]',
 );

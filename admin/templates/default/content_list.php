@@ -165,7 +165,7 @@
 	</div> -->
 </div>
 
-<div class="content" style="margin: 10px 0px;overflow: auto;height: calc(53vh);">
+<div class="content" style="margin: 10px 0px;overflow: auto;height: calc(60vh);">
     <?php echo form_open('content/del?model='.$model['name'], array('id' => 'content_list_form')); ?>
 		<table id="list_table" class="table table-sm table-hover table-striped" >
 			<thead>
