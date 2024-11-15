@@ -1,7 +1,4 @@
 <?php if ( ! defined('IN_DILICMS')) exit('No direct script access allowed');?>
-<div class="headbar">
-	<div class="alert alert-primary"><span>系统</span><span>></span><span>修改密码</span></div>
-</div>
 <div class="content_box">
 	<div class="content form_content">
         <?php echo form_open('system/password'); ?>

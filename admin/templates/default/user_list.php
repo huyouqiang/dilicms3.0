@@ -1,6 +1,5 @@
 <?php if ( ! defined('IN_DILICMS')) exit('No direct script access allowed');?>
 <div class="headbar">
-	<div class="alert alert-primary"><span>系统</span><span>></span><span>权限管理</span><span>></span><span>用户管理</span></div>
 	<div class="row">
         
 		<form name="serachuser" action="<?php echo backend_url('user/view'); ?>" method="get" class="rol">

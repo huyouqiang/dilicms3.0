@@ -1,6 +1,5 @@
 <?php if ( ! defined('IN_DILICMS')) exit('No direct script access allowed');?>
 <div class="headbar">
-	<div class="alert alert-primary"><?=$bread?></div>
 	<div class="operating">
 		<a href="<?php echo backend_url('category/add'); ?>" class="hack_ie"><button class="btn btn-sm btn-primary" type="button"><span class="addition">添加新分类模型</span></button></a>
 	</div>

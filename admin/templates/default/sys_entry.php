@@ -214,15 +214,49 @@ Header START -->
 				<!-- Card News START -->
 				<div class="col-sm-6 col-lg-12" style="padding: 0px 0px;margin-right:0px;">
 					<div class="card dataCenter" style="padding: 0px 0px;overflow: auto;height:calc(100vh - 56px);border-radius: 0px;margin-right: 0px;">
-                        <div class="card-header pb-0 border-0">
-                            <h5 class="card-title mb-0" style="font-size: 16px;">
-                                <!-- 数据平台 -->
-                            </h5>
-                            <a href="javascript:void(0)" class="d-flex align-items-center pb-3 mb-3 link-dark text-decoration-none border-bottom">
-                                <svg class="bi me-2" width="30" height="24"><use xlink:href="#bootstrap"/></svg>
-                                <span class="fs-8 fw-semibold">数据平台</span>
-                            </a>
+                        <div class="card-header pb-0 border-0" style="position: relative;float: left;color: #000000;">
+
+                            <svg class="bi me-2" width="30" height="24" style="position: relative;float: left;"><use xlink:href="#bootstrap"/></svg>
+                            <?php if (strpos($_SERVER['REQUEST_URI'],'content/view') !==  false): ?>
+                            <?=$bread?><b>(<?php echo $provider['total_rows']; ?>)</b>
+                            <?php elseif (strpos($_SERVER['REQUEST_URI'],'content/form') !==  false): ?>
+                                <?=$bread?>
+                            <?php elseif (strpos($_SERVER['REQUEST_URI'],'system/home') !==  false): ?>
+                                <b>后台首页>后台首页</b>
+                            <?php elseif (strpos($_SERVER['REQUEST_URI'],'setting/site') !==  false): ?>
+                                <b>系统设置>站点设置</b>
+                            <?php elseif (strpos($_SERVER['REQUEST_URI'],'setting/backend') !==  false): ?>
+                                <b>系统设置>后台设置</b>
+                            <?php elseif (strpos($_SERVER['REQUEST_URI'],'system/password') !==  false): ?>
+                                <b>系统设置>修改密码</b>
+                            <?php elseif (strpos($_SERVER['REQUEST_URI'],'system/cache') !==  false): ?>
+                                <b>系统设置>更新缓存</b>
+                            <?php elseif (strpos($_SERVER['REQUEST_URI'],'model/view') !==  false): ?>
+                                <b>模型管理>内容模型管理</b>
+                            <?php elseif (strpos($_SERVER['REQUEST_URI'],'category/view') !==  false): ?>
+                                <b>模型管理>分类模型管理</b>
+                            <?php elseif (strpos($_SERVER['REQUEST_URI'],'plugin/view') !==  false): ?>
+                                <b>扩展管理>插件管理</b>
+                            <?php elseif (strpos($_SERVER['REQUEST_URI'],'role/view') !==  false): ?>
+                                <b>权限管理>用户组管理</b>
+                            <?php elseif (strpos($_SERVER['REQUEST_URI'],'user/view') !==  false): ?>
+                                <b>权限管理>用户管理</b>
+                            <?php elseif (strpos($_SERVER['REQUEST_URI'],'database/index') !==  false): ?>
+                                <b>数据库管理>数据库备份</b>
+                            <?php elseif (strpos($_SERVER['REQUEST_URI'],'database/recover') !==  false): ?>
+                                <b>数据库管理>数据库还原</b>
+                            <?php elseif (strpos($_SERVER['REQUEST_URI'],'database/optimize') !==  false): ?>
+                                <b>数据库管理>数据库优化</b>
+                            <?php else: ?>
+                                <b>未知操作</b>
+                            <?php endif; ?>
+
+<!--                            <a href="javascript:void(0)" class="d-flex align-items-center pb-3 mb-3 link-dark text-decoration-none border-bottom">-->
+<!--                                <svg class="bi me-2" width="30" height="24"><use xlink:href="#bootstrap"/></svg>-->
+<!--                                --><?php //=$bread?><!--(--><?php //echo $provider['total_rows']; ?><!--)-->
+<!--                            </a>-->
                         </div>
+                        <div class="border-bottom" style="margin: 20px 10px 10px 10px;"></div>
 					<!-- Card header END -->
 					<!-- Card body START -->
 					<div class="card-body" style="padding-left: 5px;padding-right: 5px;margin-top: 0px;padding-top:0px;">

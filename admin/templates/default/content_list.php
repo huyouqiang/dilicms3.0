@@ -91,7 +91,7 @@
     }
   </style>
 <div class="headbar">
-	<div class="alert alert-primary"><?=$bread?>(<?php echo $provider['total_rows']; ?>)</div>
+<!--	<div class="alert alert-primary">--><?php //=$bread?><!--(--><?php //echo $provider['total_rows']; ?><!--)</div>-->
 	<div class="operating" style="position:relative; overflow:visible;margin:10px 20px 0px 0px;">
     	<a href="javascript:void(0)" onclick="selectAll('id[]');"><button class="btn btn-sm btn-primary" type="button"><span class="sel_all">全选</span></button></a>
 		<a class="hack_ie" href="<?php echo backend_url('content/form','model='.$model['name']); ?>"><button class="btn btn-sm btn-primary" type="button"><span class="addition">添加</span></button></a>
@@ -165,7 +165,7 @@
 	</div> -->
 </div>
 
-<div class="content" style="margin: 10px 0px;overflow: auto;height: calc(60vh);">
+<div class="content" style="margin: 10px 0px;overflow: auto;height: calc(68vh);border: 1px solid #eeeeee;">
     <?php echo form_open('content/del?model='.$model['name'], array('id' => 'content_list_form')); ?>
 		<table id="list_table" class="table table-sm table-hover table-striped" >
 			<thead>

@@ -1,6 +1,5 @@
 <?php if ( ! defined('IN_DILICMS')) exit('No direct script access allowed');?>
 <div class="headbar">
-	<div class="alert alert-primary"><span>数据库管理</span><span>></span><span>数据库还原</span></div>
     <div class="operating">
         <a href="javascript:void(0)" onclick="selectAll('file[]');"><button class="btn btn-sm btn-primary" type="button"><span class="sel_all">全选</span></button></a>
         <a href="javascript:void(0)" onclick="multi_delete();"><button class="btn btn-sm btn-primary" type="button"><span class="delete">批量删除</span></button></a>

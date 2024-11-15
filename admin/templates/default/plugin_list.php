@@ -1,6 +1,5 @@
 <?php if ( ! defined('IN_DILICMS')) exit('No direct script access allowed');?>
 <div class="headbar">
-	<div class="alert alert-primary"><span>插件</span><span>></span><span>插件管理</span><span>></span><span>插件列表</span></div>
 	<div class="operating">
     	<a class="hack_ie" href="javascript:void(0)" onclick="selectAll('id[]');"><button class="btn btn-sm btn-primary" type="button"><span class="sel_all">全选</span></button></a>
 		<a class="hack_ie" href="<?php echo backend_url('plugin/add'); ?>"><button class="btn btn-sm btn-primary" type="button"><span class="addition">设计新插件</span></button></a>

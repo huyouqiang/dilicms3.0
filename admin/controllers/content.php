@@ -75,18 +75,18 @@ class Content extends Admin_Controller
 		$this->plugin_manager->trigger('reached');
 		$this->settings->load('model/' . $model);
 		$data['model'] = $this->settings->item('models');
-		// print_r($data);
 		$data['model'] = $data['model'][$model];
-		
+        $data['group'] = $this->db->select()->from("ge_group")->where("id","{$data['model']['belong_group']}")->get()->row_array();
 		$this->load->library('form');
 		$this->load->library('field_behavior');
 		$data['provider'] = $this->_pagination($data['model'],$id);
 		$data['bread'] = make_bread(Array(
-			'内容管理' => '',
+            $data['group']['description'] => '',
 			$data['model']['description'] => site_url('content/view?model=' . $data['model']['name']),
 		));
 
-		
+//        print_r($data);
+
 		$this->_template('content_list', $data);
 	}
 	

@@ -4,7 +4,7 @@
 <script charset="utf-8" src="js/kindeditor/lang/zh_CN.js"></script>
 <?php $current_tab =  $this->input->get('tab') ? $this->input->get('tab') : 'site_basic' ; ?>
 <div class="headbar">
-	<div class="alert alert-primary"><span>系统</span><span>></span><span>系统设置</span><span>></span><span>站点设置</span></div>
+<!--	<div class="alert alert-primary"><span>系统</span><span>></span><span>系统设置</span><span>></span><span>站点设置</span></div>-->
 
     <ul class="nav nav-tabs" id="myTab" role="tablist">
         <li class="nav-item" role="presentation">

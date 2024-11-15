@@ -1,6 +1,5 @@
 <?php if ( ! defined('IN_DILICMS')) exit('No direct script access allowed');?>
 <div class="headbar">
-	<div class="alert alert-primary"><span>系统</span><span>></span><span>更新缓存</span></div>
 	<div class="operating">
 		<a href="javascript:void(0)" onclick="selectAll('cache[]');"><button class="btn btn-sm btn-primary" type="button"><span class="sel_all">全选</span></button></a>
 		<a href="javascript:;" onclick="$('#cache_form').submit();"><button class="btn btn-sm btn-primary" type="button"><span class="remove">更新</span></button></a>

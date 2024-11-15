@@ -1,6 +1,5 @@
 <?php if ( ! defined('IN_DILICMS')) exit('No direct script access allowed');?>
 <div class="headbar">
-	<div class="alert alert-primary"><span>系统</span><span>></span><span>权限管理</span><span>></span><span>用户组管理</span></div>
 	<div class="operating">
 		<a class="hack_ie" href="<?php echo backend_url('role/add'); ?>"><button class="btn btn-sm btn-primary" type="button"><span class="addition">添加新用户组</span></button></a>
 	</div>

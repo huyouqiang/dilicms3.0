@@ -14,14 +14,14 @@ function make_bread($flour)
 		if(empty($link))
 		{
 			// $bread[] = "<span class=\"bread_name\"><a href=\"javascript:void(0);\">$name</a></span>";
-			$bread[] = "<span class=\"bread_name\">$name</span>";
+			$bread[] = "<b class=\"bread_name\">$name</b>";
 		}
 		else
 		{
-			$bread[] = "<span class=\"bread_name\"><a href=\"$link\" target=\"_self\">$name</a></span>";
+			$bread[] = "<b class=\"bread_name\"><a href=\"$link\" target=\"_self\" style=\"color:#000000;\">$name</a></b>";
 		}
 	}
-	return implode('<span class="bread_gt">&gt;</span>', $bread);
+	return implode('<b class="bread_gt">&gt;</b>', $bread);
 }
 
 /**

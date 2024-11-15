@@ -1,6 +1,5 @@
 <?php if ( ! defined('IN_DILICMS')) exit('No direct script access allowed');?>
 <div class="headbar">
-	<div class="alert alert-primary"><span>数据库管理</span><span>></span><span>数据库优化</span></div>
     <div class="operating">
         <a href="javascript:$('form').submit();"><button class="btn btn-sm btn-primary" type="button"><span class="sel_all">立即优化</span></button></a>
     </div>

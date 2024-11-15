@@ -1,6 +1,5 @@
 <?php if ( ! defined('IN_DILICMS')) exit('No direct script access allowed');?>
 <div class="headbar">
-	<div class="alert alert-primary"><?=$bread?></div>
 	<div class="operating">
 		<a class="hack_ie" href="<?php echo backend_url('model/add'); ?>"><button class="btn btn-sm btn-primary" type="button"><span class="addition">添加新内容模型</span></button></a>
 	</div>

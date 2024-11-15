@@ -1,7 +1,4 @@
 <?php if ( ! defined('IN_DILICMS')) exit('No direct script access allowed');?>
-<div class="headbar">
-	<div class="alert alert-primary"><span>系统</span><span>></span><span>用户组管理</span><span>></span><span>修改用户组</span></div>
-</div>
 <style>
 th {
 	width: 200px;

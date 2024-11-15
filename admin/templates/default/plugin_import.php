@@ -1,7 +1,4 @@
 <?php if ( ! defined('IN_DILICMS')) exit('No direct script access allowed');?>
-<div class="headbar">
-	<div class="alert alert-primary"><span>插件</span><span>></span><span>插件管理</span><span>></span><span>设计新插件</span></div>
-</div>
 <div class="content_box">
 	<div class="content form_content">
         <?php echo form_open('plugin/import'); ?>

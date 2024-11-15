@@ -1,7 +1,4 @@
 <?php if ( ! defined('IN_DILICMS')) exit('No direct script access allowed');?>
-<div class="headbar">
-	<div class="alert alert-primary"><span>数据库管理</span><span>></span><span>数据库备份</span></div>
-</div>
 <style>
 ul {
     padding-left:0px;

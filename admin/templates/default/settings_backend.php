@@ -1,8 +1,6 @@
 <?php if ( ! defined('IN_DILICMS')) exit('No direct script access allowed');?>
 <script src="js/xheditor/xheditor-zh-cn.min.js" type="text/javascript"></script>
-<div class="headbar">
-	<div class="alert alert-primary"><span>系统</span><span>></span><span>系统设置</span><span>></span><span>后台设置</span></div>
-</div>
+
 <style>
 th {
 	width: 200px;
