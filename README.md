@@ -4,11 +4,11 @@
 
 >master分支，为旧款ui，拥有表单分组功能，但字段类型缺乏json等新类型支持
 
->bootstrap5分支，将系统ui全部更换为bootstrap5,目前已完成系统设置部分,数据表格ui正在开发中
+>bootstrap5分支，将系统ui全部更换为bootstrap5,目前已完成系统设置部分,数据表格ui和功能已开发完成
 
-![Image text](https://raw.githubusercontent.com/huyouqiang/dilicms3.0/bootstrap5/preview/img-1.png)
-![Image text](https://raw.githubusercontent.com/huyouqiang/dilicms3.0/bootstrap5/preview/img-2.png)
-![Image text](https://raw.githubusercontent.com/huyouqiang/dilicms3.0/bootstrap5/preview/img-3.png)
+![Image text](https://raw.githubusercontent.com/huyouqiang/dilicms3.0/bootstrap5/preview/img-01.png)
+![Image text](https://raw.githubusercontent.com/huyouqiang/dilicms3.0/bootstrap5/preview/img-02.png)
+![Image text](https://raw.githubusercontent.com/huyouqiang/dilicms3.0/bootstrap5/preview/img-03.png)
 
 #### 环境要求
 

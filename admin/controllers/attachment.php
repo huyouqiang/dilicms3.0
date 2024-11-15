@@ -50,8 +50,8 @@ class Attachment extends CI_Controller
      */
 	public function _upload_post()
 	{
-		
-		//不能加载SESSION类库
+
+        //不能加载SESSION类库
 		$hash = $this->input->post('hash', TRUE);
 		list($session_id, $model_type, $model) = explode('^', $hash);
         $session = $this->db->where('session_id', $session_id)->get($this->db->dbprefix('sessions'))->row();
