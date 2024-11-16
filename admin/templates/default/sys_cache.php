@@ -49,10 +49,6 @@
                     <td>后台设置缓存</td>
                 </tr>
                 <tr>
-                	<td><input type="checkbox" value="plugin" name="cache[]" class="form-check-input"/></td>
-                    <td>插件缓存</td>
-                </tr>
-                <tr>
                 	<td><input type="checkbox" value="fieldtypes" name="cache[]" class="form-check-input"/></td>
                     <td>字段类型缓存</td>
                 </tr>

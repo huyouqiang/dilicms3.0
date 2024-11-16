@@ -237,8 +237,12 @@ Header START -->
                                 <b>模型管理>内容模型管理</b>
                             <?php elseif (strpos($_SERVER['REQUEST_URI'],'category/view') !==  false): ?>
                                 <b>模型管理>分类模型管理</b>
+                            <?php elseif (strpos($_SERVER['REQUEST_URI'],'model/add') !==  false): ?>
+                                <b>模型管理>内容模型管理>添加内容模型</b>
                             <?php elseif (strpos($_SERVER['REQUEST_URI'],'plugin/view') !==  false): ?>
                                 <b>扩展管理>插件管理</b>
+                            <?php elseif (strpos($_SERVER['REQUEST_URI'],'plugin/add') !==  false): ?>
+                                <b>扩展管理>设计新插件</b>
                             <?php elseif (strpos($_SERVER['REQUEST_URI'],'role/view') !==  false): ?>
                                 <b>权限管理>用户组管理</b>
                             <?php elseif (strpos($_SERVER['REQUEST_URI'],'user/view') !==  false): ?>
@@ -250,7 +254,7 @@ Header START -->
                             <?php elseif (strpos($_SERVER['REQUEST_URI'],'database/optimize') !==  false): ?>
                                 <b>数据库管理>数据库优化</b>
                             <?php else: ?>
-                                <b>编辑操作</b>
+                                <?=$bread?>
                             <?php endif; ?>
 
 <!--                            <a href="javascript:void(0)" class="d-flex align-items-center pb-3 mb-3 link-dark text-decoration-none border-bottom">-->

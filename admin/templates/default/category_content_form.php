@@ -7,7 +7,6 @@
 <link rel="stylesheet" media="screen" type="text/css" href="js/colorPicker/css/colorpicker.css" />
 <script src="js/dili_utility/content_form.js" type="text/javascript"></script>
 <div class="headbar">
-	<div class="alert alert-primary"><?=$bread?></div>
 	<?php if($model['hasattach']): ?>
         <div class="operating" style="overflow:visible">
             <div class="search f_r" style="position:relative">

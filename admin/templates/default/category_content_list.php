@@ -1,6 +1,5 @@
 <?php if ( ! defined('IN_DILICMS')) exit('No direct script access allowed');?>
 <div class="headbar">
-	<div class="alert alert-primary"><?=$bread?></div>
 	<div class="operating">
     	<a href="javascript:void(0)" onclick="selectAll('classid[]');"><button class="btn btn-sm btn-primary" type="button"><span class="sel_all">全选</span></button></a>
 		<a class="hack_ie" href="<?php echo backend_url('category_content/form','model='.$model['name'].'&u_c_level='.$provider['where']['u_c_level']); ?>"><button class="btn btn-sm btn-primary" type="button"><span class="addition">添加</span></button></a>

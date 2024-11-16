@@ -1,7 +1,4 @@
 <?php if ( ! defined('IN_DILICMS')) exit('No direct script access allowed');?>
-<div class="headbar">
-	<div class="alert alert-primary"><?=$bread?></div>
-</div>
 <div class="content_box">
 	<div class="content form_content">
         <?php echo form_open('category/add'); ?>

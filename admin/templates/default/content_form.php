@@ -12,7 +12,6 @@ ul {
 }
 </style>
 <div class="headbar">
-<!--    <div class="alert alert-primary">--><?php //=$bread?><!--</div>-->
     <div class="operating" style="overflow:visible;display:none;">
         <?php if($model['hasattach']): ?>
         <div class="search f_r" style="position:relative">
