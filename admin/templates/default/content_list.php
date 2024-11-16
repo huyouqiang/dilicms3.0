@@ -165,7 +165,7 @@
 	</div> -->
 </div>
 
-<div class="content" style="margin: 10px 0px;overflow: auto;height: calc(68vh);border: 1px solid #eeeeee;">
+<div class="content" style="margin: 10px 0px 0px 0px;overflow: auto;height: calc(68vh);border: 1px solid #eeeeee;">
     <?php echo form_open('content/del?model='.$model['name'], array('id' => 'content_list_form')); ?>
 		<table id="list_table" class="table table-sm table-hover table-striped" >
 			<thead>
@@ -212,7 +212,7 @@
     <?php echo form_close(); ?>
 </div>
 
-<div class="mt-4">
+<div style="margin-top: 10px;">
 <nav aria-label="navigation">
 	<ul class="pagination pagination-light d-inline-block d-md-flex justify-content-center">
 		<?php echo $provider['pagination']; ?>

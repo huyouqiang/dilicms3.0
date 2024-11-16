@@ -114,8 +114,8 @@ Header START -->
 						<img class="avatar-img rounded-circle" src="<?php echo setting('backend_logo');  ?>" alt="">
 						</div>
 						<div class="ms-sm-3 d-flex">
-						<p class="small mb-2"><b>DEV</b> 系统用户消息推送功能，正在集成中</p>
-						<p class="small ms-3 text-nowrap">03-01</p>
+						<p class="small mb-2">暂无消息</p>
+						<p class="small ms-3 text-nowrap">24/11/16</p>
 						</div>
 					</a>
 					</li>				
@@ -160,8 +160,10 @@ Header START -->
 				<i class="fa-fw bi bi-house me-2"></i>站点首页
 				</a> 
 			</li>
-			<li class="dropdown-divider"></li>
+
 						<li><a class="dropdown-item" href="<?php echo backend_url('login/quit'); ?>"><i class="bi bi-door-open fa-fw me-2"></i>退出管理</a></li>
+                <li class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="https://github.com/huyouqiang/dilicms3.0/tree/bootstrap5" target="_blank"><i class="bi bi-github fa-fw me-2"></i>开源项目</a></li>
 						</ul>
 		</li>
 		<!-- Profile START -->
@@ -248,7 +250,7 @@ Header START -->
                             <?php elseif (strpos($_SERVER['REQUEST_URI'],'database/optimize') !==  false): ?>
                                 <b>数据库管理>数据库优化</b>
                             <?php else: ?>
-                                <b>未知操作</b>
+                                <b>编辑操作</b>
                             <?php endif; ?>
 
 <!--                            <a href="javascript:void(0)" class="d-flex align-items-center pb-3 mb-3 link-dark text-decoration-none border-bottom">-->

@@ -126,7 +126,7 @@ class CI_Pagination {
 		// Is there only one page? Hm... nothing more to do here then.
 		if ($num_pages == 1)
 		{
-			return '';
+//			return '';
 		}
 
 		// Set the base page index for starting page number
