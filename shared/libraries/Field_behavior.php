@@ -156,7 +156,12 @@ class Field_behavior
 												'default' => 0
 												) ;
 									break;
-				case 'select':
+				case 'select': $field = array(
+                                                    'type' => 'VARCHAR',
+                                                    'constraint' => $data['length'] ? $data['length'] : 10 ,
+                                                    'default' => 0
+                                                ) ;
+                                    break;
 				case 'radio_int'   	: $field = array(
 													'type' => 'INT',
 														'constraint' => $data['length'] ? $data['length'] : 10 ,
