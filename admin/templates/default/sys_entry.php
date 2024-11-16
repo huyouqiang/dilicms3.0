@@ -239,6 +239,10 @@ Header START -->
                                 <b>模型管理>分类模型管理</b>
                             <?php elseif (strpos($_SERVER['REQUEST_URI'],'model/add') !==  false): ?>
                                 <b>模型管理>内容模型管理>添加内容模型</b>
+                            <?php elseif (strpos($_SERVER['REQUEST_URI'],'category/add') !==  false): ?>
+                                <b>模型管理>内容模型管理>添加分类模型</b>
+                            <?php elseif (strpos($_SERVER['REQUEST_URI'],'category/del') !==  false): ?>
+                                <b>模型管理>内容模型管理>删除分类模型</b>
                             <?php elseif (strpos($_SERVER['REQUEST_URI'],'plugin/view') !==  false): ?>
                                 <b>扩展管理>插件管理</b>
                             <?php elseif (strpos($_SERVER['REQUEST_URI'],'plugin/add') !==  false): ?>
@@ -253,8 +257,10 @@ Header START -->
                                 <b>数据库管理>数据库还原</b>
                             <?php elseif (strpos($_SERVER['REQUEST_URI'],'database/optimize') !==  false): ?>
                                 <b>数据库管理>数据库优化</b>
-                            <?php else: ?>
+                            <?php elseif (isset($bread)): ?>
                                 <?=$bread?>
+                            <?php else: ?>
+                                <b>编辑操作</b>
                             <?php endif; ?>
 
 <!--                            <a href="javascript:void(0)" class="d-flex align-items-center pb-3 mb-3 link-dark text-decoration-none border-bottom">-->

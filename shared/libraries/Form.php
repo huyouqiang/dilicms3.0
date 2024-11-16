@@ -195,8 +195,9 @@ class Form
      */
 	private function _int($field, $default)
 	{
+        $field['width'] =  $field['width'] ? $field['width'] : 150;
 		return '<input class="form-control" name="' . $field['name'] . '" id="' . $field['name'] . 
-			   '" type="text" style="width:50px" autocomplete="off" value="' . $default . '" />';
+			   '" type="text" style="width:' . $field['width'] . 'px" autocomplete="off" value="' . $default . '" />';
 	}
 	
 	// ------------------------------------------------------------------------
@@ -211,8 +212,9 @@ class Form
      */
 	private function _float($field, $default)
 	{
+        $field['width'] =  $field['width'] ? $field['width'] : 150;
 		return '<input class="form-control" name="' . $field['name'] . '" id="' .$field['name'] . 
-		       '" type="text" style="width:50px" autocomplete="off" value="' . $default . '" />';	
+		       '" type="text" style="width:' . $field['width'] . 'px" autocomplete="off" value="' . $default . '" />';
 	}
 
 	// ------------------------------------------------------------------------

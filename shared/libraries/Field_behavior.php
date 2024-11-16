@@ -150,7 +150,6 @@ class Field_behavior
 												 'default' => 0
 												) ;
 								break;
-				case 'input' : 
 				case 'select_int': $field = array(
 												'type' => 'INT',
 												'constraint' => $data['length'] ? $data['length'] : 10 ,
@@ -164,7 +163,8 @@ class Field_behavior
 														'default' => 0
 													) ;
 									break;
-				case 'radio' :
+                case 'input' :
+                case 'radio' :
 				case 'checkbox':
 				case 'checkbox_from_model':
 				case 'datetime':
