@@ -11,7 +11,7 @@
  Target Server Version : 50744 (5.7.44)
  File Encoding         : 65001
 
- Date: 16/11/2024 14:05:11
+ Date: 16/11/2024 16:11:11
 */
 
 SET NAMES utf8mb4;
@@ -59,7 +59,7 @@ CREATE TABLE `ge_attachments` (
   `image` tinyint(1) DEFAULT '0',
   `posttime` int(11) DEFAULT '0',
   PRIMARY KEY (`aid`) USING BTREE
-) ENGINE=MyISAM AUTO_INCREMENT=515 DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC;
+) ENGINE=MyISAM AUTO_INCREMENT=518 DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC;
 
 -- ----------------------------
 -- Records of ge_attachments
@@ -139,6 +139,9 @@ INSERT INTO `ge_attachments` (`aid`, `uid`, `model`, `from`, `content`, `name`, 
 INSERT INTO `ge_attachments` (`aid`, `uid`, `model`, `from`, `content`, `name`, `folder`, `realname`, `type`, `image`, `posttime`) VALUES (512, 1, 164, 0, 8, '17101797674126e10860e13cb8', '2024/03', '截屏2023-11-24 05.25.03', 'png', 1, 1710179767);
 INSERT INTO `ge_attachments` (`aid`, `uid`, `model`, `from`, `content`, `name`, `folder`, `realname`, `type`, `image`, `posttime`) VALUES (513, 1, 164, 0, 8, '1731688942e4a735a6125ee5a8', '2024/11', '未标题-1', 'png', 1, 1731688942);
 INSERT INTO `ge_attachments` (`aid`, `uid`, `model`, `from`, `content`, `name`, `folder`, `realname`, `type`, `image`, `posttime`) VALUES (514, 1, 164, 0, 8, '17316900365ef70e938fa5f8a4', '2024/11', '头像', 'jpeg', 1, 1731690036);
+INSERT INTO `ge_attachments` (`aid`, `uid`, `model`, `from`, `content`, `name`, `folder`, `realname`, `type`, `image`, `posttime`) VALUES (515, 1, 193, 0, 1, '173174350283f1eafbb4aa4064', '2024/11', '头像', 'jpeg', 1, 1731743502);
+INSERT INTO `ge_attachments` (`aid`, `uid`, `model`, `from`, `content`, `name`, `folder`, `realname`, `type`, `image`, `posttime`) VALUES (516, 1, 193, 0, 1, '1731744046db4a8fc63a7dbd9a', '2024/11', '未标题-1', 'png', 1, 1731744046);
+INSERT INTO `ge_attachments` (`aid`, `uid`, `model`, `from`, `content`, `name`, `folder`, `realname`, `type`, `image`, `posttime`) VALUES (517, 1, 193, 0, 1, '1731744062dba0474de121d1fa', '2024/11', '头像', 'jpeg', 1, 1731744062);
 COMMIT;
 
 -- ----------------------------
@@ -258,7 +261,7 @@ CREATE TABLE `ge_group` (
   `description` varchar(40) DEFAULT NULL,
   `level` int(10) DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE=MyISAM AUTO_INCREMENT=29 DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC;
+) ENGINE=MyISAM AUTO_INCREMENT=31 DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC;
 
 -- ----------------------------
 -- Records of ge_group
@@ -270,8 +273,6 @@ INSERT INTO `ge_group` (`id`, `name`, `description`, `level`) VALUES (18, 'class
 INSERT INTO `ge_group` (`id`, `name`, `description`, `level`) VALUES (23, 'notice', '通知模块', 3);
 INSERT INTO `ge_group` (`id`, `name`, `description`, `level`) VALUES (25, 'comment', '点评模块', 5);
 INSERT INTO `ge_group` (`id`, `name`, `description`, `level`) VALUES (26, 'report', '报告模块', 6);
-INSERT INTO `ge_group` (`id`, `name`, `description`, `level`) VALUES (27, 'test_1', '测试_1', 10);
-INSERT INTO `ge_group` (`id`, `name`, `description`, `level`) VALUES (28, 'test_2', 't_2', 20);
 COMMIT;
 
 -- ----------------------------
@@ -339,7 +340,7 @@ CREATE TABLE `ge_model_fields` (
   PRIMARY KEY (`id`) USING BTREE,
   UNIQUE KEY `name` (`name`,`model`) USING BTREE,
   KEY `model` (`model`) USING BTREE
-) ENGINE=MyISAM AUTO_INCREMENT=1126 DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC;
+) ENGINE=MyISAM AUTO_INCREMENT=1140 DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC;
 
 -- ----------------------------
 -- Records of ge_model_fields
@@ -670,6 +671,20 @@ INSERT INTO `ge_model_fields` (`id`, `name`, `description`, `model`, `type`, `le
 INSERT INTO `ge_model_fields` (`id`, `name`, `description`, `model`, `type`, `length`, `values`, `width`, `height`, `rules`, `ruledescription`, `searchable`, `listable`, `order`, `editable`) VALUES (1120, 'user_check', '复选框', 154, 'checkbox', '10', '1=选项1|2=选项2', 0, 0, '', '', 1, 1, 20, 1);
 INSERT INTO `ge_model_fields` (`id`, `name`, `description`, `model`, `type`, `length`, `values`, `width`, `height`, `rules`, `ruledescription`, `searchable`, `listable`, `order`, `editable`) VALUES (1125, 'text_3', 'text_3', 164, 'wysiwyg', '', '', 0, 0, '', '', 1, 1, 599, 1);
 INSERT INTO `ge_model_fields` (`id`, `name`, `description`, `model`, `type`, `length`, `values`, `width`, `height`, `rules`, `ruledescription`, `searchable`, `listable`, `order`, `editable`) VALUES (1124, 'json_3', 'json_3', 164, 'textarea_json', '', '', 0, 0, '', '', 1, 1, 300, 1);
+INSERT INTO `ge_model_fields` (`id`, `name`, `description`, `model`, `type`, `length`, `values`, `width`, `height`, `rules`, `ruledescription`, `searchable`, `listable`, `order`, `editable`) VALUES (1126, 'user_name', 'user_name', 193, 'int', '30', '', 0, 0, 'required', '', 1, 1, 2, 1);
+INSERT INTO `ge_model_fields` (`id`, `name`, `description`, `model`, `type`, `length`, `values`, `width`, `height`, `rules`, `ruledescription`, `searchable`, `listable`, `order`, `editable`) VALUES (1127, 'user_age', 'user_age', 193, 'int', '10', '', 0, 0, '', '', 1, 1, 3, 1);
+INSERT INTO `ge_model_fields` (`id`, `name`, `description`, `model`, `type`, `length`, `values`, `width`, `height`, `rules`, `ruledescription`, `searchable`, `listable`, `order`, `editable`) VALUES (1128, 'user_rename', 'user_rename', 193, 'input', '30', '', 200, 0, '', '', 1, 1, 5, 1);
+INSERT INTO `ge_model_fields` (`id`, `name`, `description`, `model`, `type`, `length`, `values`, `width`, `height`, `rules`, `ruledescription`, `searchable`, `listable`, `order`, `editable`) VALUES (1129, 'float_1', 'float_1', 193, 'float', '10', '', 200, 0, '', '', 1, 1, 5, 1);
+INSERT INTO `ge_model_fields` (`id`, `name`, `description`, `model`, `type`, `length`, `values`, `width`, `height`, `rules`, `ruledescription`, `searchable`, `listable`, `order`, `editable`) VALUES (1130, 'json_1', 'json_1', 193, 'textarea_json', '100', '', 300, 300, '', '', 1, 1, 8, 1);
+INSERT INTO `ge_model_fields` (`id`, `name`, `description`, `model`, `type`, `length`, `values`, `width`, `height`, `rules`, `ruledescription`, `searchable`, `listable`, `order`, `editable`) VALUES (1131, 'select_int', 'select_int', 193, 'select_int', '10', '1=选项1|2=选项2', 200, 200, '', '', 1, 1, 10, 1);
+INSERT INTO `ge_model_fields` (`id`, `name`, `description`, `model`, `type`, `length`, `values`, `width`, `height`, `rules`, `ruledescription`, `searchable`, `listable`, `order`, `editable`) VALUES (1132, 'select_varchar', 'select_varchar', 193, 'select', '30', '你=你|我=我', 200, 200, '', '', 1, 1, 12, 1);
+INSERT INTO `ge_model_fields` (`id`, `name`, `description`, `model`, `type`, `length`, `values`, `width`, `height`, `rules`, `ruledescription`, `searchable`, `listable`, `order`, `editable`) VALUES (1133, 'radio_int', 'radio_int', 193, 'radio_int', '10', '1=男|2=女', 200, 200, '', '', 1, 1, 13, 1);
+INSERT INTO `ge_model_fields` (`id`, `name`, `description`, `model`, `type`, `length`, `values`, `width`, `height`, `rules`, `ruledescription`, `searchable`, `listable`, `order`, `editable`) VALUES (1134, 'radio_varchar', 'radio_varchar', 193, 'radio', '10', '我=我|你=你', 200, 200, '', '', 1, 1, 15, 1);
+INSERT INTO `ge_model_fields` (`id`, `name`, `description`, `model`, `type`, `length`, `values`, `width`, `height`, `rules`, `ruledescription`, `searchable`, `listable`, `order`, `editable`) VALUES (1135, 'checkbox_varchar', 'checkbox_varchar', 193, 'checkbox', '10', '音乐=音乐|电影=电影', 200, 200, '', '', 1, 1, 16, 1);
+INSERT INTO `ge_model_fields` (`id`, `name`, `description`, `model`, `type`, `length`, `values`, `width`, `height`, `rules`, `ruledescription`, `searchable`, `listable`, `order`, `editable`) VALUES (1136, 'editor_full', 'editor_full', 193, 'wysiwyg', '1000', '', 0, 0, '', '', 1, 1, 18, 1);
+INSERT INTO `ge_model_fields` (`id`, `name`, `description`, `model`, `type`, `length`, `values`, `width`, `height`, `rules`, `ruledescription`, `searchable`, `listable`, `order`, `editable`) VALUES (1137, 'editor_simple', 'editor_simple', 193, 'wysiwyg_basic', '1000', '', 200, 200, '', '', 1, 1, 30, 1);
+INSERT INTO `ge_model_fields` (`id`, `name`, `description`, `model`, `type`, `length`, `values`, `width`, `height`, `rules`, `ruledescription`, `searchable`, `listable`, `order`, `editable`) VALUES (1138, 'date_1', 'date_1', 193, 'datetime', '30', '', 200, 200, '', '', 1, 1, 50, 1);
+INSERT INTO `ge_model_fields` (`id`, `name`, `description`, `model`, `type`, `length`, `values`, `width`, `height`, `rules`, `ruledescription`, `searchable`, `listable`, `order`, `editable`) VALUES (1139, 'file_1', 'file_1', 193, 'file', '100', '', 200, 200, '', '', 1, 1, 60, 1);
 COMMIT;
 
 -- ----------------------------
@@ -688,7 +703,7 @@ CREATE TABLE `ge_models` (
   `model_sort` int(10) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`) USING BTREE,
   UNIQUE KEY `name` (`name`) USING BTREE
-) ENGINE=MyISAM AUTO_INCREMENT=193 DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC;
+) ENGINE=MyISAM AUTO_INCREMENT=195 DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC;
 
 -- ----------------------------
 -- Records of ge_models
@@ -725,6 +740,8 @@ INSERT INTO `ge_models` (`id`, `name`, `description`, `perpage`, `hasattach`, `b
 INSERT INTO `ge_models` (`id`, `name`, `description`, `perpage`, `hasattach`, `built_in`, `thumb_preferences`, `belong_group`, `model_sort`) VALUES (190, 'class_remind', '课前提醒', '50', 1, 0, '{\"enabled\":[],\"default\":\"original\"}', 18, 0);
 INSERT INTO `ge_models` (`id`, `name`, `description`, `perpage`, `hasattach`, `built_in`, `thumb_preferences`, `belong_group`, `model_sort`) VALUES (191, 'class_preview', '课前预习', '50', 1, 0, '{\"enabled\":[],\"default\":\"original\"}', 18, 0);
 INSERT INTO `ge_models` (`id`, `name`, `description`, `perpage`, `hasattach`, `built_in`, `thumb_preferences`, `belong_group`, `model_sort`) VALUES (192, 'h5_default_template', '课次默认模板', '50', 1, 0, '{\"enabled\":[],\"default\":\"original\"}', 18, 0);
+INSERT INTO `ge_models` (`id`, `name`, `description`, `perpage`, `hasattach`, `built_in`, `thumb_preferences`, `belong_group`, `model_sort`) VALUES (193, 's_1', '完整示例', '50', 1, 0, '{\"enabled\":[],\"default\":\"original\"}', 17, 30);
+INSERT INTO `ge_models` (`id`, `name`, `description`, `perpage`, `hasattach`, `built_in`, `thumb_preferences`, `belong_group`, `model_sort`) VALUES (194, 's_2', 's_2', '50', 1, 0, '{\"enabled\":[],\"default\":\"original\"}', 18, 0);
 COMMIT;
 
 -- ----------------------------
@@ -866,7 +883,7 @@ CREATE TABLE `ge_sessions` (
 -- Records of ge_sessions
 -- ----------------------------
 BEGIN;
-INSERT INTO `ge_sessions` (`session_id`, `ip_address`, `user_agent`, `last_activity`, `user_data`) VALUES ('38b9fe875bf7be6c5fbfc32fc25239c8', '58.39.155.228', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36', 1731736982, 'a:2:{s:9:\"user_data\";s:0:\"\";s:3:\"uid\";s:1:\"1\";}');
+INSERT INTO `ge_sessions` (`session_id`, `ip_address`, `user_agent`, `last_activity`, `user_data`) VALUES ('d67b1d7949678cc725b7e35c3e4c6252', '58.39.155.228', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36', 1731744272, 'a:4:{s:9:\"user_data\";s:0:\"\";s:3:\"uid\";s:1:\"1\";s:10:\"model_type\";s:5:\"model\";s:5:\"model\";s:3:\"s_1\";}');
 COMMIT;
 
 -- ----------------------------
@@ -8467,6 +8484,59 @@ CREATE TABLE `ge_u_m_report_comment` (
 
 -- ----------------------------
 -- Records of ge_u_m_report_comment
+-- ----------------------------
+BEGIN;
+COMMIT;
+
+-- ----------------------------
+-- Table structure for ge_u_m_s_1
+-- ----------------------------
+DROP TABLE IF EXISTS `ge_u_m_s_1`;
+CREATE TABLE `ge_u_m_s_1` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `create_time` int(10) unsigned NOT NULL DEFAULT '0',
+  `update_time` int(10) unsigned NOT NULL DEFAULT '0',
+  `create_user` tinyint(10) unsigned NOT NULL DEFAULT '0',
+  `update_user` tinyint(10) unsigned NOT NULL DEFAULT '0',
+  `user_name` varchar(30) NOT NULL DEFAULT '',
+  `user_age` int(10) NOT NULL DEFAULT '0',
+  `user_rename` varchar(30) NOT NULL DEFAULT '',
+  `float_1` float NOT NULL DEFAULT '0',
+  `json_1` json NOT NULL,
+  `select_int` int(10) NOT NULL DEFAULT '0',
+  `select_varchar` varchar(30) NOT NULL DEFAULT '0',
+  `radio_int` int(10) NOT NULL DEFAULT '0',
+  `radio_varchar` varchar(10) NOT NULL DEFAULT '',
+  `checkbox_varchar` varchar(10) NOT NULL DEFAULT '',
+  `editor_full` text NOT NULL,
+  `editor_simple` text NOT NULL,
+  `date_1` varchar(30) NOT NULL DEFAULT '',
+  `file_1` varchar(100) NOT NULL DEFAULT '',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of ge_u_m_s_1
+-- ----------------------------
+BEGIN;
+INSERT INTO `ge_u_m_s_1` (`id`, `create_time`, `update_time`, `create_user`, `update_user`, `user_name`, `user_age`, `user_rename`, `float_1`, `json_1`, `select_int`, `select_varchar`, `radio_int`, `radio_varchar`, `checkbox_varchar`, `editor_full`, `editor_simple`, `date_1`, `file_1`) VALUES (1, 1731737864, 1731744062, 1, 1, 'hu', 30, 'hu', 1.23, '{}', 2, '我', 2, '我', '音乐,电影', '<h1>\n	123\n</h1>\n<p>\n	<span style=\"color:#E53333;\">123</span> \n</p>\n<p>\n	<span style=\"color:#E53333;\"><br />\n</span> \n</p>\n<p>\n	<span style=\"color:#E53333;background-color:#006600;\">123</span> \n</p>\n<p>\n	<span style=\"color:#E53333;background-color:#006600;\"><br />\n</span> \n</p>\n<p>\n	<span style=\"color:#E53333;background-color:#006600;\"><img src=\"/attachments/2024/11/173174350283f1eafbb4aa4064.jpeg\" alt=\"\" /><br />\n</span> \n</p>\n<p>\n	<span style=\"color:#E53333;background-color:#006600;\"><br />\n</span> \n</p>\n<p>\n	<span style=\"color:#E53333;background-color:#006600;\"><embed src=\"http://hutc.top/tv/no_signal.mp4\" type=\"video/x-ms-asf-plugin\" width=\"550\" height=\"400\" autostart=\"false\" loop=\"true\" /><br />\n</span> \n</p>', '<h1>\n	123\n</h1>\n<p>\n	<span style=\"color:#E53333;\">123</span> \n</p>\n<p>\n	<span style=\"color:#E53333;\"><br />\n</span> \n</p>\n<p>\n	<span style=\"color:#E53333;background-color:#006600;\">123</span> \n</p>\n<p>\n	<span style=\"color:#E53333;background-color:#006600;\"><br />\n</span> \n</p>\n<p>\n	<span style=\"color:#E53333;background-color:#006600;\"><img src=\"http://d.hutc.top/attachments/2024/11/173174350283f1eafbb4aa4064.jpeg\" alt=\"\" /><br />\n</span> \n</p>\n<p>\n	<span style=\"color:#E53333;background-color:#006600;\"><br />\n</span> \n</p>\n<p>\n	<span style=\"color:#E53333;background-color:#006600;\"><embed width=\"550\" height=\"400\" /></span> \n</p>', '2024-11-16T15:56', 'attachments/2024/11/1731744062dba0474de121d1fa.jpeg');
+COMMIT;
+
+-- ----------------------------
+-- Table structure for ge_u_m_s_2
+-- ----------------------------
+DROP TABLE IF EXISTS `ge_u_m_s_2`;
+CREATE TABLE `ge_u_m_s_2` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `create_time` int(10) unsigned NOT NULL DEFAULT '0',
+  `update_time` int(10) unsigned NOT NULL DEFAULT '0',
+  `create_user` tinyint(10) unsigned NOT NULL DEFAULT '0',
+  `update_user` tinyint(10) unsigned NOT NULL DEFAULT '0',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of ge_u_m_s_2
 -- ----------------------------
 BEGIN;
 COMMIT;
