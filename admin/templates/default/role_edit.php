@@ -53,18 +53,18 @@ ul {
                         </ul>
                     </td>
 				</tr>
-                <tr>
-					<th> 允许的插件：</th>
-					<td>
-                    	<ul class="attr_list">
-							<?php 
-							 $role->plugins = explode(',',$role->plugins);
-							foreach($plugins as $key=>$v): ?>
-                            <li><label class="attr"><input type="checkbox" <?php echo in_array($key,$role->plugins) ? 'checked="checked"' : ''; ?> value="<?php echo $key; ?>" name="plugin[]"><?php echo $v; ?></label></li>
-							<?php endforeach; ?>
-                        </ul>
-                    </td>
-				</tr>
+<!--                <tr>-->
+<!--					<th> 允许的插件：</th>-->
+<!--					<td>-->
+<!--                    	<ul class="attr_list">-->
+<!--							--><?php //
+//							 $role->plugins = explode(',',$role->plugins);
+//							foreach($plugins as $key=>$v): ?>
+<!--                            <li><label class="attr"><input type="checkbox" --><?php //echo in_array($key,$role->plugins) ? 'checked="checked"' : ''; ?><!-- value="--><?php //echo $key; ?><!--" name="plugin[]">--><?php //echo $v; ?><!--</label></li>-->
+<!--							--><?php //endforeach; ?>
+<!--                        </ul>-->
+<!--                    </td>-->
+<!--				</tr>-->
 				<tr>
 					<th></th>
 					<td>

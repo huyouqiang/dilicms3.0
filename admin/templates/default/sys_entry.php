@@ -220,7 +220,8 @@ Header START -->
 
                             <svg class="bi me-2" width="30" height="24" style="position: relative;float: left;"><use xlink:href="#bootstrap"/></svg>
                             <?php if (strpos($_SERVER['REQUEST_URI'],'content/view') !==  false): ?>
-                            <?=$bread?><b>(<?php echo $provider['total_rows']; ?>)</b>
+                            <?php if (isset($bread)): ?><?=$bread?><b>(<?php echo $provider['total_rows']; ?>)</b><?php else: ?>
+                            <b>提示操作</b><?php endif; ?>
                             <?php elseif (strpos($_SERVER['REQUEST_URI'],'content/form') !==  false): ?>
                                 <?=$bread?>
                             <?php elseif (strpos($_SERVER['REQUEST_URI'],'system/home') !==  false): ?>
