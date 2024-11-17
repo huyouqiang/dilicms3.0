@@ -34,7 +34,13 @@
 
 #### 数据源
 
->单选/复选框（varchar）	字符串1=备注1|字符串2=备注2 例如：1=男|2=女
+<table class="table table-sm table-bordered">
+		<tbody><tr><td> <b>字段类型</b></td><td><b>数据源说明</b></td></tr><tr><td> 整形</td><td>不用设置 </td></tr><tr><td> 浮点型</td><td>不用设置 </td></tr><tr><td> 单行文本框</td><td>不用设置 </td></tr><tr><td>文本区域<br>
+		<br>
+		</td><td>不用设置</td></tr><tr><td>下拉菜单</td><td><font>设置如:“0=分类1|1=分类2”整型/字符串<br>
+		<br>
+		</font></td></tr><tr><td>单选按钮</td><td>设置如:“0=分类1|1=分类2”整型/字符串</td></tr><tr><td>复选框</td><td>设置如:“0=分类1|1=分类2”字符串</td></tr><tr><td>编辑器</td><td>不用设置</td></tr><tr><td>日期时间</td><td>不用设置</td></tr><tr><td>颜色选择器</td><td>不用设置</td></tr></tbody>
+</table>
 
 #### 示例url
 
