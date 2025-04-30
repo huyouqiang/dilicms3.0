@@ -9,6 +9,7 @@
 <link rel="stylesheet" href="images/font-ux/css.css" />
 <script language="javascript" src="js/jquery.js"></script>
 <script language="javascript" src="js/admin.js"></script>
+  <script language="javascript" src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
 <link rel="stylesheet" href="images/bootstrap-icons.css"  type="text/css" />
 <!-- Bootstrap JS -->
 <script src="images/bootstrap.bundle.min.js"></script>
@@ -87,12 +88,14 @@ Header START -->
 		<!-- Nav right START -->
 		<ul class="nav flex-nowrap align-items-center ms-sm-3 list-unstyled">
 		<li class="nav-item ms-2">
-			<a class="nav-link icon-md btn btn-light p-0" href="/admin/login">
+			<a class="nav-link icon-md btn btn-light p-0" href="/admin/login" data-bs-toggle="tooltip" data-bs-placement="bottom"
+         data-bs-title="系统设置">
 			<i class="bi bi-gear-fill fs-6"> </i>
 			</a>
 		</li>
 		<li class="nav-item ms-2">
-			<a class="nav-link icon-md btn btn-light p-0" href="/admin/index.php/content/view">
+			<a class="nav-link icon-md btn btn-light p-0" href="/admin/index.php/content/view" data-bs-toggle="tooltip" data-bs-placement="bottom"
+         data-bs-title="数据中心">
 			<i class="bi bi-database-fill fs-6"> </i>
 			</a>
 		</li>
@@ -338,6 +341,11 @@ Header START -->
     // var windowHeight = $(window).height();
     // $('.menu').height(windowHeight-150);
     // $('.dataCenter').height(windowHeight-150);
+
+  var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+  var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+    return new bootstrap.Tooltip(tooltipTriggerEl)
+  })
 
 
 </script>
