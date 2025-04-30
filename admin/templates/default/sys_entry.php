@@ -9,7 +9,7 @@
 <link rel="stylesheet" href="images/font-ux/css.css" />
 <script language="javascript" src="js/jquery.js"></script>
 <script language="javascript" src="js/admin.js"></script>
-  <script language="javascript" src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+<script language="javascript" src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
 <link rel="stylesheet" href="images/bootstrap-icons.css"  type="text/css" />
 <!-- Bootstrap JS -->
 <script src="images/bootstrap.bundle.min.js"></script>
@@ -112,7 +112,7 @@ Header START -->
 				<div class="card-body p-0">
 				<ul class="list-group list-group-flush list-unstyled p-2">
 					<li>
-					<a href="#" class="list-group-item list-group-item-action rounded d-flex border-0 p-3 mb-1">
+					<a href="javascript:void(0);" class="list-group-item list-group-item-action rounded d-flex border-0 p-3 mb-1">
 						<div class="avatar text-center d-none d-sm-inline-block">
 						<img class="avatar-img rounded-circle" src="<?php echo setting('backend_logo');  ?>" alt="">
 						</div>
@@ -342,6 +342,7 @@ Header START -->
     // $('.menu').height(windowHeight-150);
     // $('.dataCenter').height(windowHeight-150);
 
+  // 实例化boostrap5-tips
   var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
   var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
     return new bootstrap.Tooltip(tooltipTriggerEl)

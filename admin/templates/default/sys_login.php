@@ -7,6 +7,7 @@
 <title><?php echo setting('backend_title');  ?></title>
 <link rel="stylesheet" href="images/admin.css"  type="text/css" />
 <link rel="stylesheet" href="images/bootstrap-icons.css"  type="text/css" />
+<script language="javascript" src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
 <!-- Bootstrap JS -->
 <script src="images/bootstrap.bundle.min.js"></script>
 </head>
@@ -97,43 +98,44 @@ Header START -->
 			</div>
 			<!-- Main navbar END -->
 
-			<!-- Nav right START -->
-			<ul class="nav flex-nowrap align-items-center ms-sm-3 list-unstyled">
-			<li class="nav-item ms-2">
-				<a class="nav-link icon-md btn btn-light p-0" href="/admin/login">
-				<i class="bi bi-gear-fill fs-6"> </i>
-				</a>
-			</li>
-			<li class="nav-item ms-2">
-				<a class="nav-link icon-md btn btn-light p-0" href="/blog/feedback">
-				<i class="bi bi-chat-left-text-fill fs-6"> </i>
-				</a>
-			</li>
-			<li class="nav-item dropdown ms-2">
-				<a class="nav-link icon-md btn btn-light p-0" href="#" id="notifDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside">
-				<span class="badge-notif animation-blink"></span>
-				<i class="bi bi-bell-fill fs-6"> </i>
-				</a>
-				<div class="dropdown-menu dropdown-animation dropdown-menu-end dropdown-menu-size-md p-0 shadow-lg border-0" aria-labelledby="notifDropdown">
-				<div class="card">
-					<div class="card-header d-flex justify-content-between align-items-center">
-					<h6 class="m-0">消息 <span class="badge bg-danger bg-opacity-10 text-danger ms-1">1</span></h6>
-					</div>
-					<div class="card-body p-0">
-					<ul class="list-group list-group-flush list-unstyled p-2">
-						<li>
-						<a href="#" class="list-group-item list-group-item-action rounded d-flex border-0 p-3 mb-1">
-							<div class="avatar text-center d-none d-sm-inline-block">
-							<img class="avatar-img rounded-circle" src="<?php echo setting('backend_logo');  ?>" alt="">
-							</div>
-							<div class="ms-sm-3 d-flex">
-							<p class="small mb-2"><b>DEV</b> 系统用户消息推送功能，正在集成中</p>
-							<p class="small ms-3 text-nowrap">03-01</p>
-							</div>
-						</a>
-						</li>
-						
-						</ul>
+      <!-- Nav right START -->
+      <ul class="nav flex-nowrap align-items-center ms-sm-3 list-unstyled">
+        <li class="nav-item ms-2">
+          <a class="nav-link icon-md btn btn-light p-0" href="/admin/login" data-bs-toggle="tooltip" data-bs-placement="bottom"
+             data-bs-title="系统设置">
+            <i class="bi bi-gear-fill fs-6"> </i>
+          </a>
+        </li>
+        <li class="nav-item ms-2">
+          <a class="nav-link icon-md btn btn-light p-0" href="/admin/index.php/content/view" data-bs-toggle="tooltip" data-bs-placement="bottom"
+             data-bs-title="数据中心">
+            <i class="bi bi-database-fill fs-6"> </i>
+          </a>
+        </li>
+        <li class="nav-item dropdown ms-2">
+          <a class="nav-link icon-md btn btn-light p-0" href="#" id="notifDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside">
+            <span class="badge-notif animation-blink"></span>
+            <i class="bi bi-bell-fill fs-6"> </i>
+          </a>
+          <div class="dropdown-menu dropdown-animation dropdown-menu-end dropdown-menu-size-md p-0 shadow-lg border-0" aria-labelledby="notifDropdown">
+            <div class="card">
+              <div class="card-header d-flex justify-content-between align-items-center">
+                <h6 class="m-0">消息 <span class="badge bg-danger bg-opacity-10 text-danger ms-1">1</span></h6>
+              </div>
+              <div class="card-body p-0">
+                <ul class="list-group list-group-flush list-unstyled p-2">
+                  <li>
+                    <a href="javascript:void(0);" class="list-group-item list-group-item-action rounded d-flex border-0 p-3 mb-1">
+                      <div class="avatar text-center d-none d-sm-inline-block">
+                        <img class="avatar-img rounded-circle" src="<?php echo setting('backend_logo');  ?>" alt="">
+                      </div>
+                      <div class="ms-sm-3 d-flex">
+                        <p class="small mb-2">暂无消息</p>
+                        <p class="small ms-3 text-nowrap">24/11/16</p>
+                      </div>
+                    </a>
+                  </li>
+                </ul>
 					</div>
 					<!-- <div class="card-footer text-center">
 					<a href="#" class="btn btn-sm btn-primary-soft">所有消息</a>
@@ -173,8 +175,9 @@ Header START -->
 				<i class="fa-fw bi bi-house me-2"></i>站点首页
 				</a> 
 			</li>
-			<li class="dropdown-divider"></li>
 						<li><a class="dropdown-item" href="<?php echo backend_url('login/quit'); ?>"><i class="bi bi-door-open fa-fw me-2"></i>退出管理</a></li>
+          <li class="dropdown-divider"></li>
+          <li><a class="dropdown-item" href="https://github.com/huyouqiang/dilicms3.0/tree/bootstrap5" target="_blank"><i class="bi bi-github fa-fw me-2"></i>开源项目</a></li>
 						</ul>
 							</ul>
 			</li>
@@ -260,3 +263,13 @@ Header START -->
 	<!-- footer END --> 
 </body>
 </html>
+
+<script>
+
+// 实例化boostrap5-tips
+var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+return new bootstrap.Tooltip(tooltipTriggerEl)
+})
+
+</script>
