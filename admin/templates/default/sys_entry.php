@@ -9,7 +9,7 @@
 <link rel="stylesheet" href="images/font-ux/css.css" />
 <script language="javascript" src="js/jquery.js"></script>
 <script language="javascript" src="js/admin.js"></script>
-<script language="javascript" src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+<script language="javascript" src="js/popper.min.js"></script>
 <link rel="stylesheet" href="images/bootstrap-icons.css"  type="text/css" />
 <!-- Bootstrap JS -->
 <script src="images/bootstrap.bundle.min.js"></script>

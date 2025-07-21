@@ -7,7 +7,7 @@
 <title><?php echo setting('backend_title');  ?></title>
 <link rel="stylesheet" href="images/admin.css"  type="text/css" />
 <link rel="stylesheet" href="images/bootstrap-icons.css"  type="text/css" />
-<script language="javascript" src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+<script language="javascript" src="js/popper.min.js"></script>
 <!-- Bootstrap JS -->
 <script src="images/bootstrap.bundle.min.js"></script>
 </head>
