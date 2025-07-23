@@ -188,9 +188,9 @@ Header START -->
 			<div class="row g-4" style="width: 100%;">
 			<!-- Main content START -->
 			<div class="col-lg-2" style="margin-left: 0px;padding: 0px 0px;">
-				<div class="bg-mode p-4 card menu" style="margin-left: 0px;overflow: auto;height: calc(100vh - 56px);">
+				<div class="bg-mode card menu" style="margin-left: 0px;overflow: auto;height: calc(100vh - 56px);padding:0.3rem 2rem;">
 				<!-- <h3 class="h5 mb-4" style="font-size: 16px;">&nbsp;&nbsp;&nbsp;系统菜单</h3> -->
-				<a href="javascript:void(0)" class="d-flex align-items-center pb-3 mb-3 link-dark text-decoration-none border-bottom">
+				<a href="javascript:void(0)" class="d-flex align-items-center pb-1 mb-1 link-dark text-decoration-none border-bottom">
 				<svg class="bi me-2" width="30" height="24"><use xlink:href="#bootstrap"/></svg>
 				<span class="fs-8 fw-semibold">系统菜单</span>
 				</a>
@@ -219,7 +219,7 @@ Header START -->
 				<!-- Card News START -->
 				<div class="col-sm-6 col-lg-12" style="padding: 0px 0px;margin-right:0px;">
 					<div class="card dataCenter" style="padding: 0px 0px;overflow: auto;height:calc(100vh - 56px);border-radius: 0px;margin-right: 0px;">
-                        <div class="card-header pb-0 border-0" style="position: relative;float: left;color: #000000;">
+                        <div class="card-header pb-0 border-0" style="position: relative;float: left;color: #000000;padding: 5px;">
 
                             <svg class="bi me-2" width="30" height="24" style="position: relative;float: left;"><use xlink:href="#bootstrap"/></svg>
                             <?php if (strpos($_SERVER['REQUEST_URI'],'content/view') !==  false): ?>
@@ -272,7 +272,7 @@ Header START -->
 <!--                                --><?php //=$bread?><!--(--><?php //echo $provider['total_rows']; ?><!--)-->
 <!--                            </a>-->
                         </div>
-                        <div class="border-bottom" style="margin: 20px 10px 10px 10px;"></div>
+                        <div class="border-bottom" style="margin: 5px;"></div>
 					<!-- Card header END -->
 					<!-- Card body START -->
 					<div class="card-body" style="padding-left: 5px;padding-right: 5px;margin-top: 0px;padding-top:0px;">
