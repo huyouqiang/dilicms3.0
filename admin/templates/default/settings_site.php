@@ -79,7 +79,7 @@
                     <tr>
                         <th></th>
                         <td>
-                            <button class="btn btn-sm btn-primary" type='submit'><span>保存基本设置</span></button>
+                            <button class="btn btn-sm btn-primary" type='submit'><span><i class="bi bi-check"></i></span></button>
                         </td>
                     </tr>
                 </table>
@@ -106,7 +106,7 @@
                         <tr>
                             <th></th>
                             <td>
-                                <button class="btn btn-sm btn-primary" type='submit'><span>保存站点状态</span></button>
+                                <button class="btn btn-sm btn-primary" type='submit'><span><i class="bi bi-check"></i></span></button>
                             </td>
                         </tr>
                     </table>
@@ -163,7 +163,7 @@
 				<tr>
 					<th></th>
 					<td>
-						<button class="btn btn-sm btn-primary" type='submit'><span>保存附件设置</span></button>
+						<button class="btn btn-sm btn-primary" type='submit'><span><i class="bi bi-check"></i></span></button>
 					</td>
 				</tr>
 			</table>
@@ -181,7 +181,7 @@
 				<tr>
 					<th></th>
 					<td>
-						<button class="btn btn-sm btn-primary" type='submit'><span>保存注册协议</span></button>
+						<button class="btn btn-sm btn-primary" type='submit'><span><i class="bi bi-check"></i></span></button>
 					</td>
 				</tr>
 			</table>
@@ -199,7 +199,7 @@
 				<tr>
 					<th></th>
 					<td>
-						<button class="btn btn-sm btn-primary" type='submit' ><span>保存主题设置</span></button>
+						<button class="btn btn-sm btn-primary" type='submit' ><span><i class="bi bi-check"></i></span></button>
 					</td>
 				</tr>
 			</table>

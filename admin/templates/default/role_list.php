@@ -1,7 +1,7 @@
 <?php if ( ! defined('IN_DILICMS')) exit('No direct script access allowed');?>
 <div class="headbar">
 	<div class="operating">
-		<a class="hack_ie" href="<?php echo backend_url('role/add'); ?>"><button class="btn btn-sm btn-primary" type="button"><span class="addition">添加新用户组</span></button></a>
+		<a class="hack_ie" href="<?php echo backend_url('role/add'); ?>"><button class="btn btn-sm btn-primary" type="button"><span class="addition"><i class="bi bi-plus fs-6"></i></span></button></a>
 	</div>
 	<!-- <div class="field">
 		<table class="table">
@@ -31,8 +31,10 @@
             	<tr>
                 	<td><?php echo $v->name; ?></td>
                     <td>
-                    	<a href="<?php echo backend_url('role/edit/'.$v->id); ?>" class="btn btn-sm btn-primary">修改</a>
-                        <a class="confirm_delete btn btn-sm btn-primary" href="<?php echo backend_url('role/del/'.$v->id); ?>">删除</a>
+                      <div class="btn-group btn-group-sm">
+                    	<a href="<?php echo backend_url('role/edit/'.$v->id); ?>" class="btn btn-sm btn-primary"><i class="bi bi-pencil fs-6"></i></a>
+                        <a class="confirm_delete btn btn-sm btn-primary" href="<?php echo backend_url('role/del/'.$v->id); ?>"><i class="bi bi-trash fs-6"></i></a>
+                      </div>
                     </td>
                 </tr>
             <?php endforeach; ?>

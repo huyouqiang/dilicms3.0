@@ -3,13 +3,15 @@
 	<div class="row">
         
 		<form name="serachuser" action="<?php echo backend_url('user/view'); ?>" method="get" class="rol">
-			<a class="rol" href="<?php echo backend_url('user/add'); ?>"><button class="btn btn-sm btn-primary" type="button" style="width:auto;float:left;margin-right:10px;"><span class="addition">添加新用户</span></button></a>
-			<select class="form-control" style="width:auto;float:left" name="role" onchange="location='<?php echo backend_url('user/view'); ?>/'+this.value;">
+      <div class="btn-group btn-group-sm">
+			<a class="btn btn-primary btn-sm" href="<?php echo backend_url('user/add'); ?>"><span class="addition"><i class="bi bi-plus fs-6"></i></span></a>
+			<select class="form-control btn btn-primary btn-sm"  name="role" onchange="location='<?php echo backend_url('user/view'); ?>/'+this.value;">
 				<option value="">选择用户组</option>
 				<?php foreach($roles as $k=>$r): ?>
                 <option <?php echo $role == $k ? 'selected="selected"' : '' ?> value="<?php echo $k; ?>"><?php echo $r; ?></option>
                 <?php endforeach; ?>
 			</select>
+      </div>
 		</form>
 		
 	</div>
@@ -50,8 +52,10 @@
                     <td><?php echo $v->name; ?></td>
                     <td><?php echo $v->status == 1 ? '正常' : '冻结'; ?></td>
                     <td>
-                    	<a href="<?php echo backend_url('user/edit/'.$v->uid); ?>" class="btn btn-sm btn-primary">修改</a>
-                        <a href="<?php echo backend_url('user/del/'.$v->uid); ?>" class="confirm_delete btn btn-sm btn-primary">删除</a>
+                      <div class="btn-group btn-group-sm">
+                    	<a href="<?php echo backend_url('user/edit/'.$v->uid); ?>" class="btn btn-sm btn-primary"><i class="bi bi-pencil fs-6"></i></a>
+                        <a href="<?php echo backend_url('user/del/'.$v->uid); ?>" class="confirm_delete btn btn-sm btn-primary"><i class="bi bi-trash fs-6"></i></a>
+                      </div>
                     </td>
                 </tr>
             <?php endforeach; ?>

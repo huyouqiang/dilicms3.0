@@ -68,7 +68,7 @@ ul {
 				<tr>
 					<th></th>
 					<td>
-						<button class="btn btn-sm btn-primary" type='submit'><span>修改用户组</span></button>
+						<button class="btn btn-sm btn-primary" type='submit'><span><i class="bi bi-check"></i></span></button>
 					</td>
 				</tr>
 			</table>

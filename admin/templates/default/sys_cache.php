@@ -1,8 +1,8 @@
 <?php if ( ! defined('IN_DILICMS')) exit('No direct script access allowed');?>
 <div class="headbar">
-	<div class="operating">
-		<a href="javascript:void(0)" onclick="selectAll('cache[]');"><button class="btn btn-sm btn-primary" type="button"><span class="sel_all">全选</span></button></a>
-		<a href="javascript:;" onclick="$('#cache_form').submit();"><button class="btn btn-sm btn-primary" type="button"><span class="remove">更新</span></button></a>
+	<div class="btn-group btn-group-sm">
+		<a href="javascript:void(0)" onclick="selectAll('cache[]');" class="btn btn-sm btn-primary" type="button"><span class="sel_all"><i class="bi bi-list-check fs-6"></i></span></a>
+		<a href="javascript:;" onclick="$('#cache_form').submit();" class="btn btn-sm btn-primary" type="button"><span class="remove"><i class="bi bi-arrow-clockwise fs-6"></i></span></a>
 	</div>
 	<div class="field">
 		<table class="table">

@@ -326,10 +326,10 @@ class Field_behavior
 							}
 							break;
 				case 'wysiwyg':
-							echo '富文本请至详情查看';
+							echo '[富文本]';
 							break;
 				case 'wysiwyg_basic':
-							echo '富文本请至详情查看';
+							echo '[富文本]';
 							break;
 				default :
 							$more=strlen($value->$fieldName)>15 ? '...':'';

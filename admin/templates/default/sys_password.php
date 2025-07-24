@@ -28,7 +28,7 @@
 						<label>*<?php echo form_error('new_pass_confirm'); ?></label>
 					</td>
 				</tr>
-				<tr><td></td><td><button class="btn btn-sm btn-primary" type="submit"><span>保 存</span></button></td></tr>
+				<tr><td></td><td><button class="btn btn-sm btn-primary" type="submit"><span><i class="bi bi-check"></i></span></button></td></tr>
 			</table>
 		<?php echo form_close(); ?>
 	</div>

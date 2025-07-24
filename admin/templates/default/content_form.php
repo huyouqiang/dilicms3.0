@@ -53,7 +53,7 @@ ul {
                         <?php if ($model['name'] == 'referee_apply') : ?>
                             <p style="color:red">提示：编辑后系统自动向客户发送手机短信和电子邮件通知。</p>
                         <?php endif; ?>
-                        <button class="btn btn-sm btn-primary" type='submit'><span><?php echo $button_name; ?></span></button>
+                        <button class="btn btn-sm btn-primary" type='submit'><span><i class="bi bi-check"></i></span></button>
                     </td>
                 </tr>
             </table>

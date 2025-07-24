@@ -70,7 +70,7 @@ ul {
 				<tr>
 					<th></th>
 					<td>
-						<button class="btn btn-sm btn-primary" type='submit'><span>添加内容模型</span></button>
+						<button class="btn btn-sm btn-primary" type='submit'><i class="bi bi-check"> </i></button>
 					</td>
 				</tr>
 			</table>

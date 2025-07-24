@@ -1,7 +1,7 @@
 <?php if ( ! defined('IN_DILICMS')) exit('No direct script access allowed');?>
 <div class="headbar">
 	<div class="operating">
-		<a class="hack_ie" href="<?php echo backend_url('model/add'); ?>"><button class="btn btn-sm btn-primary" type="button"><span class="addition">添加新内容模型</span></button></a>
+		<a class="hack_ie" href="<?php echo backend_url('model/add'); ?>"><button class="btn btn-sm btn-primary" type="button"><i class="bi bi-plus fs-6"> </i></button></a>
 	</div>
 	<!-- <div class="field">
 		<table class="table">
@@ -62,10 +62,10 @@ table thead {/*留出滚动条的位置*/
                     <td><?php echo $v->model_sort; ?></td>
                     <td>
 						<div class="btn-group btn-group-sm">
-							<a type="button" class="btn btn-sm btn-primary" href="<?php echo backend_url('model/edit/'.$v->id); ?>">修改</a>
-							<a type="button" class="btn btn-sm btn-primary confirm_delete" href="<?php echo backend_url('model/del/'.$v->id); ?>">删除</a>
-							<a type="button" class="btn btn-sm btn-primary" href="<?php echo backend_url('model/fields/'.$v->id); ?>">字段</a>
-							<a type="button" class="btn btn-sm btn-primary" href="<?php echo backend_url('content/view/','model='.$v->name); ?>">列表</a>
+							<a type="button" class="btn btn-sm btn-primary" href="<?php echo backend_url('model/edit/'.$v->id); ?>"><i class="bi bi-pencil fs-6"></i></a>
+              <a type="button" class="btn btn-sm btn-primary confirm_delete" href="<?php echo backend_url('model/del/'.$v->id); ?>"><i class="bi bi-trash fs-6"></i></a>
+              <a type="button" class="btn btn-sm btn-primary" href="<?php echo backend_url('model/fields/'.$v->id); ?>"><i class="bi bi-database fs-6"></i></a>
+							<a type="button" class="btn btn-sm btn-primary" href="<?php echo backend_url('content/view/','model='.$v->name); ?>"><i class="bi bi-table fs-6"></i></a>
 						</div>
                     	<!-- <a href="<?php echo backend_url('model/edit/'.$v->id); ?>"><img class="operator" src="images/icon_edit.gif" alt="修改" title="修改"></a>
                         <a class="btn btn-sm btn-primary" href="<?php echo backend_url('model/del/'.$v->id); ?>">删除</a>

@@ -66,7 +66,7 @@
 		/* text-align: center; */
 		right: 0px;
 		/*border-left: 1px solid #DDDDDD ;*/
-		width: 150px;
+		width: 100px;
         /*background-color: #f9f9f9;*/
         /*border-left: 1px solid #0f6fec;*/
         /*box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.9); !* 水平偏移 垂直偏移 模糊半径 颜色 *!*/
@@ -93,60 +93,69 @@
 <div class="headbar">
 <!--	<div class="alert alert-primary">--><?php //=$bread?><!--(--><?php //echo $provider['total_rows']; ?><!--)</div>-->
 	<div class="operating" style="position:relative; overflow:visible;">
-    	<a href="javascript:void(0)" onclick="selectAll('id[]');"><button class="btn btn-sm btn-primary" type="button"><span class="sel_all">全选</span></button></a>
-		<a class="hack_ie" href="<?php echo backend_url('content/form','model='.$model['name']); ?>"><button class="btn btn-sm btn-primary" type="button"><span class="addition">添加</span></button></a>
-        <a href="javascript:void(0)" onclick="multi_delete();"><button class="btn btn-sm btn-primary" type="button"><span class="delete">批量删除</span></button></a>
+    <div class="btn-group btn-group-sm">
+      <a type="button" class="btn btn-sm btn-primary" href="<?php echo backend_url('content/form','model='.$model['name']); ?>"><span class="addition"><i class="bi bi-plus fs-6"></i></span></a>
+
+    	<a type="button" class="btn btn-sm btn-primary" href="javascript:void(0)" onclick="selectAll('id[]');"><span class="sel_all"><i class="bi bi-list-check fs-6"></i></span></a>
+
+        <a type="button" class="btn btn-sm btn-primary" href="javascript:void(0)" onclick="multi_delete();"><span class="delete"><i class="bi bi-trash fs-6"></i></span></a>
+
         <?php
         $provider['where']['model'] = $model['name'];
         $s =  json_encode($provider['where'],JSON_UNESCAPED_UNICODE);
         $s =  urlencode($s);
         ?>
-        <a href="<?php echo backend_url('excel/exportExcel','model='.$s);?>;"><button class="btn btn-sm btn-primary" type="button"><span class="export">导出EXCEL</span></button></a>
-        <?php if($model['searchable']) : ?>
-            <a href="javascript:void(0)" onclick="searchForm()" ><button class="btn btn-sm btn-primary" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal"><span class="remove">筛选</span></button></a>
-			<a href="/admin/index.php/content/view?model=<?php echo isset($_GET['model']) ? $_GET['model']:''; ?>"><button class="btn btn-sm btn-primary" type="button"><span class="delete">重置</span></button></a>
+        <a type="button" class="btn btn-sm btn-primary" href="<?php echo backend_url('excel/exportExcel','model='.$s);?>;"><span class="export"><i class="bi bi-check"></i></span></a>
 
-            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h6 class="modal-title" id="exampleModalLabel">筛选</h6>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                        </div>
-                        <div class="modal-body" style="height: calc(50vh);overflow: auto;">
-                            <?php echo form_open('content/view?model='.$model['name']); ?>
-                            <table class="table">
-                                <colgroup><col width="150px"><col></colgroup><tbody>
-                                <tr>
-                                    <td style="background-color: #ffffff;">ID</td>
-                                    <td style="background-color: #ffffff;"> <?php $this->field_behavior->on_search(array('type'=>'input','name'=>'id','width'=>'0'),''); ?></td>
-                                </tr>
-                                <?php foreach($model['searchable'] as $v): ?>
-                                    <tr>
-                                        <td style="background-color: #ffffff;"><?php echo $model['fields'][$v]['description']; ?></td>
-                                        <td style="background-color: #ffffff;">
-                                            <?php $this->field_behavior->on_search($model['fields'][$v],(isset($provider['where'][$model['fields'][$v]['name']]) ? $provider['where'][$model['fields'][$v]['name']] : '' )); ?>
-                                        </td>
-                                    </tr>
-                                <?php endforeach; ?>
-                                <tr>
-                                    <td style="background-color: #ffffff;"></td>
-                                    <td style="background-color: #ffffff;"><button class="btn btn-sm btn-primary" type="submit" style="margin-top: 10px;"><span>搜索</span></button></td>
-                                </tr>
-                                </tbody></table>
-                            <?php echo form_close(); ?>
-                        </div>
-<!--                        <div class="modal-footer">-->
-<!--                            <button type="submit" class="btn btn-secondary" data-bs-dismiss="modal">搜索</button>-->
-<!--                            <button type="button" class="btn btn-primary">Save changes</button>-->
-<!--                        </div>-->
-                    </div>
-                </div>
-            </div>
+        <?php if($model['searchable']) : ?>
+            <a type="button" class="btn btn-sm btn-primary" href="javascript:void(0)" onclick="searchForm()" data-bs-toggle="modal" data-bs-target="#exampleModal"><span class="remove"><i class="bi bi-search fs-6"></i></span></a>
+
+			<a type="button" class="btn btn-sm btn-primary" href="/admin/index.php/content/view?model=<?php echo isset($_GET['model']) ? $_GET['model']:''; ?>"><i class="bi bi-arrow-clockwise fs-6"></i></a>
+
+
 
         <?php endif; ?>
 		<?php $this->plugin_manager->trigger('buttons'); ?>
+    </div>
 	</div>
+
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h6 class="modal-title" id="exampleModalLabel">筛选</h6>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body" style="height: calc(50vh);overflow: auto;">
+          <?php echo form_open('content/view?model='.$model['name']); ?>
+          <table class="table">
+            <colgroup><col width="150px"><col></colgroup><tbody>
+            <tr>
+              <td style="background-color: #ffffff;">ID</td>
+              <td style="background-color: #ffffff;"> <?php $this->field_behavior->on_search(array('type'=>'input','name'=>'id','width'=>'0'),''); ?></td>
+            </tr>
+            <?php foreach($model['searchable'] as $v): ?>
+              <tr>
+                <td style="background-color: #ffffff;"><?php echo $model['fields'][$v]['description']; ?></td>
+                <td style="background-color: #ffffff;">
+                  <?php $this->field_behavior->on_search($model['fields'][$v],(isset($provider['where'][$model['fields'][$v]['name']]) ? $provider['where'][$model['fields'][$v]['name']] : '' )); ?>
+                </td>
+              </tr>
+            <?php endforeach; ?>
+            <tr>
+              <td style="background-color: #ffffff;"></td>
+              <td style="background-color: #ffffff;"><button class="btn btn-sm btn-primary" type="submit" style="margin-top: 10px;"><i class="bi bi-search fs-6"></i></button></td>
+            </tr>
+            </tbody></table>
+          <?php echo form_close(); ?>
+        </div>
+        <!--                        <div class="modal-footer">-->
+        <!--                            <button type="submit" class="btn btn-secondary" data-bs-dismiss="modal">搜索</button>-->
+        <!--                            <button type="button" class="btn btn-primary">Save changes</button>-->
+        <!--                        </div>-->
+      </div>
+    </div>
+  </div>
 	<!-- <div class="field">
 		<table class="table">
 			<thead>
@@ -181,6 +190,7 @@
 				</tr>
 			</thead>
 			<tbody>
+      <?php if (sizeof($provider['list'])>0) : ?>
             <?php foreach($provider['list'] as $key => $v) : ?>
             	<tr>
                 	<td><input type="checkbox" class="form-check-input" name="id[]" value="<?php echo $v->id; ?>" /></td>
@@ -201,12 +211,17 @@
                     </td>
                  <?php endforeach; ?>
                     <td class="shadow">
-                    	<a href="<?php echo backend_url('content/form/','model='.$model['name'].'&id='.$v->id); ?>" type="button" class="btn btn-sm btn-primary">修改</a>
-                        <a href="<?php echo backend_url('content/del','model='.$model['name'].'&id='.$v->id); ?>" type="button" class="btn btn-sm btn-primary confirm_delete">删除</a>
+                      <div class="btn-group btn-group-sm">
+                    	<a href="<?php echo backend_url('content/form/','model='.$model['name'].'&id='.$v->id); ?>" type="button" class="btn btn-sm btn-primary"><i class="bi bi-pencil fs-6"></i></a>
+                        <a href="<?php echo backend_url('content/del','model='.$model['name'].'&id='.$v->id); ?>" type="button" class="btn btn-sm btn-primary confirm_delete"><i class="bi bi-trash fs-6"></i></a>
                         <?php $this->plugin_manager->trigger('row_buttons', $v); ?>
+                       </div>
                     </td>
                 </tr>
-            <?php endforeach; ?>
+          <?php endforeach; ?>
+      <?php else: ?>
+        <tr><td colspan="<?php echo sizeof($model['fields'])+5; ?>">没有数据</td></tr>
+      <?php endif; ?>
 			</tbody>
 		</table>
     <?php echo form_close(); ?>
@@ -214,14 +229,14 @@
 
 <div style="margin-top: 10px;">
 <nav aria-label="navigation">
-	<ul class="pagination pagination-light d-inline-block d-md-flex">
+  <div type="button" class="btn-group btn-group-sm">
 		<?php echo $provider['pagination']; ?>
 		<!-- <li class="page-item active"><a class="page-link"  href="/admin/bloglist?p=1">1</a></li>
 		<li class="page-item"><a class="page-link"  href="/admin/bloglist?p=2">2</a></li>
 		<li class="page-item"><a class="page-link"  href="/admin/bloglist?p=3">3</a></li>
 		<li class="page-item"><a class="page-link"  href="/admin/bloglist?p=4">4</a></li>
 		<li class="page-item"><a class="page-link"  href="/admin/bloglist?p=5">尾页</a></li>					               -->
-	</ul>
+  </div>
 </nav>
 </div>
 

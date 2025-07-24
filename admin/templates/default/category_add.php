@@ -68,7 +68,7 @@
 				<tr>
 					<th></th>
 					<td>
-						<button class="btn btn-sm btn-primary" type='submit'><span>添加新分类模型</span></button>
+						<button class="btn btn-sm btn-primary" type='submit'><span><i class="bi bi-check fs-6"></i></span></button>
 					</td>
 				</tr>
 			</table>

@@ -1,6 +1,7 @@
 <?php if ( ! defined('IN_DILICMS')) exit('No direct script access allowed');?>
 <div class="headbar">
 	<div class="operating">
+    <div class="btn-group btn-group-sm">
     	<a href="javascript:void(0)" onclick="selectAll('classid[]');"><button class="btn btn-sm btn-primary" type="button"><span class="sel_all">全选</span></button></a>
 		<a class="hack_ie" href="<?php echo backend_url('category_content/form','model='.$model['name'].'&u_c_level='.$provider['where']['u_c_level']); ?>"><button class="btn btn-sm btn-primary" type="button"><span class="addition">添加</span></button></a>
         <a href="javascript:void(0)" onclick="multi_delete();"><button class="btn btn-sm btn-primary" type="button"><span class="delete">批量删除</span></button></a>
@@ -8,6 +9,7 @@
         <a class="hack_ie" href="<?php echo backend_url('category_content/view','model='.$model['name'].'&u_c_level='.($provider['parent'] ? $provider['parent']->parentid  : '0')); ?>"><button class="btn btn-sm btn-primary" type="button"><span class="grade">返回上一级</span></button></a>
         <?php endif; ?>
         <?php $this->plugin_manager->trigger('buttons'); ?>
+    </div>
 	</div>
 	<div class="field">
 		<table class="table">

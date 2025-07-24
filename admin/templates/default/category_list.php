@@ -1,7 +1,7 @@
 <?php if ( ! defined('IN_DILICMS')) exit('No direct script access allowed');?>
 <div class="headbar">
 	<div class="operating">
-		<a href="<?php echo backend_url('category/add'); ?>" class="hack_ie"><button class="btn btn-sm btn-primary" type="button"><span class="addition">添加新分类模型</span></button></a>
+		<a href="<?php echo backend_url('category/add'); ?>" class="hack_ie"><button class="btn btn-sm btn-primary" type="button"><span class="addition"><i class="bi bi-plus fs-6"></i></span></button></a>
 	</div>
 	<!-- <div class="field">
 		<table class="table">
@@ -37,10 +37,12 @@
                     <td><?php echo $v->description; ?></td>
                     <td><?php echo $v->level; ?></td>
                     <td>
-                    	<a href="<?php echo backend_url('category/edit/'.$v->id); ?>" class="btn btn-sm btn-primary">修改</a>
-                        <a class="confirm_delete btn btn-sm btn-primary" href="<?php echo backend_url('category/del/'.$v->id); ?>">删除</a>
+                      <div class="btn-group btn-group-sm">
+                    	<a href="<?php echo backend_url('category/edit/'.$v->id); ?>" class="btn btn-sm btn-primary"><i class="bi bi-pencil fs-6"></i></a>
+                        <a class="confirm_delete btn btn-sm btn-primary" href="<?php echo backend_url('category/del/'.$v->id); ?>"><i class="bi bi-trash fs-6"></i></a>
                         <!-- <a href="<?php echo backend_url('category/fields/'.$v->id); ?>">字段管理</a>
                         <a href="<?php echo backend_url('category_content/view','model='.$v->name); ?>">列表</a> -->
+                      </div>
                     </td>
                 </tr>
             <?php endforeach; ?>

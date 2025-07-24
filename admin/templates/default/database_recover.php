@@ -1,8 +1,8 @@
 <?php if ( ! defined('IN_DILICMS')) exit('No direct script access allowed');?>
 <div class="headbar">
-    <div class="operating">
-        <a href="javascript:void(0)" onclick="selectAll('file[]');"><button class="btn btn-sm btn-primary" type="button"><span class="sel_all">全选</span></button></a>
-        <a href="javascript:void(0)" onclick="multi_delete();"><button class="btn btn-sm btn-primary" type="button"><span class="delete">批量删除</span></button></a>
+    <div class="btn-group btn-group-sm">
+        <a href="javascript:void(0)" onclick="selectAll('file[]');" class="btn btn-sm btn-primary" type="button"><span class="sel_all"><i class="bi bi-list-check fs-6"></i></span></a>
+        <a href="javascript:void(0)" onclick="multi_delete();" class="btn btn-sm btn-primary" type="button"><span class="delete"><i class="bi bi-trash fs-6"></i></span></a>
     </div>
     <div class="red_box" style="margin-bottom: 10px;"><b>说明：</b>本功能在恢复备份数据的同时，将全部覆盖原有数据，<span style="color:red">请谨慎操作</span>。</div>
     <!-- <div class="field">
@@ -63,10 +63,12 @@ table thead {/*留出滚动条的位置*/
                 <td width="100px" style="padding-left:0"><?php echo $file['extension']; ?></td>
                 <td width="150px" style="padding-left:0"><?php echo $file['date']; ?></td>
                 <td style="padding-left:0">
+                  <div class="btn-group btn-group-sm">
                     <a href="javascript:void(0);"
-                       onclick="if(confirm('是否确定要导入该文件到数据库？')){window.location='<?php echo site_url('database/files/import/'.urlencode($file['name']));?>'}" class="btn btn-sm btn-primary">导入</a>
-                     <a href="javascript:void(0);" onclick="if(confirm('是否确定要删除该文件？')){window.location='<?php echo site_url('database/files/delete/'.urlencode($file['name']));?>'}" class="btn btn-sm btn-primary">删除</a>
-                     <a href="javascript:void(0);" onclick="if(confirm('是否要下载该文件？')){window.location='<?php echo site_url('database/files/download/'.urlencode($file['name']));?>'}" class="btn btn-sm btn-primary">下载</a>
+                       onclick="if(confirm('是否确定要导入该文件到数据库？')){window.location='<?php echo site_url('database/files/import/'.urlencode($file['name']));?>'}" class="btn btn-sm btn-primary"><i class="bi bi-arrow-down-left fs-6"></i></a>
+                     <a href="javascript:void(0);" onclick="if(confirm('是否确定要删除该文件？')){window.location='<?php echo site_url('database/files/delete/'.urlencode($file['name']));?>'}" class="btn btn-sm btn-primary"><i class="bi bi-trash fs-6"></i></a>
+                     <a href="javascript:void(0);" onclick="if(confirm('是否要下载该文件？')){window.location='<?php echo site_url('database/files/download/'.urlencode($file['name']));?>'}" class="btn btn-sm btn-primary"><i class="bi bi-download fs-6"></i></a>
+                  </div>
                 </td>
             </tr>
         <?php endforeach; ?>

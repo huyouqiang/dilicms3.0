@@ -1,7 +1,7 @@
 <?php if ( ! defined('IN_DILICMS')) exit('No direct script access allowed');?>
 <div class="headbar">
     <div class="operating">
-        <a href="javascript:$('form').submit();"><button class="btn btn-sm btn-primary" type="button"><span class="sel_all">立即优化</span></button></a>
+        <a href="javascript:$('form').submit();"><button class="btn btn-sm btn-primary" type="button"><span class="sel_all"><i class="bi bi-arrow-clockwise fs-6"></i></span></button></a>
     </div>
     <div class="red_box" style="margin-bottom: 10px"><b>说明：</b>数据表(MyISAM存储引擎)优化可以去除数据文件中的碎片，使记录排列紧密，提高读写速度。</div>
     <!-- <div class="field">

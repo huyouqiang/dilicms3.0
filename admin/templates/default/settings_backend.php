@@ -66,7 +66,7 @@ th {
 				<tr>
 					<th></th>
 					<td>
-						<button class="btn btn-sm btn-primary" type='submit'><span>保存后台设置</span></button>
+						<button class="btn btn-sm btn-primary" type='submit'><span><i class="bi bi-check"></i></span></button>
 					</td>
 				</tr>
 			</table>
