@@ -1,16 +1,14 @@
 <?php if ( ! defined('IN_DILICMS')) exit('No direct script access allowed');
 $setting['current_role']=array (
-  'id' => '3',
-  'name' => '测试人员',
+  'id' => '5',
+  'name' => 'g_1',
   'rights' => 
   array (
-    0 => 'content@view',
-    1 => 'content@form@edit',
-    2 => 'content@save@edit',
+    0 => 'database@index',
   ),
   'models' => 
   array (
-    0 => '0',
+    0 => 'notice_read_record',
   ),
   'category_models' => 
   array (

@@ -13,7 +13,6 @@ $setting=array (
     'radio' => '单选按钮(VARCHAR)',
     'checkbox' => '复选框(VARCHAR)',
     'wysiwyg' => '编辑器(TEXT)',
-    'wysiwyg_basic' => '编辑器(简)(TEXT)',
     'datetime' => '日期时间(VARCHAR)',
   ),
   'extra_fieldtypes' => 

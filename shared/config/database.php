@@ -53,7 +53,7 @@ if ( ! class_exists('Platform'))
 $active_group = get_instance()->platform->get_type();
 $active_record = TRUE;
 
-$db['default']['hostname'] = 'localhost';
+$db['default']['hostname'] = '127.0.0.1';
 $db['default']['username'] = 'root';
 $db['default']['password'] = '123456';
 $db['default']['database'] = 'dilicms3.0';

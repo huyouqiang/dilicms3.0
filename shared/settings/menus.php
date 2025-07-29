@@ -89,23 +89,6 @@ $setting['menus']=array (
       ),
       3 => 
       array (
-        'menu_id' => '12',
-        'class_name' => 'plugin',
-        'method_name' => 'view',
-        'menu_name' => '扩展管理',
-        'sub_menus' => 
-        array (
-          0 => 
-          array (
-            'menu_id' => '13',
-            'class_name' => 'plugin',
-            'method_name' => 'view',
-            'menu_name' => '插件管理',
-          ),
-        ),
-      ),
-      4 => 
-      array (
         'menu_id' => '14',
         'class_name' => 'role',
         'method_name' => 'view',
@@ -128,7 +111,7 @@ $setting['menus']=array (
           ),
         ),
       ),
-      5 => 
+      4 => 
       array (
         'menu_id' => '21',
         'class_name' => 'database',
@@ -181,15 +164,15 @@ $setting['menus']=array (
           array (
             'class_name' => 'content',
             'method_name' => 'view',
-            'extra' => 'notice_read_record',
-            'menu_name' => '通知阅读记录',
+            'extra' => 'headmaster',
+            'menu_name' => '后台账户信息',
           ),
           1 => 
           array (
             'class_name' => 'content',
             'method_name' => 'view',
-            'extra' => 'class',
-            'menu_name' => '班级列表',
+            'extra' => 'school',
+            'menu_name' => '学校列表',
           ),
           2 => 
           array (
@@ -202,15 +185,15 @@ $setting['menus']=array (
           array (
             'class_name' => 'content',
             'method_name' => 'view',
-            'extra' => 'school',
-            'menu_name' => '学校列表',
+            'extra' => 'class',
+            'menu_name' => '班级列表',
           ),
           4 => 
           array (
             'class_name' => 'content',
             'method_name' => 'view',
-            'extra' => 'headmaster',
-            'menu_name' => '后台账户信息',
+            'extra' => 'school_district',
+            'menu_name' => '校区列表',
           ),
           5 => 
           array (
@@ -230,78 +213,78 @@ $setting['menus']=array (
           array (
             'class_name' => 'content',
             'method_name' => 'view',
-            'extra' => 'school_district',
-            'menu_name' => '校区列表',
+            'extra' => 'notice_read_record',
+            'menu_name' => '通知阅读记录',
           ),
           8 => 
-          array (
-            'class_name' => 'content',
-            'method_name' => 'view',
-            'extra' => 'class_performance',
-            'menu_name' => '学员课堂表现',
-          ),
-          9 => 
           array (
             'class_name' => 'content',
             'method_name' => 'view',
             'extra' => 'notice_img',
             'menu_name' => '通知图片',
           ),
-          10 => 
+          9 => 
           array (
             'class_name' => 'content',
             'method_name' => 'view',
             'extra' => 'templateLog',
             'menu_name' => '模板消息日志',
           ),
-          11 => 
+          10 => 
           array (
             'class_name' => 'content',
             'method_name' => 'view',
             'extra' => 'course_rename',
             'menu_name' => '课程备注',
           ),
-          12 => 
+          11 => 
           array (
             'class_name' => 'content',
             'method_name' => 'view',
             'extra' => 'class_times',
             'menu_name' => '班级课次库',
           ),
-          13 => 
+          12 => 
           array (
             'class_name' => 'content',
             'method_name' => 'view',
             'extra' => 'class_time',
             'menu_name' => '班级课次',
           ),
-          14 => 
+          13 => 
           array (
             'class_name' => 'content',
             'method_name' => 'view',
             'extra' => 'student_evaluate',
             'menu_name' => '学员评价',
           ),
-          15 => 
+          14 => 
           array (
             'class_name' => 'content',
             'method_name' => 'view',
             'extra' => 'wonderful_moment',
             'menu_name' => '学员精彩瞬间',
           ),
-          16 => 
+          15 => 
           array (
             'class_name' => 'content',
             'method_name' => 'view',
             'extra' => 'parent_comments',
             'menu_name' => '家长点评',
           ),
-          17 => 
+          16 => 
           array (
             'class_name' => 'content',
             'method_name' => 'view',
             'extra' => 'parents_reply',
             'menu_name' => '通知家长回复',
+          ),
+          17 => 
+          array (
+            'class_name' => 'content',
+            'method_name' => 'view',
+            'extra' => 'class_performance',
+            'menu_name' => '学员课堂表现',
           ),
           18 => 
           array (
@@ -393,6 +376,13 @@ $setting['menus']=array (
             'method_name' => 'view',
             'extra' => 'h5_default_template',
             'menu_name' => '课次默认模板',
+          ),
+          31 => 
+          array (
+            'class_name' => 'content',
+            'method_name' => 'view',
+            'extra' => 's_1',
+            'menu_name' => '完整示例',
           ),
         ),
       ),

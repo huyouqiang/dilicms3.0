@@ -4,14 +4,13 @@ $setting['current_role']=array (
   'name' => '运营人员',
   'rights' => 
   array (
-    0 => 'system@cache',
-    1 => 'model@view',
-    2 => 'content@view',
-    3 => 'content@form@edit',
+    0 => 'content@view',
+    1 => 'content@form@add',
+    2 => 'content@form@edit',
   ),
   'models' => 
   array (
-    0 => 'student',
+    0 => 's_1',
   ),
   'category_models' => 
   array (
